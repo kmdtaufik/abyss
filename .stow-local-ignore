@@ -1,0 +1,10 @@
+./
+flake.nix
+flake.lock
+home
+system
+settings.nix
+.Xresources
+kitty*
+*
+.git*

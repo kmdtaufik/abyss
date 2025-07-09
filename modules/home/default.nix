@@ -1,0 +1,26 @@
+{
+  imports = [
+    ./shell/nushell.nix
+    ./shell/bash.nix
+    ./shell/alias.nix
+    ./starship.nix
+    ./zoxide.nix
+    ./alacritty.nix
+    ./fastfetch.nix
+    ./swappy.nix
+    ./wlogout/wlogout.nix
+    ./xsettingsd.nix
+    ./waybar/waybar.nix
+    ./pywal/pywal.nix
+    ./dunst.nix
+    ./qt.nix
+    ./gtk.nix
+    ./rofi/rofi.nix
+    ./hypr
+    ./abyss
+    ./nvim.nix
+    ./matugen/matugen.nix
+    ./devsuite.nix
+    ./ohmyposh.nix
+  ];
+}
