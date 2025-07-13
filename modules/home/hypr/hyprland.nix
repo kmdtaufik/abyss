@@ -9,11 +9,11 @@
         "NIXOS_OZONE_WL, 1"
         "SDL_VIDEODRIVER,wayland"
         "NIXPKGS_ALLOW_UNFREE, 1"
-        #No need in uwsm 
+        #No need in uwsm
         /*
-          "XDG_CURRENT_DESKTOP, Hyprland"
-          "XDG_SESSION_TYPE, wayland"
-          "XDG_SESSION_DESKTOP, Hyprland"
+        "XDG_CURRENT_DESKTOP, Hyprland"
+        "XDG_SESSION_TYPE, wayland"
+        "XDG_SESSION_DESKTOP, Hyprland"
         */
         "GDK_BACKEND, wayland,x11"
         "CLUTTER_BACKEND, wayland"
@@ -24,7 +24,6 @@
         "MOZ_ENABLE_WAYLAND, 1"
         "GDK_SCALE,1"
         "QT_SCALE_FACTOR,1"
-
       ];
       monitor = [
         ",preferred,auto,1"
@@ -239,6 +238,10 @@
       bindm = [
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
+      ];
+      binde = [
+        "ALT, Tab, cyclenext"
+        "ALT, Tab, bringactivetotop"
       ];
       #animations
       animations = {
