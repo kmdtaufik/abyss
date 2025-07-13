@@ -21,6 +21,5 @@
     ./nvim.nix
     ./matugen/matugen.nix
     ./devsuite.nix
-    ./ohmyposh.nix
   ];
 }
