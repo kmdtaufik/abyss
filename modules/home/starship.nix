@@ -9,10 +9,9 @@
     settings = {
       "$schema" = "https://starship.rs/config-schema.json";
 
-      #palette = "catppuccin_mocha";
+      palette = "catppuccin_mocha";
 
-      /*
-         palettes.catppuccin_mocha = {
+      palettes.catppuccin_mocha = {
         rosewater = "#f5e0dc";
         flamingo = "#f2cdcd";
         pink = "#f5c2e7";
@@ -40,7 +39,6 @@
         mantle = "#181825";
         crust = "#11111b";
       };
-      */
 
       username = {
         format = " [$user]($style)@";
