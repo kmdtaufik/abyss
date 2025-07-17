@@ -48,9 +48,14 @@
     playerctl
     nh
     bat
-    kdePackages.qt6ct
+    /*
+      kdePackages.qt6ct
     qt5.qtwayland
     qt6.qtwayland
+    */
+    libsForQt5.qtwayland
+    kdePackages.qtwayland
+    qt6ct
     lazygit
   ];
 
