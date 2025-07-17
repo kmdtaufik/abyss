@@ -142,7 +142,7 @@
       "$mainMod" = "SUPER";
       bind = [
         # Applications
-        "$mainMod, T, exec, alacritty"
+        "$mainMod, T, exec, ghostty"
         "$mainMod, B, exec, vivaldi"
         "$mainMod, E, exec, nautilus"
         "$mainMod CTRL, E, exec, emojipicker"
