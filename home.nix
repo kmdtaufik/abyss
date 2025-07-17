@@ -86,6 +86,7 @@ in {
     qbittorrent
     peazip
     discord
+    ghostty
   ];
   programs = {
     gh.enable = true;
