@@ -3,7 +3,6 @@
     enable = true;
     settings = {
       #change shell to bash
-      terminal.shell = "/run/current-system/sw/bin/bash";
       font = {
         size = 12.0;
         normal = {
