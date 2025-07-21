@@ -37,7 +37,7 @@
         "wl-paste --watch cliphist store"
         #"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "xdg-run"
-        "bash launch-waybar"
+        "launch-bar"
         "restore-wallpaper"
       ];
       source = [
