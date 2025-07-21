@@ -1,5 +1,5 @@
 {pkgs, ...}:
-pkgs.writers.writeBashBin "launch-waybar" {}
+pkgs.writers.writeBashBin "launch-bar" {}
 /*
 bash
 */
