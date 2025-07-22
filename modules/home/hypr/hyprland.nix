@@ -21,6 +21,7 @@
         "QT_WAYLAND_DISABLE_WINDOWDECORATION, 1"
         "QT_AUTO_SCREEN_SCALE_FACTOR, 1"
         "QT_QPA_PLATFORMTHEME,qt6ct"
+        "QT_QPA_PLATFORMTHEME,qt5ct"
         "MOZ_ENABLE_WAYLAND, 1"
         "GDK_SCALE,1"
         "QT_SCALE_FACTOR,1"
@@ -31,7 +32,7 @@
       exec-once = [
         "hyprctl setcursor Bibata-Modern-Ice 24"
         "systemctl --user enable --now hyprpolkitagent.service"
-        "dunst"
+        "swaync"
         "systemctl --user enable --now hypridle.service"
         "hyprpaper"
         "wl-paste --watch cliphist store"
@@ -41,7 +42,7 @@
         "restore-wallpaper"
       ];
       source = [
-        " ~/.cache/wal/colors-hyprland.conf"
+        "~/.config/hypr/colors.conf"
       ];
       cursor = {
         no_hardware_cursors = true;
@@ -60,8 +61,8 @@
         gaps_in = 10;
         gaps_out = 14;
         border_size = 3;
-        "col.active_border" = "$color11";
-        "col.inactive_border" = "rgba(ffffffff)";
+        "col.active_border" = "$on_surface";
+        "col.inactive_border" = "$on_primary_fixed";
         layout = "dwindle";
         resize_on_border = true;
       };
@@ -137,6 +138,16 @@
         "float, title:^(Picture-in-Picture)$"
         "pin, title:^(Picture-in-Picture)$"
         "move 69.5% 4%, title:^(Picture-in-Picture)$"
+      ];
+
+      #layerrule
+      layerrule = [
+        "blur, swaync-control-center"
+        "blur, swaync-notification-window"
+        "ignorezero, swaync-control-center"
+        "ignorezero, swaync-notification-window"
+        "ignorealpha 0.5, swaync-control-center"
+        "ignorealpha 0.5, swaync-notification-window"
       ];
       #keybindings
       "$mainMod" = "SUPER";

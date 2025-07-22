@@ -12,4 +12,12 @@
       gpl = "git pull";
     };
   };
+  programs.bash.initExtra = ''
+    mount-usb() {
+      udisksctl mount -b /dev/"$1"
+    }
+    unmount-usb() {
+      udisksctl unmount -b /dev/"$1"
+    }
+  '';
 }

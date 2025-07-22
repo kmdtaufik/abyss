@@ -1,6 +1,8 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  inherit (import ../../../settings.nix) theShell;
+in {
   programs.bash = {
-    enable = true;
+    enable = theShell == "bash";
     shellAliases = {
       ls = "lsd";
       ll = "ls -la";
@@ -8,8 +10,8 @@
     };
 
     initExtra = ''
-      # Initialize blesh
-      source ${pkgs.blesh}/share/blesh/ble.sh
+      # Initialize bash completions
+      source ${pkgs.bash-completion}/share/bash_completion/bash_completion
 
       # Load pywal sequences if not inside VSCode terminal
       if [ "$TERM_PROGRAM" != "vscode" ]; then
@@ -30,7 +32,8 @@
   };
 
   home.packages = with pkgs; [
-    blesh
+    bash-completion
+    nix-bash-completions
     coreutils
     findutils
     gawk
@@ -44,5 +47,4 @@
 
   programs.starship.enableBashIntegration = true;
   programs.zoxide.enableBashIntegration = true;
-  programs.oh-my-posh.enableBashIntegration = false;
 }

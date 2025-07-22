@@ -5,9 +5,9 @@
   username,
   hostname,
   ...
-}:
-let
-  inherit (import ./settings.nix)
+}: let
+  inherit
+    (import ./settings.nix)
     theLocale
     theTimezone
     gitUsername
@@ -16,11 +16,10 @@ let
     theKBDLayout
     flakeDir
     ;
-in
-{
+in {
   imports = [
     ./hardware.nix
-    ./system
+    ./modules/system/
   ];
 
   # Enable networking
@@ -47,6 +46,7 @@ in
   console.keyMap = "${theKBDLayout}";
   # Define a user account.
   users = {
+    #defaultUserShell = pkgs."${theShell}";
     mutableUsers = true;
     users."${username}" = {
       homeMode = "755";
@@ -60,9 +60,9 @@ in
         "libvirtd"
         "kvm"
       ];
-      shell = pkgs.${theShell};
+      shell = pkgs."${theShell}";
       ignoreShellProgramCheck = true;
-      packages = with pkgs; [ ];
+      packages = with pkgs; [];
     };
   };
 
@@ -79,7 +79,7 @@ in
         "nix-command"
         "flakes"
       ];
-      substituters = [ "https://hyprland.cachix.org" ];
+      substituters = ["https://hyprland.cachix.org"];
       trusted-public-keys = [
         "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
       ];

@@ -1,6 +1,6 @@
 {
   programs.nushell = {
-    enable = false;
+    enable = true;
     shellAliases = {
       rm = "rm -t";
       ll = "ls -la";
@@ -14,11 +14,8 @@
       if ($env.TERM_PROGRAM? | default "") != "vscode" {
         cat ~/.cache/wal/sequences
       }
-      if ($env.TTY | str contains "pts") {
        fastfetch --config examples/13
-      }
-
-
     '';
   };
+  programs.starship.enableNushellIntegration = true;
 }
