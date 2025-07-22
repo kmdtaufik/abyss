@@ -12,7 +12,6 @@
     ./xsettingsd.nix
     ./waybar/waybar.nix
     ./pywal/pywal.nix
-    ./dunst.nix
     ./qt.nix
     ./gtk.nix
     ./rofi/rofi.nix
@@ -21,5 +20,6 @@
     ./nvim.nix
     ./matugen/matugen.nix
     ./devsuite.nix
+    ./swaync/swaync.nix
   ];
 }

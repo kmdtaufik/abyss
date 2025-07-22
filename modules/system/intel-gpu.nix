@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  inherit (import ./../settings.nix) gpuType;
+  inherit (import ../../settings.nix) gpuType;
 in
   lib.mkIf ("${gpuType}" == "intel") {
     nixpkgs.config.packageOverrides = pkgs: {

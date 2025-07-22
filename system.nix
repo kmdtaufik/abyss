@@ -19,7 +19,7 @@
 in {
   imports = [
     ./hardware.nix
-    ./modules/system/
+    ./modules/system
   ];
 
   # Enable networking

@@ -4,7 +4,7 @@
   ...
 }: let
   inherit
-    (import ./../settings.nix)
+    (import ../../settings.nix)
     theKBDVariant
     theKBDLayout
     theSecondKBDLayout
