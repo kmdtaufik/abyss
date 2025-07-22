@@ -30,8 +30,6 @@
   };
   services.pulseaudio.enable = false;
   #sound.enable = true;
-  security.rtkit.enable = true;
-  programs.thunar.enable = true;
   services.gvfs.enable = true;
   services.tumbler.enable = true;
   services.gnome.gnome-keyring.enable = true;
@@ -42,6 +40,8 @@
     enable = true;
     enableGnomeKeyring = true;
   };
+
+  services.power-profiles-daemon.enable = true;
   # security.pam.services.hyprlock = {
   #   text = ''
   #     auth include login
