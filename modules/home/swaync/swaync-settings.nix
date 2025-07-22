@@ -64,19 +64,19 @@
       "buttons-grid" = {
         "actions" = [
           {
-            "label" = "";
+            "label" = " ";
             "command" = "hyprlock";
           }
           {
-            "label" = "󰝟";
+            "label" = "󰝟 ";
             "command" = "pactl set-sink-mute @DEFAULT_SINK@ toggle";
           }
           {
-            "label" = "󰂯";
+            "label" = "󰂯 ";
             "command" = "blueman-manager";
           }
           {
-            "label" = "";
+            "label" = " ";
             "command" = "bash -c $HOME/.config/ml4w/scripts/wlogout.sh";
           }
         ];
