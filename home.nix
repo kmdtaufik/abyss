@@ -77,16 +77,17 @@ in {
     jp2a
     alejandra
     cliphist
-    libreoffice
-    librewolf
+    libreoffice-fresh
     github-desktop
     zoom-us
-    teamviewer
     superfile
     qbittorrent
     peazip
     discord
     ghostty
+    localsend
+    dotenvx
+    swaynotificationcenter
   ];
   programs = {
     gh.enable = true;
