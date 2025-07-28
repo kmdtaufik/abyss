@@ -1,14 +1,14 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   gtk = {
     enable = true;
+    /*
     theme = {
-      name = "Adwaita";
+      name = "Adwaita:Dark";
       package = pkgs.libadwaita;
-
     };
+    */
     iconTheme = {
-      name = "Papirus";
+      name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
     font = {
@@ -22,7 +22,7 @@
       package = pkgs.bibata-cursors;
     };
     gtk3.extraConfig = {
-      #gtk-theme-name = "Adwaita";
+      gtk-theme-name = "Adwaita:Dark";
       #gtk-icon-theme-name = "Papirus";
       #gtk-font-name = "Cantarell 11";
       #gtk-cursor-theme-name = "Bibata-Modern-Ice";
@@ -39,8 +39,14 @@
       gtk-xft-rgba = "rgb";
       gtk-application-prefer-dark-theme = 1;
     };
+    gtk3.extraCss = ''
+      @import 'colors.css';
+    '';
     gtk4.extraConfig = {
       gtk-application-prefer-dark-theme = true;
     };
+
+    gtk4.extraCss = ''
+      @import 'colors.css';'';
   };
 }

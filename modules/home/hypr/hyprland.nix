@@ -36,8 +36,10 @@
         "systemctl --user enable --now hypridle.service"
         "hyprpaper"
         "wl-paste --watch cliphist store"
+        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         #"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "xdg-run"
+        "gtk.sh"
         "launch-bar"
         "restore-wallpaper"
       ];
@@ -122,35 +124,7 @@
         disable_splash_rendering = true;
         initial_workspace_tracking = 1;
       };
-      /*
-      #window rule
-      windowrule = [
-        "tile,title:^(Microsoft-edge)$"
-        "tile,title:^(Brave-browser)$"
-        "tile,title:^(Vivaldi)$"
-        "tile,title:^(Firefox)$"
-        "tile,title:^(Google-chrome)$"
-        "tile,title:^(Chromium)$"
-        "float,title:^(pavucontrol)$"
-        "float,title:^(blueman-manager)$"
-        "float,title:^(nm-connection-editor)$"
-        "float,title:^(qalculate-gtk)$"
-        "tile,title:^(Visual-studio-code)$"
-        "float, title:^(Picture-in-Picture)$"
-        "pin, title:^(Picture-in-Picture)$"
-        "move 69.5% 4%, title:^(Picture-in-Picture)$"
-      ];
 
-      #layerrule
-      layerrule = [
-        "blur, swaync-control-center"
-        "blur, swaync-notification-window"
-        "ignorezero, swaync-control-center"
-        "ignorezero, swaync-notification-window"
-        "ignorealpha 0.5, swaync-control-center"
-        "ignorealpha 0.5, swaync-notification-window"
-      ];
-      */
       #keybindings
       "$mainMod" = "SUPER";
       bind = [
