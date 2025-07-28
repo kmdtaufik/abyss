@@ -12,5 +12,6 @@
     (import ./scripts/restore-wallpaper.nix {inherit pkgs;})
     (import ./scripts/launch-waybar.nix {inherit pkgs;})
     (import ./scripts/launch-wlogout.nix {inherit pkgs;})
+    (import ./scripts/gtk.nix {inherit pkgs;})
   ];
 }

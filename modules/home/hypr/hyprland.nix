@@ -122,6 +122,7 @@
         disable_splash_rendering = true;
         initial_workspace_tracking = 1;
       };
+      /*
       #window rule
       windowrule = [
         "tile,title:^(Microsoft-edge)$"
@@ -149,6 +150,7 @@
         "ignorealpha 0.5, swaync-control-center"
         "ignorealpha 0.5, swaync-notification-window"
       ];
+      */
       #keybindings
       "$mainMod" = "SUPER";
       bind = [
@@ -276,4 +278,14 @@
       };
     };
   };
+  imports = [
+    ./conf/windowrule.nix
+    /*
+      ./conf/layerrule.nix
+    ./conf/gestures.nix
+    ./conf/binds.nix
+    ./conf/bindm.nix
+    ./conf/binde.nix
+    */
+  ];
 }

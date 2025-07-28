@@ -81,13 +81,20 @@ in {
     github-desktop
     zoom-us
     superfile
-    qbittorrent
     peazip
     discord
     ghostty
     localsend
-    dotenvx
-    swaynotificationcenter
+    nwg-look
+    smile
+    nwg-displays
+    vesktop
+    chromium
+    libadwaita
+    adwaita-icon-theme
+    adwaita-qt
+    adwaita-qt6
+    glib
   ];
   programs = {
     gh.enable = true;
