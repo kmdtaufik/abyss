@@ -30,10 +30,8 @@ configuration {
 
 
 
-/* ---- Load pywal colors (custom wal template) ---- */
-@theme "~/.cache/wal/colors-rofi-pywal"
-
-
+/* ---- Load colors ---- */
+@theme "~/.config/rofi/colors.rasi"
 
 * {
     border-width: 3px;
