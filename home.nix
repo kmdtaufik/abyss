@@ -95,10 +95,13 @@ in {
     adwaita-qt
     adwaita-qt6
     glib
+    qt6.qtwayland
+    qt5.qtwayland
   ];
   programs = {
     gh.enable = true;
     fzf.enable = true;
   };
   programs.home-manager.enable = true;
+  services.kdeconnect.enable = true;
 }
