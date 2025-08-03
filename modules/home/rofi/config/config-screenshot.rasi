@@ -35,7 +35,7 @@ configuration {
   /* ---- Map colors ---- */
     color11:@primary;
     color5:@on-primary-fixed;
-    foreground:@on-surface;;
+    foreground:@on-surface;
     border-width: 3px;
     border-radius: 2em;
     current-image: url("~/.config/abyss/.cache/blurred_wallpaper.png", height);

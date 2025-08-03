@@ -2,7 +2,7 @@
   inherit (import ../../../settings.nix) theShell;
 in {
   programs.bash = {
-    enable = theShell == "bash";
+    enable = true;
     shellAliases = {
       ls = "lsd";
       ll = "ls -la";
@@ -11,7 +11,7 @@ in {
 
     initExtra = ''
       # Initialize bash completions
-      source ${pkgs.bash-completion}/share/bash_completion/bash_completion
+      #source ${pkgs.bash-completion}/share/bash_completion/bash_completion
 
       # Load pywal sequences if not inside VSCode terminal
       if [ "$TERM_PROGRAM" != "vscode" ]; then
@@ -34,14 +34,6 @@ in {
   home.packages = with pkgs; [
     bash-completion
     nix-bash-completions
-    coreutils
-    findutils
-    gawk
-    util-linux
-    rsync # Needed for progress-bar cp/mv
-    unzip # For zip files
-    unrar # For rar files
-    p7zip # For .7z files
     lsd
   ];
 

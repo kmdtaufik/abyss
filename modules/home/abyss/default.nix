@@ -14,5 +14,6 @@
     (import ./scripts/launch-wlogout.nix {inherit pkgs;})
     (import ./scripts/gtk.nix {inherit pkgs;})
     (import ./scripts/wallpaper.nix {inherit pkgs;})
+    (import ./scripts/mount-manager.nix {inherit pkgs;})
   ];
 }

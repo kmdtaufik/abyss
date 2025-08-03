@@ -77,7 +77,7 @@ in {
     jp2a
     alejandra
     cliphist
-    libreoffice-fresh
+    libreoffice-collabora
     github-desktop
     zoom-us
     superfile
@@ -97,6 +97,15 @@ in {
     glib
     qt6.qtwayland
     qt5.qtwayland
+    onlyoffice-bin
+    /*
+    qt6.qtbase
+    qt6.qtdeclarative
+    qt6.qtsvg
+    qt6.qttools
+    */
+    duf
+    ncdu
   ];
   programs = {
     gh.enable = true;
