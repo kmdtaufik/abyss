@@ -25,6 +25,7 @@
       lazygit
       nixd
       alejandra
+      cargo
     ];
   };
 }
