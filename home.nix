@@ -3,6 +3,7 @@
   pkgs,
   inputs,
   username,
+  packages,
   ...
 }: let
   inherit
@@ -98,14 +99,15 @@ in {
     qt6.qtwayland
     qt5.qtwayland
     onlyoffice-bin
-    /*
     qt6.qtbase
     qt6.qtdeclarative
     qt6.qtsvg
     qt6.qttools
-    */
+    #inputs.quickshell.packages.x86_64-linux.default
     duf
     ncdu
+    material-symbols
+    mongodb-atlas-cli
   ];
   programs = {
     gh.enable = true;
