@@ -29,20 +29,7 @@
       monitor = [
         ",preferred,auto,1"
       ];
-      exec-once = [
-        "hyprctl setcursor Bibata-Modern-Ice 24"
-        "systemctl --user enable --now hyprpolkitagent.service"
-        "swaync"
-        "systemctl --user enable --now hypridle.service"
-        "hyprpaper"
-        "wl-paste --watch cliphist store"
-        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        #"dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "xdg-run"
-        "gtk.sh"
-        "launch-bar"
-        "restore-wallpaper"
-      ];
+
       source = [
         "~/.config/hypr/colors.conf"
       ];
@@ -129,10 +116,10 @@
       "$mainMod" = "SUPER";
       bind = [
         # Applications
-        "$mainMod, T, exec, ghostty"
+        "$mainMod, T, exec, alacritty"
         "$mainMod, B, exec, vivaldi"
         "$mainMod, E, exec, nautilus"
-        "$mainMod CTRL, E, exec, emojipicker"
+        "$mainMod CTRL, E, exec, smile"
 
         # Windows
         "$mainMod, Q, killactive"
@@ -254,6 +241,7 @@
   };
   imports = [
     ./conf/windowrule.nix
+    ./conf/autostart.nix
     /*
       ./conf/layerrule.nix
     ./conf/gestures.nix
