@@ -140,7 +140,7 @@
 
         # Actions
         " , PRINT, exec, screenshot"
-        "$mainMod, S, exec, screenshot"
+        "$mainMod CTRL, S, exec, screenshot"
         "$mainMod SHIFT, L, exec, wlogout"
         "$mainMod SHIFT, W, exec, waypaper --random"
         "$mainMod CTRL, W, exec, waypaper"
@@ -161,6 +161,7 @@
         "$mainMod, 8, workspace, 8"
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
+        "$mainMod, S,togglespecialworkspace," #move to specific workspace
 
         "$mainMod SHIFT, 1, movetoworkspace, 1"
         "$mainMod SHIFT, 2, movetoworkspace, 2"
@@ -172,6 +173,7 @@
         "$mainMod SHIFT, 8, movetoworkspace, 8"
         "$mainMod SHIFT, 9, movetoworkspace, 9"
         "$mainMod SHIFT, 0, movetoworkspace, 10"
+        "$mainMod SHIFT, S, movetoworkspacesilent, special"
 
         "$mainMod, Tab, workspace, m+1"
         "$mainMod SHIFT, Tab, workspace, m-1"
