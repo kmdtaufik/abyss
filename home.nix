@@ -58,7 +58,6 @@ in {
     google-chrome
     gnupg
     pinentry-all
-    ags
     imagemagick
     alacritty
     grim
@@ -78,19 +77,14 @@ in {
     jp2a
     alejandra
     cliphist
-    libreoffice-collabora
-    github-desktop
     zoom-us
     superfile
-    peazip
     discord
     ghostty
-    localsend
     nwg-look
     smile
     nwg-displays
     vesktop
-    chromium
     libadwaita
     adwaita-icon-theme
     adwaita-qt
@@ -98,16 +92,14 @@ in {
     glib
     qt6.qtwayland
     qt5.qtwayland
-    onlyoffice-bin
     qt6.qtbase
     qt6.qtdeclarative
     qt6.qtsvg
     qt6.qttools
-    #inputs.quickshell.packages.x86_64-linux.default
     duf
     ncdu
-    material-symbols
-    mongodb-atlas-cli
+    walker
+    libreoffice
   ];
   programs = {
     gh.enable = true;
