@@ -21,5 +21,6 @@
     ./matugen/matugen.nix
     ./devsuite.nix
     ./swaync/swaync.nix
+    ./zen.nix
   ];
 }
