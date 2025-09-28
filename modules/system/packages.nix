@@ -30,7 +30,6 @@
     ydotool
     wl-clipboard
     socat
-    cowsay
     lshw
     pkg-config
     meson
@@ -68,10 +67,10 @@
     };
     fuse.userAllowOther = true;
     mtr.enable = true;
-    gnupg.agent = {
-      enable = false;
-      enableSSHSupport = false;
-    };
+    # gnupg.agent = {
+    #   enable = false;
+    #   enableSSHSupport = false;
+    # };
     virt-manager.enable = false;
   };
 

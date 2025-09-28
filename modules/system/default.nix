@@ -8,5 +8,6 @@
     ./intel-gpu.nix
     ./services.nix
     ./security.nix
+    ./gpg.nix
   ];
 }

@@ -18,6 +18,7 @@
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     devsuite.url = "github:kmdtaufik/devsuite";
     nvf.url = "github:notashelf/nvf";
+    walker.url = "github:abenz1267/walker";
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       # IMPORTANT: we're using "libgbm" and is only available in unstable so ensure
@@ -28,7 +29,6 @@
   outputs = inputs @ {
     nixpkgs,
     home-manager,
-    nvf,
     ...
   }: let
     system = "x86_64-linux";
@@ -42,14 +42,6 @@
       };
     };
   in {
-    packages.${system}.default =
-      (
-        nvf.lib.neovimConfiguration {
-          pkgs = nixpkgs.legacyPackages.${system};
-          modules = [./modules/home/pkgs/neovim.nix];
-        }
-      ).neovim;
-
     nixosConfigurations = {
       "${hostname}" = nixpkgs.lib.nixosSystem {
         specialArgs = {
