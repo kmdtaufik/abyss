@@ -22,5 +22,6 @@
     ./devsuite.nix
     ./swaync/swaync.nix
     ./zen.nix
+    ./walker.nix
   ];
 }

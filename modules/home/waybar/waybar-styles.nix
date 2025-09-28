@@ -1,6 +1,8 @@
 {
   programs.waybar.style =
-    #css
+    /*
+    css
+    */
     ''
       @import './colors.css';
       @define-color color11 @on_primary_fixed;
@@ -24,7 +26,7 @@
           window#waybar {
               background-color: rgba(0,0,0,0.8);
               border-bottom: 0px solid #ffffff;
-              /* color: #FFFFFF; */
+              /*color: #FFFFFF;*/
               background: transparent;
               transition-property: background-color;
               transition-duration: .5s;

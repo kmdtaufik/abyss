@@ -84,7 +84,6 @@ in {
     nwg-look
     smile
     nwg-displays
-    vesktop
     libadwaita
     adwaita-icon-theme
     adwaita-qt
@@ -98,12 +97,12 @@ in {
     qt6.qttools
     duf
     ncdu
-    walker
     libreoffice
   ];
   programs = {
     gh.enable = true;
     fzf.enable = true;
+    obsidian.enable = true;
   };
   programs.home-manager.enable = true;
   services.kdeconnect.enable = true;

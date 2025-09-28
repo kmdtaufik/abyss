@@ -10,6 +10,7 @@
       gc = "git commit -m";
       gp = "git push";
       gpl = "git pull";
+      walker = "walker --height 300";
     };
     sessionVariables = {
       EDITOR = "nvim";
