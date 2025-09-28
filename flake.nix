@@ -27,8 +27,10 @@
     };
   };
   outputs = inputs @ {
+    self,
     nixpkgs,
     home-manager,
+    nvf,
     ...
   }: let
     system = "x86_64-linux";
@@ -42,6 +44,16 @@
       };
     };
   in {
+    #Exposing packages
+    packages."x86_64-linux" = {
+      default = self.packages."x86_64-linux".nvf-nvim;
+      nvf-nvim =
+        (nvf.lib.neovimConfiguration {
+          pkgs = nixpkgs.legacyPackages."x86_64-linux";
+          modules = [./modules/pkgs/nvim];
+        }).neovim;
+    };
+
     nixosConfigurations = {
       "${hostname}" = nixpkgs.lib.nixosSystem {
         specialArgs = {
@@ -62,7 +74,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              backupFileExtension = "backup-";
+              backupFileExtension = ".backup";
               users.${username} = import ./home.nix;
             };
           }
