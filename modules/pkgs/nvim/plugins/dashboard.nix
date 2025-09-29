@@ -26,7 +26,7 @@
               icon = " ";
               key = "f";
               desc = "Find File";
-              action = ":lua  Snacks.picker.files({ cwd = find_project_root() }) ";
+              action = ":lua  Snacks.dashboard.pick('files',{ cwd = find_project_root() }) ";
             }
             {
               icon = " ";
@@ -38,13 +38,13 @@
               icon = " ";
               key = "g";
               desc = "Find Text";
-              action = ":lua Snacks.picker.grep({ cwd = find_project_root() }) ";
+              action = ":lua Snacks.dashboard.pick('live_grep',{ cwd = find_project_root() }) ";
             }
             {
               icon = " ";
               key = "r";
               desc = "Recent Files";
-              action = ":lua Snacks.picker.recent() ";
+              action = ":lua Snacks.dashboard.pick('oldfiles') ";
             }
             {
               icon = " ";
