@@ -1,5 +1,8 @@
 {
-  imports = [./languages.nix];
+  imports = [
+    ./languages.nix
+    ./plugins
+  ];
 
   vim = {
     theme = {
