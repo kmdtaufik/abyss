@@ -2,14 +2,11 @@
   imports = [
     ./languages.nix
     ./plugins
+    ./keyamps.nix
+    ./colorscheme.nix
   ];
 
   vim = {
-    theme = {
-      enable = true;
-      name = "catppuccin";
-      style = "mocha";
-    };
     statusline.lualine.enable = true;
 
     luaConfigPost =
