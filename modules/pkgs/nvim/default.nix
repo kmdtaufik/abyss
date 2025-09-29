@@ -1,14 +1,12 @@
 {
-  imports = [];
+  imports = [./languages.nix];
 
   vim = {
     theme = {
       enable = true;
-      name = "gruvbox";
-      style = "dark";
+      name = "catppuccin";
+      style = "mocha";
     };
-    languages = {
-      nix.enable = true;
-    };
+    statusline.lualine.enable = true;
   };
 }
