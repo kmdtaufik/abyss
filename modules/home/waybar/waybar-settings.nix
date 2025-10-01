@@ -16,10 +16,10 @@
         spacing = 0;
 
         modules-left = [
-          "custom/appmenu"
+          # "custom/appmenu"
           "hyprland/workspaces"
-          "group/links"
-          "group/quicklinks"
+          # "group/links"
+          # "group/quicklinks"
           "custom/empty"
         ];
 
@@ -39,7 +39,7 @@
           "group/tools"
           "tray"
           "custom/notification"
-          "custom/exit"
+          # "custom/exit"
           "clock"
         ];
 
