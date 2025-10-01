@@ -46,8 +46,8 @@
   in {
     #Exposing packages
     packages."x86_64-linux" = {
-      default = self.packages."x86_64-linux".nvf-nvim;
-      nvf-nvim =
+      default = self.packages."x86_64-linux".neovim;
+      neovim =
         (nvf.lib.neovimConfiguration {
           pkgs = nixpkgs.legacyPackages."x86_64-linux";
           modules = [./modules/pkgs/nvim];
