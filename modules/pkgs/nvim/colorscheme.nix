@@ -1,8 +1,10 @@
-{
-  vim.theme = {
-    enable = true;
-    name = "tokyonight";
-    style = "storm";
-    transparent = true;
+{pkgs, ...}: {
+  config.vim = {
+    theme = {
+      enable = true;
+      name = "tokyonight";
+      style = "moon";
+      transparent = true;
+    };
   };
 }

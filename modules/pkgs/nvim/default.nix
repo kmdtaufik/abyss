@@ -8,7 +8,6 @@
 
   vim = {
     statusline.lualine.enable = true;
-
     luaConfigPost =
       /*
       lua
