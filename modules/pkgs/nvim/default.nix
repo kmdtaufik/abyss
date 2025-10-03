@@ -1,6 +1,6 @@
 {
   imports = [
-    ./languages.nix
+    ./languages
     ./plugins
     ./keyamps.nix
     ./colorscheme.nix
