@@ -29,15 +29,6 @@ in {
   #"Xcursor.size" = 24;
   #};
 
-  # Install & Configure Git
-  # programs.git = {
-  #   enable = true;
-  #   signing.key = "0292F1A141E88790";
-  #   # userName = "${gitUsername}";
-  #   # userEmail = "${gitEmail}";
-  #   signing.signByDefault = false;
-  # };
-
   # Create XDG Dirs
   xdg = {
     userDirs = {
@@ -94,6 +85,8 @@ in {
     duf
     ncdu
     libreoffice
+    croc
+    papers
   ];
   programs = {
     gh.enable = true;
