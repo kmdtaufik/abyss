@@ -34,14 +34,13 @@
   services.tumbler.enable = true;
   services.gnome.gnome-keyring.enable = true;
   hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = false; # powers up the default Bluetooth controller on boot
-  services.blueman.enable = true;
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   security.pam.services.hyprlock = {
     enable = true;
     enableGnomeKeyring = true;
   };
 
-  services.power-profiles-daemon.enable = true;
+  services.auto-cpufreq.enable = true;
   # security.pam.services.hyprlock = {
   #   text = ''
   #     auth include login
