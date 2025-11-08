@@ -1,3 +1,0 @@
-{
-  vim.globals.mapleader = " ";
-}
