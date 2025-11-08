@@ -8,7 +8,7 @@
     ./alacritty.nix
     ./fastfetch.nix
     ./swappy.nix
-    ./wlogout/wlogout.nix
+    # ./wlogout/wlogout.nix
     ./xsettingsd.nix
     ./waybar/waybar.nix
     ./pywal/pywal.nix

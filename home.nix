@@ -13,7 +13,7 @@ in {
   # Home Manager Settings
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
-  home.stateVersion = "23.11";
+  home.stateVersion = "25.11";
   # Set The Colorscheme
   # colorScheme = inputs.nix-colors.colorSchemes."${theme}";
 
@@ -28,15 +28,6 @@ in {
   # xresources.properties = {
   #"Xcursor.size" = 24;
   #};
-
-  # Install & Configure Git
-  # programs.git = {
-  #   enable = true;
-  #   signing.key = "0292F1A141E88790";
-  #   # userName = "${gitUsername}";
-  #   # userEmail = "${gitEmail}";
-  #   signing.signByDefault = false;
-  # };
 
   # Create XDG Dirs
   xdg = {
@@ -54,10 +45,7 @@ in {
   #};
   # Install Packages For The User
   home.packages = with pkgs; [
-    vivaldi
     google-chrome
-    gnupg
-    pinentry-all
     imagemagick
     alacritty
     grim
@@ -77,7 +65,6 @@ in {
     jp2a
     alejandra
     cliphist
-    zoom-us
     superfile
     discord
     ghostty
@@ -98,6 +85,8 @@ in {
     duf
     ncdu
     libreoffice
+    croc
+    papers
   ];
   programs = {
     gh.enable = true;
@@ -105,5 +94,5 @@ in {
     obsidian.enable = true;
   };
   programs.home-manager.enable = true;
-  services.kdeconnect.enable = true;
+  services.kdeconnect.enable = false;
 }

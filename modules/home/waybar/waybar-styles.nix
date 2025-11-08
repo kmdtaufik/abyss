@@ -6,7 +6,7 @@
     ''
       @import './colors.css';
       @define-color color11 @on_primary_fixed;
-
+      @define-color primary @primary;
       @define-color backgroundlight @on_surface;
       @define-color backgrounddark @color11;
       @define-color workspacesbackground1 @on_surface;
@@ -18,7 +18,7 @@
       @define-color iconcolor @on_surface;
 
         * {
-              font-family: "Fira Sans Semibold", "Font Awesome 6 Free", "Font Awesome 6 Brands", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+              font-family: "Fira Sans Semibold", "Font Awesome 7 Free", "Font Awesome 7 Brands", "Font Awesome 6 Free", "Font Awesome 6 Brands", FontAwesome, "Material Icons", Roboto, Helvetica, Arial, sans-serif;
               border: none;
               border-radius: 0px;
           }
@@ -358,14 +358,14 @@
            * ----------------------------------------------------- */
 
           #clock {
-              background-color: @backgroundlight;
-              font-size: 16px;
-              color: @textcolor2;
+              /*background-color: @backgroundlight;*/
+              font-size: 18px;
+              color: @textcolor3;
               border-radius: 3px 5px 3px 5px;
               padding: 1px 10px 0px 10px;
               margin: 3px 0px 3px 0px;
               opacity: 1.0;
-              border: 3px solid @bordercolor;
+              /*border: 3px solid @bordercolor;*/
           }
 
           /* -----------------------------------------------------

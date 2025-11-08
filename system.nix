@@ -58,7 +58,6 @@ in {
     mutableUsers = true;
     users."${username}" = {
       homeMode = "755";
-      hashedPassword = "$6$Cb1najBbswhf2rtK$0X6lDYzTIzKBrmr.9fMChgAUOglY7QGXAHtsV6k5vDvdcgnE6.9IIAwCab6vC/58Ap0L0qSGtIWZA3JO73g2D0";
       isNormalUser = true;
       description = "${gitUsername}";
       extraGroups = [
@@ -100,5 +99,5 @@ in {
       options = "--delete-older-than 7d";
     };
   };
-  system.stateVersion = "23.11";
+  system.stateVersion = "25.11";
 }

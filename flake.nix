@@ -1,5 +1,5 @@
 {
-  description = "Infinity, NisOS config";
+  description = "Abyss, NixOS config";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -17,7 +17,6 @@
     matugen.url = "github:/InioX/matugen";
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     devsuite.url = "github:kmdtaufik/devsuite";
-    nvf.url = "github:notashelf/nvf";
     walker.url = "github:abenz1267/walker";
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -27,12 +26,13 @@
     };
   };
   outputs = inputs @ {
+    self,
     nixpkgs,
     home-manager,
+    nvf,
     ...
   }: let
-    system = "x86_64-linux";
-    inherit (import ./settings.nix) username hostname;
+    inherit (import ./settings.nix) username hostname system;
 
     pkgs = import nixpkgs {
       inherit system;
@@ -42,6 +42,16 @@
       };
     };
   in {
+    #Exposing packages
+    packages.${system} = {
+      default = self.packages.${system}.neovim;
+      neovim =
+        (nvf.lib.neovimConfiguration {
+          pkgs = nixpkgs.legacyPackages.${system};
+          modules = [./modules/pkgs/nvim];
+        }).neovim;
+    };
+
     nixosConfigurations = {
       "${hostname}" = nixpkgs.lib.nixosSystem {
         specialArgs = {
@@ -62,7 +72,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              backupFileExtension = "backup-";
+              backupFileExtension = ".backup";
               users.${username} = import ./home.nix;
             };
           }

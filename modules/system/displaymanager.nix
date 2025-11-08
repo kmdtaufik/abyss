@@ -18,17 +18,20 @@ in {
     };
     libinput.enable = true;
     displayManager.sddm = {
+      package = pkgs.kdePackages.sddm;
+      extraPackages= with pkgs;[ sddm-astronaut ];
       enable = true;
       autoNumlock = true;
       wayland.enable = true;
-      theme = "tokyo-night-sddm";
+      theme = "sddm-astronaut-theme";
     };
   };
 
   environment.systemPackages = let
-    tokyo-night = pkgs.libsForQt5.callPackage ./sddm-tokyo-night.nix {};
-  in [
-    tokyo-night # Name: tokyo-night-sddm
-    pkgs.libsForQt5.qt5.qtgraphicaleffects
+sddm-astronaut= pkgs.sddm-astronaut.override{
+    embeddedTheme = "japanese_aesthetic";
+  };
+  in  [
+  sddm-astronaut
   ];
 }

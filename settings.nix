@@ -3,7 +3,7 @@
 # https://gitlab.com/Zaney/zaneyos/-/wikis/Setting-Options
 let
   # THINGS YOU NEED TO CHANGE
-  username = "devshadow";
+  username = "kdx";
   userHome = "/home/${username}";
   flakeDir = "${userHome}/zicronos";
 in {
@@ -19,16 +19,14 @@ in {
   username = "${username}";
   userHome = "${userHome}";
   hostname = "nixos";
-  gitUsername = "008";
-  gitEmail = "147173391+xeroxero8x@users.noreply.github.com";
-  theme = "tokyo-night-dark";
+  system = "x86_64-linux";
+
+  gitUsername = "MD TAUFIK KHAN";
+  gitEmail = "147173391+kmdtaufikx@users.noreply.github.com";
   browser = "firefox";
   # ^ (use as is or replace with your own repo - removing will break the wallsetter script)
   wallpaperDir = "${userHome}/wallpapers";
-  screenshotDir = "${userHome}/Pictures/Screenshots";
   flakeDir = "${flakeDir}";
-  flakePrev = "${userHome}/.zicronos-previous";
-  flakeBackup = "${userHome}/.zicronos-backup";
   terminal = "kitty"; # This sets the terminal that is used by the hyprland terminal keybinding
 
   # System Settings
@@ -43,12 +41,6 @@ in {
   theKernel = "zen"; # Possible options: default, latest, lqx, xanmod, zen
   sdl-videodriver = "wayland"; # Either x11 or wayland ONLY. Games might require x11 set here
   # For Hybrid Systems intel-nvidia
-  # Should Be Used As gpuType
-  cpuType = "intel";
-  gpuType = "intel";
-
-  #Config Settings
-  # configDirectory = "${userHome}/abyss/home/config";
 
   # Nvidia Hybrid Devices
   # ONLY NEEDED FOR HYBRID
@@ -64,25 +56,4 @@ in {
   # NTP & HWClock Settings
   ntp = true;
   localHWClock = false;
-
-  # Enable Printer & Scanner Support
-  printer = false;
-
-  # Enable Flatpak & Larger Programs
-  distrobox = false;
-  flatpak = false;
-  kdenlive = false;
-  blender = false;
-  # Enable Support For
-  # Logitech Devices
-  logitech = false;
-
-  # Enable Python & PyCharm
-  python = false;
-
-  # Enable SyncThing
-  syncthing = false;
-
-  # Enable Kde Connetc
-  kdeconnect = false;
 }
