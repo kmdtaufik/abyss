@@ -1,8 +1,14 @@
 {
+  imports = [
+    ./trouble.nix
+  ];
   vim = {
     lsp = {
       enable = true;
       formatOnSave = true;
+      trouble = {
+        enable = true;
+      };
       inlayHints = {
         enable = true;
       };

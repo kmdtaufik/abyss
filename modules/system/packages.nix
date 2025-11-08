@@ -11,13 +11,9 @@
   # List System Programs
   environment.systemPackages = with pkgs; [
     jq
-    postman
-    mongodb-compass
     wget
-    nix-init
     curl
     git
-    fastfetch
     htop
     btop
     libvirt
@@ -47,8 +43,8 @@
     playerctl
     nh
     bat
-    qt5.qtwayland
-    qt6.qtwayland
+    libsForQt5.qt5.qtwayland
+    kdePackages.qtwayland
     qt6ct
     lazygit
   ];

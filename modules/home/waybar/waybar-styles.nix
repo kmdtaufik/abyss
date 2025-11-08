@@ -358,14 +358,14 @@
            * ----------------------------------------------------- */
 
           #clock {
-              background-color: @backgroundlight;
-              font-size: 16px;
-              color: @textcolor2;
+              /*background-color: @backgroundlight;*/
+              font-size: 18px;
+              color: @textcolor3;
               border-radius: 3px 5px 3px 5px;
               padding: 1px 10px 0px 10px;
               margin: 3px 0px 3px 0px;
               opacity: 1.0;
-              border: 3px solid @bordercolor;
+              /*border: 3px solid @bordercolor;*/
           }
 
           /* -----------------------------------------------------

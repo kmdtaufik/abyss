@@ -11,14 +11,8 @@
     enable = true;
     vscode.enable = true;
     idea.ultimate.enable = false;
-    pycharm.professional.enable = true;
+    pycharm.professional.enable = false;
     dependencies = with pkgs; [
-      prisma-engines
-      openssl
-      pnpm
-      nodejs
-      openjdk
-      python3
       #lazyvim dependencies
       fzf
       ripgrep
@@ -26,9 +20,7 @@
       fd
       lazygit
       nixd
-      marksman
-      cargo
-      glibc
+     
     ];
   };
 }

@@ -5,5 +5,6 @@
     ./picker.nix
     ./mini.nix
     ./which-key.nix
+    ./snacks.nix
   ];
 }

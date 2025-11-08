@@ -18,13 +18,14 @@
         modules-left = [
           # "custom/appmenu"
           "hyprland/workspaces"
+          "hyprland/window"
           # "group/links"
           # "group/quicklinks"
           "custom/empty"
         ];
 
         modules-center = [
-          "hyprland/window"
+          "clock"
           "custom/empty"
         ];
 
@@ -34,13 +35,12 @@
           "bluetooth"
           "network"
           #"battery"
-          "power-profiles-daemon"
+          # "power-profiles-daemon"
           "group/hardware"
           "group/tools"
           "tray"
           "custom/notification"
           # "custom/exit"
-          "clock"
         ];
 
         # Quicklink modules
@@ -117,14 +117,15 @@
 
         # Window module
         "hyprland/window" = {
+          format = "{class}";
           max-length = 60;
-          rewrite = {
-            "(.*) - Brave" = "$1";
-            "(.*) - Chromium" = "$1";
-            "(.*) - Brave Search" = "$1";
-            "(.*) - Outlook" = "$1";
-            "(.*) Microsoft Teams" = "$1";
-          };
+          # rewrite = {
+          #   "(.*) - Brave" = "$1";
+          #   "(.*) - Chromium" = "$1";
+          #   "(.*) - Brave Search" = "$1";
+          #   "(.*) - Outlook" = "$1";
+          #   "(.*) Microsoft Teams" = "$1";
+          # };
           separate-outputs = true;
         };
 
@@ -333,16 +334,17 @@
           format-disabled = "";
           format-off = "";
           interval = 30;
-          on-click = "blueman-manager";
+          on-click = "";
           format-no-controller = "";
         };
 
         # Clock
         "clock" = {
-          format = "{:%H:%M %a}";
+          format = "{:%H:%M}";
           on-click = "flatpak run com.ml4w.calendar";
           timezone = "";
-          tooltip = false;
+          tooltip = true;
+          tooltip-format = "{:%A, %B %d, %Y}";
         };
 
         # Tray

@@ -1,5 +1,5 @@
 {
-  description = "Infinity, NisOS config";
+  description = "Abyss, NixOS config";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -17,7 +17,7 @@
     matugen.url = "github:/InioX/matugen";
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     devsuite.url = "github:kmdtaufik/devsuite";
-    nvf.url = "github:notashelf/nvf";
+    nvf.url = "github:kmdtaufik/nvf/themes";
     walker.url = "github:abenz1267/walker";
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -33,8 +33,7 @@
     nvf,
     ...
   }: let
-    system = "x86_64-linux";
-    inherit (import ./settings.nix) username hostname;
+    inherit (import ./settings.nix) username hostname system;
 
     pkgs = import nixpkgs {
       inherit system;
@@ -45,11 +44,11 @@
     };
   in {
     #Exposing packages
-    packages."x86_64-linux" = {
-      default = self.packages."x86_64-linux".neovim;
+    packages.${system} = {
+      default = self.packages.${system}.neovim;
       neovim =
         (nvf.lib.neovimConfiguration {
-          pkgs = nixpkgs.legacyPackages."x86_64-linux";
+          pkgs = nixpkgs.legacyPackages.${system};
           modules = [./modules/pkgs/nvim];
         }).neovim;
     };
