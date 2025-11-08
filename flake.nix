@@ -17,7 +17,6 @@
     matugen.url = "github:/InioX/matugen";
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     devsuite.url = "github:kmdtaufik/devsuite";
-    nvf.url = "github:kmdtaufik/nvf/themes";
     walker.url = "github:abenz1267/walker";
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
