@@ -38,14 +38,13 @@
     ripgrep
     appimage-run
     libgcc
-    networkmanagerapplet
     yad
     playerctl
     nh
     bat
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
-    qt6ct
+    qt6Packages.qt6ct
     lazygit
   ];
 
