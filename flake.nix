@@ -29,7 +29,6 @@
     self,
     nixpkgs,
     home-manager,
-    nvf,
     ...
   }: let
     inherit (import ./settings.nix) username hostname system;
@@ -41,17 +40,7 @@
         android_sdk.accept_license = true;
       };
     };
-  in {
-    #Exposing packages
-    packages.${system} = {
-      default = self.packages.${system}.neovim;
-      neovim =
-        (nvf.lib.neovimConfiguration {
-          pkgs = nixpkgs.legacyPackages.${system};
-          modules = [./modules/pkgs/nvim];
-        }).neovim;
-    };
-
+  in { 
     nixosConfigurations = {
       "${hostname}" = nixpkgs.lib.nixosSystem {
         specialArgs = {
