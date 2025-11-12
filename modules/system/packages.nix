@@ -46,6 +46,7 @@
     kdePackages.qtwayland
     qt6Packages.qt6ct
     lazygit
+    networkmanagerapplet
   ];
 
   programs = {
