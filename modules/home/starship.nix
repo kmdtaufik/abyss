@@ -40,26 +40,26 @@
         crust = "#11111b";
       };
 
-      username = {
-        format = " [$user]($style)@";
-        show_always = true;
-        style_root = "bold red";
-        style_user = "bold mauve";
-      };
+      # username = {
+      #   format = " [$user]($style)@";
+      #   show_always = true;
+      #   style_root = "bold red";
+      #   style_user = "bold mauve";
+      # };
 
-      hostname = {
-        disabled = false;
-        format = "[$hostname]($style) in ";
-        ssh_only = false;
-        style = "bold maroon";
-        ssh_symbol = " ";
-      };
+      # hostname = {
+      #   disabled = false;
+      #   format = "[$hostname]($style) in ";
+      #   ssh_only = false;
+      #   style = "bold maroon";
+      #   ssh_symbol = " ";
+      # };
 
       directory = {
-        style = "bold peach";
+        style = " bold peach";
         truncate_to_repo = true;
         truncation_length = 0;
-        truncation_symbol = "repo: ";
+        # truncation_symbol = " ";
         read_only = "";
       };
 
@@ -135,7 +135,7 @@
       };
 
       os = {
-        disabled = false;
+        disabled = true;
         format = " [$symbol]($style)";
         style = "bold mauve";
         symbols = {
