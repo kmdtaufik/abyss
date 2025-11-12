@@ -1,13 +1,15 @@
 {
   imports = [
-    ./shell/nushell.nix
     ./shell/bash.nix
     ./shell/alias.nix
+    ./shell/fish.nix
     ./starship.nix
     ./zoxide.nix
     ./alacritty.nix
+    ./kitty.nix
     ./fastfetch.nix
     ./swappy.nix
+    ./btop.nix
     # ./wlogout/wlogout.nix
     ./xsettingsd.nix
     ./waybar/waybar.nix
