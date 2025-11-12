@@ -7,7 +7,7 @@
       "..3" = "cd ../../..";
       ff = "fastfetch";
       walker = "walker --height 300";
-      ls="eza --icons=always";
+      ls="eza --icons --group-directories-first -1";
       la="ls -a";
       ll="ls -la";
     };
