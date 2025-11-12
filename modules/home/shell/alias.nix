@@ -6,14 +6,16 @@
       "..." = "cd ../..";
       "..3" = "cd ../../..";
       ff = "fastfetch";
-      ga = "git add";
-      gc = "git commit -m";
-      gp = "git push";
-      gpl = "git pull";
       walker = "walker --height 300";
+      ls="eza --icons --group-directories-first -1";
+      la="ls -a";
+      ll="ls -la";
     };
     sessionVariables = {
       EDITOR = "nvim";
     };
+    packages = with pkgs;[
+    eza
+    ] ;
   };
 }

@@ -17,7 +17,11 @@
     matugen.url = "github:/InioX/matugen";
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     devsuite.url = "github:kmdtaufik/devsuite";
-    walker.url = "github:abenz1267/walker";
+    elephant.url = "github:abenz1267/elephant";
+    walker = {
+      url = "github:abenz1267/walker";
+      inputs.elephant.follows = "elephant";
+    };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       # IMPORTANT: we're using "libgbm" and is only available in unstable so ensure
@@ -29,7 +33,6 @@
     self,
     nixpkgs,
     home-manager,
-    nvf,
     ...
   }: let
     inherit (import ./settings.nix) username hostname system;
@@ -41,17 +44,7 @@
         android_sdk.accept_license = true;
       };
     };
-  in {
-    #Exposing packages
-    packages.${system} = {
-      default = self.packages.${system}.neovim;
-      neovim =
-        (nvf.lib.neovimConfiguration {
-          pkgs = nixpkgs.legacyPackages.${system};
-          modules = [./modules/pkgs/nvim];
-        }).neovim;
-    };
-
+  in { 
     nixosConfigurations = {
       "${hostname}" = nixpkgs.lib.nixosSystem {
         specialArgs = {
@@ -72,7 +65,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              backupFileExtension = ".backup";
+              backupFileExtension = "backup";
               users.${username} = import ./home.nix;
             };
           }

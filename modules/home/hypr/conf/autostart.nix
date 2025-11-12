@@ -1,7 +1,7 @@
 {
   wayland.windowManager.hyprland.settings.exec-once = [
-    "gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg"
-    "systemctl --user enable --now hyprpolkitagent.service"
+    # "gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg"
+    # "systemctl --user enable --now hyprpolkitagent.service"
     "hyprctl setcursor Bibata-Modern-Ice 24"
     "swaync"
     "elephant"

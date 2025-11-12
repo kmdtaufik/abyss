@@ -3,12 +3,6 @@
 in {
   programs.bash = {
     enable = true;
-    shellAliases = {
-      ls = "lsd";
-      ll = "ls -la";
-      la = "ls -a";
-    };
-
     initExtra = ''
       # Initialize bash completions
       #source ${pkgs.bash-completion}/share/bash_completion/bash_completion
@@ -34,7 +28,6 @@ in {
   home.packages = with pkgs; [
     bash-completion
     nix-bash-completions
-    lsd
   ];
 
   programs.starship.enableBashIntegration = true;

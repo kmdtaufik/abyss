@@ -9,57 +9,27 @@
     settings = {
       "$schema" = "https://starship.rs/config-schema.json";
 
-      palette = "catppuccin_mocha";
+      palette = "tokyonight_moon";
 
-      palettes.catppuccin_mocha = {
-        rosewater = "#f5e0dc";
-        flamingo = "#f2cdcd";
-        pink = "#f5c2e7";
-        mauve = "#cba6f7";
-        red = "#f38ba8";
-        maroon = "#eba0ac";
-        peach = "#fab387";
-        yellow = "#f9e2af";
-        green = "#a6e3a1";
-        teal = "#94e2d5";
-        sky = "#89dceb";
-        sapphire = "#74c7ec";
-        blue = "#89b4fa";
-        lavender = "#b4befe";
-        text = "#cdd6f4";
-        subtext1 = "#bac2de";
-        subtext0 = "#a6adc8";
-        overlay2 = "#9399b2";
-        overlay1 = "#7f849c";
-        overlay0 = "#6c7086";
-        surface2 = "#585b70";
-        surface1 = "#45475a";
-        surface0 = "#313244";
-        base = "#1e1e2e";
-        mantle = "#181825";
-        crust = "#11111b";
-      };
+      palettes.tokyonight_moon = {
+        foreground = "#c0caf5"; 
+        comment = "#565f89";  
+        selection = "#2e3c64";  
 
-      username = {
-        format = " [$user]($style)@";
-        show_always = true;
-        style_root = "bold red";
-        style_user = "bold mauve";
-      };
-
-      hostname = {
-        disabled = false;
-        format = "[$hostname]($style) in ";
-        ssh_only = false;
-        style = "bold maroon";
-        ssh_symbol = " ";
+        red = "#f7768e";       
+        orange = "#ff9e64";    
+        yellow = "#e0af68";    
+        green = "#9ece6a";     
+        purple = "#9d7cd8";    
+        cyan = "#7dcfff";      
+        pink = "#bb9af7";      
       };
 
       directory = {
-        style = "bold peach";
+        style = " bold cyan";
         truncate_to_repo = true;
         truncation_length = 0;
-        truncation_symbol = "repo: ";
+        # truncation_symbol = " ";
         read_only = "";
       };
 
@@ -70,18 +40,21 @@
       };
 
       sudo.disabled = false;
-
+      sudo.style = "bold red";
       git_status = {
         ahead = "\${count}";
         behind = "\${count}";
-        deleted = "x";
+        deleted = "x(red)";
         diverged = "\${ahead_count}\${behind_count}";
-        style = "text";
+        style = "foreground";
+        conflicted = "[≠](red)";
+        untracked = "[?](yellow)";
+        modified = "[~](orange)";
       };
 
       git_branch = {
         symbol = " ";
-        style = "bold green";
+        style = "bold purple";
       };
 
       nix_shell = {
@@ -91,7 +64,7 @@
 
       cmd_duration = {
         disabled = false;
-        style = "bold flamingo";
+        style = "bold orange";
         format = "took [$duration]($style)";
         show_milliseconds = true;
         show_notifications = true;
@@ -111,7 +84,7 @@
           }
           {
             disabled = true;
-            style = "bold peach";
+            style = "bold orange";
             threshold = 50;
           }
           {
@@ -135,9 +108,9 @@
       };
 
       os = {
-        disabled = false;
+        disabled = true;
         format = " [$symbol]($style)";
-        style = "bold mauve";
+        style = "bold pink";
         symbols = {
           Alpaquita = " ";
           Alpine = " ";
@@ -186,8 +159,9 @@
       };
 
       character = {
-        error_symbol = "";
         success_symbol = "❯(bold green)";
+        error_symbol ="(bold red)";
+        vimcmd_symbol= "V(bold purple)";
       };
 
       git_commit.tag_symbol = "  ";

@@ -10,15 +10,11 @@
   services.fstrim.enable = true;
   xdg.portal = {
     enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
+    extraPortals =with pkgs; [
       inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
-      pkgs.xdg-desktop-portal
     ];
     configPackages = [
-      pkgs.xdg-desktop-portal-gtk
-      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
-      pkgs.xdg-desktop-portal
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
     ];
   };
   services.pipewire = {
@@ -29,17 +25,15 @@
     jack.enable = true;
   };
   services.pulseaudio.enable = false;
-  #sound.enable = true;
+ #sound.enable = true;
   services.gvfs.enable = true;
   services.tumbler.enable = true;
   services.gnome.gnome-keyring.enable = true;
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   security.pam.services.hyprlock = {
-    enable = true;
     enableGnomeKeyring = true;
   };
-
   services.auto-cpufreq.enable = true;
   # security.pam.services.hyprlock = {
   #   text = ''
