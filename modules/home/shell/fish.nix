@@ -17,7 +17,6 @@ in {
       fish_greeting = {
         body = ''
           #colorscheme
-          #source $__fish_config_dir/themes/tokyonight_storm.fish 
           # -----------------------------------------------------
           # Fastfetch
           # -----------------------------------------------------
@@ -25,7 +24,9 @@ in {
         '';
       };
     };
-    shellInit = '''';
+    shellInit = ''
+        set -g fish_color_param 00ffff
+    '';
 
   };
   xdg.configFile."fish/themes"={
@@ -35,5 +36,7 @@ in {
   };
   programs.starship.enableFishIntegration = true;
   programs.zoxide.enableFishIntegration = true;
-  stylix.targets.fish.enable = true;
+  stylix.targets.fish = {
+    enable = true;
+  };
 }
