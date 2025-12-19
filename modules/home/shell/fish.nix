@@ -17,7 +17,7 @@ in {
       fish_greeting = {
         body = ''
           #colorscheme
-          source $__fish_config_dir/themes/tokyonight_storm.fish 
+          #source $__fish_config_dir/themes/tokyonight_storm.fish 
           # -----------------------------------------------------
           # Fastfetch
           # -----------------------------------------------------
@@ -29,9 +29,11 @@ in {
 
   };
   xdg.configFile."fish/themes"={
+    enable = false;
     source = ./themes;
     recursive = true;
   };
   programs.starship.enableFishIntegration = true;
   programs.zoxide.enableFishIntegration = true;
+  stylix.targets.fish.enable = true;
 }
