@@ -1,32 +1,26 @@
 {pkgs, ...}: {
   gtk = {
     enable = true;
-    /*
-    theme = {
-      name = "Adwaita:Dark";
-      package = pkgs.libadwaita;
-    };
-    */
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
-    font = {
-      name = "Cantarell";
-      size = 11;
-      package = pkgs.cantarell-fonts;
-    };
+    # font = {
+    #   name = "Cantarell";
+    #   size = 11;
+    #   package = pkgs.cantarell-fonts;
+    # };
     cursorTheme = {
       name = "Bibata-Modern-Ice";
       size = 24;
       package = pkgs.bibata-cursors;
     };
     gtk3.extraConfig = {
-      gtk-theme-name = "Adwaita:Dark";
-      #gtk-icon-theme-name = "Papirus";
-      #gtk-font-name = "Cantarell 11";
-      #gtk-cursor-theme-name = "Bibata-Modern-Ice";
-      #gtk-cursor-theme-size = 24;
+    #   gtk-theme-name = "Adwaita:Dark";
+    #   #gtk-icon-theme-name = "Papirus";
+    #   #gtk-font-name = "Cantarell 11";
+    #   #gtk-cursor-theme-name = "Bibata-Modern-Ice";
+    #   #gtk-cursor-theme-size = 24;
       gtk-toolbar-style = "GTK_TOOLBAR_ICONS";
       gtk-toolbar-icon-size = "GTK_ICON_SIZE_LARGE_TOOLBAR";
       gtk-button-images = 0;
@@ -39,14 +33,14 @@
       gtk-xft-rgba = "rgb";
       gtk-application-prefer-dark-theme = 1;
     };
-    gtk3.extraCss = ''
-      @import 'colors.css';
-    '';
     gtk4.extraConfig = {
       gtk-application-prefer-dark-theme = true;
     };
-
-    gtk4.extraCss = ''
-      @import 'colors.css';'';
+  };
+  stylix.targets.gtk = {
+    enable = true; 
+  };
+  dconf.settings."org/gnome/desktop/wm/preferences" = {
+      button-layout=":";
   };
 }
