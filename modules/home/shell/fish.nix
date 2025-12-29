@@ -12,6 +12,9 @@ in {
       gpl = "git pull ";
       gd = "git diff ";
       gb = "git branch ";
+      #nix
+      ns ="nix-shell -p";
+
     };
     functions = {
       fish_greeting = {
