@@ -1,7 +1,6 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   # Install swappy via home.packages
-  home.packages = with pkgs; [ swappy ];
+  home.packages = with pkgs; [swappy];
 
   # Place the swappy configuration file at ~/.config/swappy/config
   home.file.".config/swappy/config".text = ''

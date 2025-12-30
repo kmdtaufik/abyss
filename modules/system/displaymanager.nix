@@ -19,7 +19,7 @@ in {
     libinput.enable = true;
     displayManager.sddm = {
       package = pkgs.kdePackages.sddm;
-      extraPackages= with pkgs;[ sddm-astronaut ];
+      extraPackages = with pkgs; [sddm-astronaut];
       enable = true;
       autoNumlock = true;
       wayland.enable = true;
@@ -28,10 +28,10 @@ in {
   };
 
   environment.systemPackages = let
-sddm-astronaut= pkgs.sddm-astronaut.override{
-    embeddedTheme = "japanese_aesthetic";
-  };
-  in  [
-  sddm-astronaut
+    sddm-astronaut = pkgs.sddm-astronaut.override {
+      embeddedTheme = "japanese_aesthetic";
+    };
+  in [
+    sddm-astronaut
   ];
 }

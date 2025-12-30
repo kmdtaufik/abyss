@@ -1,7 +1,8 @@
 {
   services.xsettingsd = {
     enable = true;
-    settings = # conf
+    settings =
+      # conf
       {
         "Net/ThemeName" = "Adwaita";
         "Net/IconThemeName" = "Papirus-Dark";

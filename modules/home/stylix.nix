@@ -1,10 +1,13 @@
-{pkgs,config,...}:
 {
-  stylix={
+  pkgs,
+  config,
+  ...
+}: {
+  stylix = {
     targets = {
-     btop.enable = true;
-     bat.enable = true;
-     fzf.enable = true;
+      btop.enable = true;
+      bat.enable = true;
+      fzf.enable = true;
     };
   };
 }

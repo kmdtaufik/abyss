@@ -4,7 +4,7 @@
     settings = {
       general = {
         ignore_empty_input = true;
-        fail_transition=300;
+        fail_transition = 300;
       };
 
       background = [

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.btop = {
     enable = true;
     package = pkgs.btop.override {
@@ -6,7 +6,7 @@
       cudaSupport = true;
     };
     settings = {
-      theme_background=false;
+      theme_background = false;
       vim_keys = true;
       rounded_corners = true;
       proc_tree = true;
@@ -21,4 +21,3 @@
     };
   };
 }
-

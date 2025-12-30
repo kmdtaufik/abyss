@@ -20,7 +20,6 @@
       fd
       lazygit
       nixd
-     
     ];
   };
 }

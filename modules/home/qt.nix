@@ -1,6 +1,7 @@
 {
   qt.enable = true;
-  xdg.configFile."qt6ct/qt6ct.conf".text = # conf
+  xdg.configFile."qt6ct/qt6ct.conf".text =
+    # conf
     ''
       [Appearance]
       color_scheme_path=/usr/share/qt6ct/colors/darker.conf

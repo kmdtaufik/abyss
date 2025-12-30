@@ -4,7 +4,7 @@
   #Templates config
   xdg.configFile = {
     "wal/templates" = {
-      enable=false;
+      enable = false;
       source = ./templates;
       recursive = true;
     };

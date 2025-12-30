@@ -10,7 +10,7 @@
   services.fstrim.enable = true;
   xdg.portal = {
     enable = true;
-    extraPortals =with pkgs; [
+    extraPortals = with pkgs; [
       inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
     ];
     configPackages = [
@@ -25,7 +25,7 @@
     jack.enable = true;
   };
   services.pulseaudio.enable = false;
- #sound.enable = true;
+  #sound.enable = true;
   services.gvfs.enable = true;
   services.tumbler.enable = true;
   services.gnome.gnome-keyring.enable = true;

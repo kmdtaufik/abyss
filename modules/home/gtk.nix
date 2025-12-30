@@ -16,11 +16,11 @@
       package = pkgs.bibata-cursors;
     };
     gtk3.extraConfig = {
-    #   gtk-theme-name = "Adwaita:Dark";
-    #   #gtk-icon-theme-name = "Papirus";
-    #   #gtk-font-name = "Cantarell 11";
-    #   #gtk-cursor-theme-name = "Bibata-Modern-Ice";
-    #   #gtk-cursor-theme-size = 24;
+      #   gtk-theme-name = "Adwaita:Dark";
+      #   #gtk-icon-theme-name = "Papirus";
+      #   #gtk-font-name = "Cantarell 11";
+      #   #gtk-cursor-theme-name = "Bibata-Modern-Ice";
+      #   #gtk-cursor-theme-size = 24;
       gtk-toolbar-style = "GTK_TOOLBAR_ICONS";
       gtk-toolbar-icon-size = "GTK_ICON_SIZE_LARGE_TOOLBAR";
       gtk-button-images = 0;
@@ -38,9 +38,9 @@
     };
   };
   stylix.targets.gtk = {
-    enable = true; 
+    enable = true;
   };
   dconf.settings."org/gnome/desktop/wm/preferences" = {
-      button-layout=":";
+    button-layout = ":";
   };
 }

@@ -12,17 +12,17 @@
       palette = "tokyonight_moon";
 
       palettes.tokyonight_moon = {
-        foreground = "#c0caf5"; 
-        comment = "#565f89";  
-        selection = "#2e3c64";  
+        foreground = "#c0caf5";
+        comment = "#565f89";
+        selection = "#2e3c64";
 
-        red = "#f7768e";       
-        orange = "#ff9e64";    
-        yellow = "#e0af68";    
-        green = "#9ece6a";     
-        purple = "#9d7cd8";    
-        cyan = "#7dcfff";      
-        pink = "#bb9af7";      
+        red = "#f7768e";
+        orange = "#ff9e64";
+        yellow = "#e0af68";
+        green = "#9ece6a";
+        purple = "#9d7cd8";
+        cyan = "#7dcfff";
+        pink = "#bb9af7";
       };
 
       directory = {
@@ -160,8 +160,8 @@
 
       character = {
         success_symbol = "❯(bold green)";
-        error_symbol ="(bold red)";
-        vimcmd_symbol= "V(bold purple)";
+        error_symbol = "(bold red)";
+        vimcmd_symbol = "V(bold purple)";
       };
 
       git_commit.tag_symbol = "  ";

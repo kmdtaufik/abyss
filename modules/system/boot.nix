@@ -2,8 +2,7 @@
   pkgs,
   config,
   ...
-}:
-{
+}: {
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -11,10 +10,9 @@
     "vm.max_map_count" = 2147483642;
   };
   /*
-    # This is for OBS Virtual Cam Support - v4l2loopback setup
-    boot.kernelModules = [ "v4l2loopback" ];
-    boot.extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
+  # This is for OBS Virtual Cam Support - v4l2loopback setup
+  boot.kernelModules = [ "v4l2loopback" ];
+  boot.extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
   */
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
 }

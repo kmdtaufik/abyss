@@ -51,7 +51,7 @@
         android_sdk.accept_license = true;
       };
     };
-  in { 
+  in {
     nixosConfigurations = {
       "${hostname}" = nixpkgs.lib.nixosSystem {
         specialArgs = {

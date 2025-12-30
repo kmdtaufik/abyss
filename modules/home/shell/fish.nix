@@ -3,7 +3,7 @@
 in {
   programs.fish = {
     enable = true;
-    
+
     shellAbbrs = {
       ga = "git add .";
       gc = "git commit -m ";
@@ -13,8 +13,7 @@ in {
       gd = "git diff ";
       gb = "git branch ";
       #nix
-      ns ="nix-shell -p";
-
+      ns = "nix-shell -p";
     };
     functions = {
       fish_greeting = {
@@ -28,9 +27,8 @@ in {
       };
     };
     shellInit = ''
-        set -g fish_color_param 00ffff
+      set -g fish_color_param 00ffff
     '';
-
   };
   programs.starship.enableFishIntegration = true;
   programs.zoxide.enableFishIntegration = true;

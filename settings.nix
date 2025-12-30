@@ -21,8 +21,8 @@ in {
   wallpaperDir = "${userHome}/wallpapers";
   flakeDir = "${userHome}/abyss";
   terminal = "kitty"; # This sets the terminal that is used by the hyprland terminal keybinding
-  
-  #wallpaper 
+
+  #wallpaper
   wallpaper = ./current_wallpaper.png;
   clock24h = true;
   theLocale = "en_US.UTF-8";
