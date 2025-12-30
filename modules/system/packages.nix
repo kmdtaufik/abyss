@@ -40,7 +40,6 @@
     libgcc
     yad
     playerctl
-    nh
     bat
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
@@ -68,6 +67,7 @@
     #   enableSSHSupport = false;
     # };
     virt-manager.enable = false;
+    bash.blesh.enable = true;
   };
 
   virtualisation.libvirtd.enable = false;
