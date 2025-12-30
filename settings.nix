@@ -1,11 +1,6 @@
-# PLEASE READ THE WIKI FOR DETERMINING
-# WHAT TO PUT HERE AS OPTIONS.
-# https://gitlab.com/Zaney/zaneyos/-/wikis/Setting-Options
 let
-  # THINGS YOU NEED TO CHANGE
   username = "kdx";
   userHome = "/home/${username}";
-  flakeDir = "${userHome}/zicronos";
 in {
   #Abyss
   cache-dir = "$HOME/.cache/abyss";
@@ -20,16 +15,15 @@ in {
   userHome = "${userHome}";
   hostname = "nixos";
   system = "x86_64-linux";
-
+  #git config
   gitUsername = "MD TAUFIK KHAN";
   gitEmail = "147173391+kmdtaufikx@users.noreply.github.com";
-  browser = "firefox";
-  # ^ (use as is or replace with your own repo - removing will break the wallsetter script)
   wallpaperDir = "${userHome}/wallpapers";
-  flakeDir = "${flakeDir}";
+  flakeDir = "${userHome}/abyss";
   terminal = "kitty"; # This sets the terminal that is used by the hyprland terminal keybinding
-
-  # System Settings
+  
+  #wallpaper 
+  wallpaper = ./current_wallpaper.png;
   clock24h = true;
   theLocale = "en_US.UTF-8";
   theKBDLayout = "us";
@@ -47,13 +41,4 @@ in {
   # SYSTEMS!
   intel-bus-id = "PCI:1:0:0";
   nvidia-bus-id = "PCI:0:2:0";
-
-  # Enable / Setup NFS
-  nfs = false;
-  nfsMountPoint = "/mnt/nas";
-  nfsDevice = "nas:/volume1/nas";
-
-  # NTP & HWClock Settings
-  ntp = true;
-  localHWClock = false;
 }

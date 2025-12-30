@@ -57,6 +57,8 @@ in {
         "adbusers"
         "libvirtd"
         "kvm"
+        "dialout"
+        "uucp"
       ];
       shell = pkgs."${theShell}";
       ignoreShellProgramCheck = true;
@@ -65,7 +67,7 @@ in {
   };
 
   environment.variables = {
-    FLAKE = "${flakeDir}";
+    NH_FLAKE = "${flakeDir}";
     # POLKIT_BIN = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
   };
 

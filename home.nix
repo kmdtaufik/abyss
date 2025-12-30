@@ -87,6 +87,7 @@ in {
     libreoffice
     croc
     papers
+    anytype
   ];
   programs = {
     gh.enable = true;
