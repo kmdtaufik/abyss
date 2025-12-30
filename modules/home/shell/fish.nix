@@ -32,11 +32,6 @@ in {
     '';
 
   };
-  xdg.configFile."fish/themes"={
-    enable = false;
-    source = ./themes;
-    recursive = true;
-  };
   programs.starship.enableFishIntegration = true;
   programs.zoxide.enableFishIntegration = true;
   stylix.targets.fish = {
