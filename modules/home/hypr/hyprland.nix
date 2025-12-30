@@ -6,7 +6,7 @@
     sourceFirst = true;
     settings = {
       monitor = [
-        ",preferred,auto,1"
+        "eDP-1,preferred,auto,1"
       ];
 
       source = [
@@ -48,7 +48,6 @@
           new_optimizations = "on";
           ignore_opacity = true;
           xray = true;
-          blurls = "waybar";
         };
 
         shadow = {

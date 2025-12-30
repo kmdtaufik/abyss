@@ -1,106 +1,88 @@
 {
   wayland.windowManager.hyprland.settings = {
-    windowrule = [
-      # Pavucontrol
-      "float,class:(.*org.pulseaudio.pavucontrol.*)"
-      "size 700 600,class:(.*org.pulseaudio.pavucontrol.*)"
-      "center,class:(.*org.pulseaudio.pavucontrol.*)"
-      "pin,class:(.*org.pulseaudio.pavucontrol.*)"
+    windowrule =[
+    # Pavucontrol
+    "match:class (.*org.pulseaudio.pavucontrol.*), float on"
+    "match:class (.*org.pulseaudio.pavucontrol.*), size 700 600"
+    "match:class (.*org.pulseaudio.pavucontrol.*), center on"
+    "match:class (.*org.pulseaudio.pavucontrol.*), pin on"
 
-      # ChatGPT
-      "float,title:(ChatGPT.*)"
-      "float,title:(.*chat.openai.com.*)"
-      "size 500 50%,title:(.*chat.openai.com.*)"
-      "move 20 70,title:(.*chat.openai.com.*)"
+    # ChatGPT
+    "match:title (ChatGPT.*), float on"
+    "match:title (.*chat.openai.com.*), float on"
+    "match:title (.*chat.openai.com.*), size 500 50%"
+    "match:title (.*chat.openai.com.*), move 20 70"
 
-      # Waypaper
-      "float,class:(.*waypaper.*)"
-      "size 900 700,class:(.*waypaper.*)"
-      "center,class:(.*waypaper.*)"
-      "pin,class:(.*waypaper.*)"
+    # Waypaper
+    "match:class (.*waypaper.*), float on"
+    "match:class (.*waypaper.*), size 900 700"
+    "match:class (.*waypaper.*), center on"
+    "match:class (.*waypaper.*), pin on"
 
-      # ML4W Apps
-      "float,class:(com.ml4w.calendar)"
-      "move 100%-w-16 66,class:(com.ml4w.calendar)"
-      "pin,class:(com.ml4w.calendar)"
-      "size 400 400,class:(com.ml4w.calendar)"
+    # Blueman
+    "match:class (blueman-manager), float on"
+    "match:class (blueman-manager), size 800 600"
+    "match:class (blueman-manager), center on"
 
-      "float,class:(com.ml4w.sidebar)"
-      "move 100%-w-16 66,class:(com.ml4w.sidebar)"
-      "pin,class:(com.ml4w.sidebar)"
-      "size 400 740,class:(com.ml4w.sidebar)"
+    # nwg-look
+    "match:class (nwg-look), float on"
+    "match:class (nwg-look), size 700 600"
+    "match:class (nwg-look), move 10% 20%"
+    "match:class (nwg-look), pin on"
 
-      "float,class:(com.ml4w.welcome)"
-      "size 700 600,class:(com.ml4w.welcome)"
-      "center,class:(com.ml4w.welcome)"
-      "pin,class:(com.ml4w.welcome)"
+    # nwg-displays
+    "match:class (nwg-displays), float on"
+    "match:class (nwg-displays), size 1000 600"
+    "match:class (nwg-displays), center on"
+    "match:class (nwg-displays), pin on"
 
-      "float,class:(com.ml4w.settings)"
-      "size 800 600,class:(com.ml4w.settings)"
-      "move 10% 20%,class:(com.ml4w.settings)"
+    # Mission Center
+    "match:class (io.missioncenter.MissionCenter), float on"
+    "match:class (io.missioncenter.MissionCenter), pin on"
+    "match:class (io.missioncenter.MissionCenter), center on"
+    "match:class (io.missioncenter.MissionCenter), size 900 600"
+    
+    # Combined props (Note: no comma between matches, comma before effect)
+    "match:class (missioncenter) match:title:^(Preferences)$, float on"
+    "match:class (missioncenter) match:title:^(Preferences)$, pin on"
+    "match:class (missioncenter) match:title:^(Preferences)$, center on"
 
-      # Blueman
-      "float,class:(blueman-manager)"
-      "size 800 600,class:(blueman-manager)"
-      "center,class:(blueman-manager)"
+    # Calculator
+    "match:class (org.gnome.Calculator), float on"
+    "match:class (org.gnome.Calculator), size 700 600"
+    "match:class (org.gnome.Calculator), center on"
 
-      # nwg-look
-      "float,class:(nwg-look)"
-      "size 700 600,class:(nwg-look)"
-      "move 10% 20%,class:(nwg-look)"
-      "pin,class:(nwg-look)"
+    # Emoji Picker
+    # "match:class (it.mijorus.smile), float on"
+    # "match:class (it.mijorus.smile), pin on"
+    "match:class (it.mijorus.smile), float on, pin on, move monitor_w-230 90, size 320 409"
 
-      # nwg-displays
-      "float,class:(nwg-displays)"
-      "size 900 600,class:(nwg-displays)"
-      "move 10% 20%,class:(nwg-displays)"
-      "pin,class:(nwg-displays)"
+    # Hyprland Share
+    "match:class (hyprland-share-picker), float on"
+    "match:class (hyprland-share-picker), pin on"
+    "match:class (hyprland-share-picker), center on"
+    "match:class (hyprland-share-picker), size 600 400"
 
-      # Mission Center
-      "float,class:(io.missioncenter.MissionCenter)"
-      "pin,class:(io.missioncenter.MissionCenter)"
-      "center,class:(io.missioncenter.MissionCenter)"
-      "size 900 600,class:(io.missioncenter.MissionCenter)"
-      "float,class:(missioncenter),title:^(Preferences)$"
-      "pin,class:(missioncenter),title:^(Preferences)$"
-      "center,class:(missioncenter),title:^(Preferences)$"
+    # General Floating
+    "match:class (dotfiles-floating), float on"
+    "match:class (dotfiles-floating), size 1000 700"
+    "match:class (dotfiles-floating), center on"
 
-      # Calculator
-      "float,class:(org.gnome.Calculator)"
-      "size 700 600,class:(org.gnome.Calculator)"
-      "center,class:(org.gnome.Calculator)"
-
-      # Emoji Picker
-      "float,class:(it.mijorus.smile)"
-      "pin,class:(it.mijorus.smile)"
-      "move 100%-w-40 90,class:(it.mijorus.smile)"
-
-      # Hyprland Share
-      "float,class:(hyprland-share-picker)"
-      "pin,class:(hyprland-share-picker)"
-      "center,title:class:(hyprland-share-picker)"
-      "size 600 400,class:(hyprland-share-picker)"
-
-      # General Floating
-      "float,class:(dotfiles-floating)"
-      "size 1000 700,class:(dotfiles-floating)"
-      "center,class:(dotfiles-floating)"
-
-      # Ghostty
-      "float,class:(ml4w.dotfiles.floating)"
-      "size 1000 700,class:(ml4w.dotfiles.floating)"
-      "center,class:(ml4w.dotfiles.floating)"
-      "pin,class:(ml4w.dotfiles.floating)"
-    ];
+    # Ghostty
+    "match:class (ml4w.dotfiles.floating), float on"
+    "match:class (ml4w.dotfiles.floating), size 1000 700"
+    "match:class (ml4w.dotfiles.floating), center on"
+    "match:class (ml4w.dotfiles.floating), pin on"
+  ];
 
     layerrule = [
       # SwayNC
-      "blur, swaync-control-center"
-      "blur, swaync-notification-window"
-      "ignorezero, swaync-control-center"
-      "ignorezero, swaync-notification-window"
-      "ignorealpha 0.5, swaync-control-center"
-      "ignorealpha 0.5, swaync-notification-window"
+      "match:namespace swaync-control-center,blur on"
+      "ignore_alpha 0.5, match:namespace swaync-control-center"
+      "match:namespace swaync-notification-window,blur on"
+      "ignore_alpha 0.5,match:namespace swaync-notification-window"
+      "match:namespace waybar, blur on,ignore_alpha 0.5"
+      # "match:namespace waybar, ignore_alpha 0.5"
     ];
   };
 }

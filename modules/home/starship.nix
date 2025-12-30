@@ -100,11 +100,11 @@
         format = "[\[$symbol$status_common_meaning$status_signal_name$status_maybe_int\]]($style)";
         map_symbol = true;
         pipestatus = true;
-        symbol = "✖";
+        symbol = "󰞇";
         not_executable_symbol = "";
         not_found_symbol = "";
         sigint_symbol = "󰟾";
-        signal_symbol = "";
+        signal_symbol = "";
       };
 
       os = {

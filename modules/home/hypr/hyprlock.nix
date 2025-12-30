@@ -4,6 +4,7 @@
     settings = {
       general = {
         ignore_empty_input = true;
+        fail_transition=300;
       };
 
       background = [
@@ -33,7 +34,6 @@
           check_color = "rgb(204, 136, 34)";
           fail_color = "rgb(204, 34, 34)"; # if authentication failed, changes outer_color and fail message color
           fail_text = "<i>$FAIL <b>($ATTEMPTS)</b></i>"; # can be set to empty
-          fail_transition = 300; # transition time in ms between normal outer_color and fail_color
           capslock_color = -1;
           numlock_color = -1;
           bothlock_color = -1; # when both locks are active. -1 means don't change outer color
@@ -52,7 +52,7 @@
       label = [
         {
           monitor = "";
-          text = "cmd[update:1000] echo \"$TIME\"";
+          text = "cmd[update:60000] echo \"$TIME\"";
           color = "rgba(200, 200, 200, 1.0)";
           font_size = 55;
           font_family = "Fira Semibold";

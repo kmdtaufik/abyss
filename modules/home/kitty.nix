@@ -30,6 +30,12 @@
       cursor_trail               = 1; 
     };
 
-    extraConfig = "include colors-matugen.conf";
+    # extraConfig = "include colors-matugen.conf";
   };
+  stylix.targets.kitty = {
+    enable = true;
+    opacity.enable = false;
+    };
+# CORRECT
+stylix.targets.kitty.fonts.enable = false;
 }

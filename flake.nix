@@ -28,11 +28,18 @@
       # to have it up-to-date or simply don't specify the nixpkgs input
       # inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
   outputs = inputs @ {
     self,
     nixpkgs,
+    stylix,
     home-manager,
+    spicetify-nix,
     ...
   }: let
     inherit (import ./settings.nix) username hostname system;
@@ -57,6 +64,7 @@
         modules = [
           ./system.nix
           home-manager.nixosModules.home-manager
+          stylix.nixosModules.stylix
           {
             home-manager.extraSpecialArgs = {
               inherit username;
