@@ -1,5 +1,6 @@
 {
   imports = [
+    ./stylix.nix
     ./shell/bash.nix
     ./shell/alias.nix
     ./shell/fish.nix
@@ -25,5 +26,6 @@
     ./swaync/swaync.nix
     ./zen.nix
     ./walker.nix
+    ./nh.nix
   ];
 }

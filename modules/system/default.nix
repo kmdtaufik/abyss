@@ -9,5 +9,6 @@
     ./services.nix
     ./security.nix
     ./gpg.nix
+    ./stylix.nix
   ];
 }
