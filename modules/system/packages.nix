@@ -7,7 +7,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.android_sdk.accept_license = true;
-
   # List System Programs
   environment.systemPackages = with pkgs; [
     jq
@@ -46,6 +45,7 @@
     qt6Packages.qt6ct
     lazygit
     networkmanagerapplet
+    vlc
   ];
 
   programs = {
