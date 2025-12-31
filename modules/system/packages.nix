@@ -45,7 +45,6 @@
     qt6Packages.qt6ct
     lazygit
     networkmanagerapplet
-    vlc
   ];
 
   programs = {
