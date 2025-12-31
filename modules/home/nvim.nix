@@ -30,6 +30,7 @@
       tectonic
       (lua5_1.withPackages (ps: with ps; [luarocks]))
       lua-language-server
+      tree-sitter
     ];
   };
 }
