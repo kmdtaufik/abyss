@@ -27,5 +27,6 @@
     ./zen.nix
     ./walker.nix
     ./nh.nix
+    ./direnv.nix
   ];
 }
