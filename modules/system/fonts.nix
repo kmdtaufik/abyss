@@ -8,5 +8,10 @@
     nerd-fonts.fira-mono
     fira-sans
     nerd-fonts.jetbrains-mono
+    # (google-fonts.override {
+    #   fonts = [
+    #     "Google Sans Flex"
+    #   ];
+    # })
   ];
 }
