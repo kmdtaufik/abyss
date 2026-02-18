@@ -39,7 +39,6 @@
     nixpkgs,
     stylix,
     home-manager,
-    spicetify-nix,
     ...
   }: let
     inherit (import ./settings.nix) username hostname system;

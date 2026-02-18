@@ -88,6 +88,8 @@ in {
     croc
     papers
     anytype
+    github-copilot-cli
+    gzip
   ];
   programs = {
     gh.enable = true;
