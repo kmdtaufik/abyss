@@ -10,5 +10,6 @@
     ./security.nix
     ./gpg.nix
     ./stylix.nix
+    ./nix-ld.nix
   ];
 }
