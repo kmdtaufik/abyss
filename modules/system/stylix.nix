@@ -4,6 +4,7 @@ in {
   stylix = {
     enable = true;
     autoEnable = false;
+    polarity = "dark";
     base16Scheme = {
       scheme = "Aurora Midnight";
       slug = "aurora-midnight";

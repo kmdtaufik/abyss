@@ -40,7 +40,12 @@
   stylix.targets.gtk = {
     enable = true;
   };
-  dconf.settings."org/gnome/desktop/wm/preferences" = {
-    button-layout = ":";
+  dconf.settings = {
+    "org/gnome/desktop/wm/preferences" = {
+      button-layout = ":";
+    };
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark"; # ADD THIS
+    };
   };
 }
