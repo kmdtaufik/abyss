@@ -1,7 +1,13 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
-    systemd.enable = false;
+    package = null;
+    portalPackage = null;
+    systemd = {
+      enable = true;
+      # enableXdgAutostart = true;
+      # variables = ["--all"];
+    };
     xwayland.enable = true;
     sourceFirst = true;
     settings = {

@@ -46,7 +46,7 @@
     lazygit
     networkmanagerapplet
   ];
-
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   programs = {
     dconf.enable = true;
     adb.enable = true;
@@ -57,7 +57,7 @@
       portalPackage =
         inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       xwayland.enable = true;
-      withUWSM = true;
+      # withUWSM = true;
     };
     fuse.userAllowOther = true;
     mtr.enable = true;
