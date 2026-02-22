@@ -6,7 +6,7 @@
     systemd = {
       enable = true;
       # enableXdgAutostart = true;
-      # variables = ["--all"];
+      variables = ["--all"];
     };
     xwayland.enable = true;
     sourceFirst = true;

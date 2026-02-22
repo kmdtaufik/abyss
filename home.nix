@@ -14,12 +14,9 @@ in {
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
   home.stateVersion = "25.11";
-  # Set The Colorscheme
-  # colorScheme = inputs.nix-colors.colorSchemes."${theme}";
 
   # Import Program Configurations
   imports = [
-    #inputs.nix-colors.homeManagerModules.default
     inputs.hyprland.homeManagerModules.default
     ./modules/home
   ];
@@ -47,7 +44,6 @@ in {
   home.packages = with pkgs; [
     google-chrome
     imagemagick
-    alacritty
     grim
     grimblast
     guvcview
@@ -64,11 +60,8 @@ in {
     trash-cli
     jp2a
     alejandra
-    cliphist
     superfile
     discord
-    ghostty
-    nwg-look
     smile
     nwg-displays
     libadwaita
@@ -85,12 +78,11 @@ in {
     duf
     ncdu
     libreoffice
-    croc
     papers
     anytype
     github-copilot-cli
     gzip
-    inputs.nix4gitbutler.packages.${pkgs.system}.default
+    inputs.nix4gitbutler.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
   programs = {
     gh.enable = true;

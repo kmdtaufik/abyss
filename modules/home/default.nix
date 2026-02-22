@@ -28,5 +28,6 @@
     ./walker.nix
     ./nh.nix
     ./direnv.nix
+    ./cliphist.nix
   ];
 }
