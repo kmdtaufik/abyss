@@ -90,6 +90,7 @@ in {
     anytype
     github-copilot-cli
     gzip
+    inputs.nix4gitbutler.packages.${pkgs.system}.default
   ];
   programs = {
     gh.enable = true;

@@ -32,7 +32,7 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    nix4gitbutler.url = "github:kmdtaufik/nix4gitbutler-cli";
   };
   outputs = inputs @ {
     self,
