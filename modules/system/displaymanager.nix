@@ -26,7 +26,10 @@ in {
       theme = "sddm-astronaut-theme";
     };
   };
-
+  #enable gnome keyring for sddm
+  security.pam.services = {
+    sddm.enableGnomeKeyring = true;
+  };
   environment.systemPackages = let
     sddm-astronaut = pkgs.sddm-astronaut.override {
       embeddedTheme = "japanese_aesthetic";
