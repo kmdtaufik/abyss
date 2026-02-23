@@ -5,5 +5,6 @@
     ./hyprlock.nix
     ./hyprland.nix
     ./hyprpolkit.nix
+    ./hyprsunset.nix
   ];
 }
