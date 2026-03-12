@@ -52,7 +52,7 @@
       label = [
         {
           monitor = "";
-          text = "cmd[update:60000] echo \"$TIME\"";
+          text = "$TIME";
           color = "rgba(200, 200, 200, 1.0)";
           font_size = 55;
           font_family = "Fira Semibold";
