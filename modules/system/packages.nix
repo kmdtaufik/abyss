@@ -50,7 +50,7 @@
   programs = {
     dconf.enable = true;
     adb.enable = true;
-    seahorse.enable = false;
+    seahorse.enable = true;
     hyprland = {
       enable = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
@@ -66,7 +66,6 @@
     #   enableSSHSupport = false;
     # };
     virt-manager.enable = false;
-    bash.blesh.enable = true;
   };
 
   virtualisation.libvirtd.enable = false;
