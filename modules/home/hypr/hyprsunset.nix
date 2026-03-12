@@ -6,7 +6,7 @@
       max-gamma = 150;
       profile = [
         {
-          time = "7:30";
+          time = "07:30";
           identity = true;
         }
         {
