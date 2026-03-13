@@ -45,11 +45,11 @@
     qt6Packages.qt6ct
     lazygit
     networkmanagerapplet
+    android-tools
   ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   programs = {
     dconf.enable = true;
-    adb.enable = true;
     seahorse.enable = true;
     hyprland = {
       enable = true;
