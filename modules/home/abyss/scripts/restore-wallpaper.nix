@@ -38,6 +38,6 @@ pkgs.writeShellApplication {
     # -----------------------------------------------------
 
     echo ":: Setting wallpaper with source image $wallpaper"
-    hyprctl hyprpaper reload ,"$wallpaper"
+    hyprctl hyprpaper wallpaper ,"$wallpaper"
   '';
 }
