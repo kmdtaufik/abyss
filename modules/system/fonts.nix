@@ -25,15 +25,18 @@
     };
   };
 in {
-  fonts.packages = with pkgs; [
-    lohit-fonts.bengali
-    noto-fonts
-    corefonts
-    font-awesome
-    nerd-fonts.fira-code
-    nerd-fonts.fira-mono
-    fira-sans
-    nerd-fonts.jetbrains-mono
-    google-sans-flex
-  ];
+  fonts.packages = with pkgs;
+    [
+      lohit-fonts.bengali
+      noto-fonts
+      corefonts
+      font-awesome
+      fira-sans
+      google-sans-flex
+    ] #Nerd-fonts
+    ++ (with pkgs.nerd-fonts; [
+      fira-code
+      fira-mono
+      jetbrains-mono
+    ]);
 }
