@@ -10,17 +10,7 @@
     #   size = 11;
     #   package = pkgs.cantarell-fonts;
     # };
-    cursorTheme = {
-      name = "Bibata-Modern-Ice";
-      size = 24;
-      package = pkgs.bibata-cursors;
-    };
     gtk3.extraConfig = {
-      #   gtk-theme-name = "Adwaita:Dark";
-      #   #gtk-icon-theme-name = "Papirus";
-      #   #gtk-font-name = "Cantarell 11";
-      #   #gtk-cursor-theme-name = "Bibata-Modern-Ice";
-      #   #gtk-cursor-theme-size = 24;
       gtk-toolbar-style = "GTK_TOOLBAR_ICONS";
       gtk-toolbar-icon-size = "GTK_ICON_SIZE_LARGE_TOOLBAR";
       gtk-button-images = 0;
@@ -31,10 +21,6 @@
       gtk-xft-hinting = 1;
       gtk-xft-hintstyle = "hintslight";
       gtk-xft-rgba = "rgb";
-      gtk-application-prefer-dark-theme = 1;
-    };
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme = true;
     };
   };
   stylix.targets.gtk = {
