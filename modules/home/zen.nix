@@ -76,6 +76,7 @@
         "@searchengineadremover" = "searchengineadremover";
         "jid1-BoFifL9Vbdl2zQ@jetpack" = "decentraleyes";
         "uBlock0@raymondhill.net" = "ublock-origin";
+        "{446900e4-71c2-419f-a6a7-df9c091e268b}" = "bitwarden-password-manager";
       };
       Preferences = mkLockedAttrs {
         "browser.tabs.warnOnClose" = false;
