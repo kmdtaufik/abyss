@@ -1,6 +1,4 @@
-{pkgs, ...}: let
-  inherit (import ../../settings.nix) wallpaper;
-in {
+{pkgs, ...}: {
   stylix = {
     enable = true;
     autoEnable = false;
@@ -34,6 +32,20 @@ in {
       base0D = "00aeff"; # Electric Blue
       base0E = "b700ff"; # Ultraviolet
       base0F = "ff00cc"; # Hot Fuchsia
+    };
+    cursor = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
+      size = 24;
+    };
+    fonts = {
+      monospace = {
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "Jetbrains Mono";
+      };
+      sansSerif = {
+        name = "Google Sans Flex";
+      };
     };
   };
 }
