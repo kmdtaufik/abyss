@@ -31,6 +31,8 @@ pkgs.writeShellApplication {
     notify "🖼️ Wallpaper Setup" "Processing image..." 10
 
     magick "$input" -quality 100 "$current_wallpaper"
+    sleep 1
+    restore-wallpaper
     notify "✅ Wallpaper" "Saved to $current_wallpaper" 30
 
     magick "$current_wallpaper" -resize 75% -blur "$blur_strength" "$blurred_wallpaper"
