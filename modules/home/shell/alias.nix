@@ -18,4 +18,5 @@
       eza
     ];
   };
+  programs.carapace.enable = true;
 }

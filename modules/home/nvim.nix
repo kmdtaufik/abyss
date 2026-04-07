@@ -17,6 +17,7 @@
       tree-sitter
       python3
       nodejs_24
+      clang-tools
     ];
   };
 }
