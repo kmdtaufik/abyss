@@ -32,7 +32,10 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix4gitbutler.url = "github:kmdtaufik/nix4gitbutler-cli";
+    nix4gitbutler = {
+      url = "github:kmdtaufik/nix4gitbutler";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs @ {
     self,

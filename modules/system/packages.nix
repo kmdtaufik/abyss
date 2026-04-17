@@ -46,6 +46,9 @@
     lazygit
     networkmanagerapplet
     android-tools
+    ntfs3g
+    localsend
+    mission-center
   ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   programs = {

@@ -19,7 +19,7 @@
       "$mainMod, F, fullscreen"
       "$mainMod ALT, T, togglefloating"
       "$mainMod SHIFT, T, exec, toggle-floating" # Float all windows
-      "$mainMod, J, togglesplit"
+      # "$mainMod, J, togglesplit"
       "$mainMod, left, movefocus, l"
       "$mainMod, right, movefocus, r"
       "$mainMod, up, movefocus, u"
@@ -29,7 +29,7 @@
       "$mainMod SHIFT, down, resizeactive, 0 100"
       "$mainMod SHIFT, up, resizeactive, 0 -100"
       "$mainMod, G, togglegroup"
-      "$mainMod, K, swapsplit"
+      # "$mainMod, K, swapsplit"
 
       # Actions
       " , PRINT, exec, screenshot"

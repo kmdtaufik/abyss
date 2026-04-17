@@ -1,9 +1,7 @@
 {
-  config,
   pkgs,
   inputs,
   username,
-  packages,
   ...
 }: let
   inherit

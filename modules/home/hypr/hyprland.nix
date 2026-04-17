@@ -20,7 +20,7 @@
         "~/.config/hypr/colors.conf"
       ];
       cursor = {
-        no_hardware_cursors = true;
+        no_hardware_cursors = false;
       };
       input = {
         numlock_by_default = true;
@@ -52,7 +52,7 @@
           enabled = true;
           size = 6;
           passes = 2;
-          new_optimizations = "on";
+          new_optimizations = true;
           ignore_opacity = true;
           xray = true;
         };
