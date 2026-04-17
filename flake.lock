@@ -858,11 +858,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1775840495,
-        "narHash": "sha256-k2Uh6QosbdQeuf/7EkqpD/Kadqwr+KuZp1hrLqNVRlE=",
+        "lastModified": 1776441051,
+        "narHash": "sha256-g0QspSTrNvKKS92oXU+0LmJlnVXVyLIfIZippVdbuC8=",
         "owner": "kmdtaufik",
         "repo": "nix4gitbutler",
-        "rev": "51812dbda6643bc45c30374c0a30de8e4106e20e",
+        "rev": "7229925484f7c399ebf67f46fd9d399a303b2622",
         "type": "github"
       },
       "original": {
