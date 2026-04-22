@@ -40,15 +40,16 @@
     yad
     playerctl
     bat
-    libsForQt5.qt5.qtwayland
-    kdePackages.qtwayland
-    qt6Packages.qt6ct
+    # libsForQt5.qt5.qtwayland
+    # kdePackages.qtwayland
+    # qt6Packages.qt6ct
     lazygit
     networkmanagerapplet
     android-tools
   ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   programs = {
+    kdeconnect.enable = true;
     dconf.enable = true;
     seahorse.enable = true;
     hyprland = {
