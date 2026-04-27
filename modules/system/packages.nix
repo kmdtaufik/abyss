@@ -40,20 +40,14 @@
     yad
     playerctl
     bat
-    # libsForQt5.qt5.qtwayland
-    # kdePackages.qtwayland
-    # qt6Packages.qt6ct
     lazygit
     networkmanagerapplet
     android-tools
-<<<<<<< ours
     ouch
-||||||| ancestor
-=======
     ntfs3g
     localsend
     mission-center
->>>>>>> theirs
+    inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   programs = {
