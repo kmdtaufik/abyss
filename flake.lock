@@ -858,27 +858,11 @@
         ]
       },
       "locked": {
-<<<<<<< ours
         "lastModified": 1776838552,
         "narHash": "sha256-C7Ry+GAOo+4E0miqDfwcNv79PplYvT5iiFi4eiQiOA8=",
-||||||| ancestor
-        "lastModified": 1772196454,
-        "narHash": "sha256-rVPOPRx7ree/mop3ivZkVVDE0lngysriA1dMGhngO8A=",
-=======
-        "lastModified": 1776441051,
-        "narHash": "sha256-g0QspSTrNvKKS92oXU+0LmJlnVXVyLIfIZippVdbuC8=",
->>>>>>> theirs
         "owner": "kmdtaufik",
-<<<<<<< ours
         "repo": "nix4gitbutler",
         "rev": "7c5df32af97bac78d921c4dde55c1db17c5288bc",
-||||||| ancestor
-        "repo": "nix4gitbutler-cli",
-        "rev": "d6ef877c009d5601a877f92a878e1f6e389e33f1",
-=======
-        "repo": "nix4gitbutler",
-        "rev": "7229925484f7c399ebf67f46fd9d399a303b2622",
->>>>>>> theirs
         "type": "github"
       },
       "original": {
@@ -1077,6 +1061,26 @@
         "type": "github"
       }
     },
+    "quickshell": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1777282719,
+        "narHash": "sha256-TPpqjcrxZT3qxwzwXa/hOxwWodmoKllcf4SzhrzbWLQ=",
+        "ref": "refs/heads/master",
+        "rev": "0d61473580fb93005371becf78b08fff3eed94fd",
+        "revCount": 812,
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      }
+    },
     "root": {
       "inputs": {
         "devsuite": "devsuite",
@@ -1088,6 +1092,7 @@
         "matugen": "matugen",
         "nix4gitbutler": "nix4gitbutler",
         "nixpkgs": "nixpkgs_5",
+        "quickshell": "quickshell",
         "stylix": "stylix",
         "walker": "walker",
         "zen-browser": "zen-browser"
