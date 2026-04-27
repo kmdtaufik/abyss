@@ -47,7 +47,6 @@
     ntfs3g
     localsend
     mission-center
-    inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   programs = {
