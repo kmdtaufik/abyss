@@ -6,7 +6,7 @@
       name = "JetBrainsMono Nerd Font";
       size = 12;
     };
-    shellIntegration.mode = null;
+    shellIntegration.mode = "no-cursor";
     settings = {
       bold_font = "auto";
       italic_font = "auto";
@@ -26,8 +26,8 @@
       confirm_os_window_close = 0;
       selection_foreground = "none";
       selection_background = "none";
-
-      cursor_trail = 1;
+      cursor_shape = "beam";
+      # cursor_trail = 1;
     };
 
     # extraConfig = "include colors-matugen.conf";
