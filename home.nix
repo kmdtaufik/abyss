@@ -55,7 +55,6 @@ in {
     tldr
     ffmpeg
     zip
-    trash-cli
     jp2a
     alejandra
     superfile

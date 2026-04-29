@@ -10,12 +10,14 @@
       la = "ls -a";
       ll = "ls -la";
       cl = "clear";
+      rm = "trash";
     };
     sessionVariables = {
       EDITOR = "nvim";
     };
     packages = with pkgs; [
       eza
+      trashy
     ];
   };
   programs.carapace.enable = true;
