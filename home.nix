@@ -39,48 +39,52 @@ in {
   #};
   #};
   # Install Packages For The User
-  home.packages = with pkgs; [
-    google-chrome
-    imagemagick
-    grim
-    grimblast
-    guvcview
-    slurp
-    nautilus
-    nautilus-open-any-terminal
-    imv
-    mpv
-    pavucontrol
-    tree
-    tldr
-    ffmpeg
-    zip
-    jp2a
-    alejandra
-    superfile
-    discord
-    smile
-    nwg-displays
-    libadwaita
-    adwaita-icon-theme
-    adwaita-qt
-    adwaita-qt6
-    glib
-    qt6.qtwayland
-    qt5.qtwayland
-    qt6.qtbase
-    qt6.qtdeclarative
-    qt6.qtsvg
-    qt6.qttools
-    duf
-    ncdu
-    libreoffice
-    papers
-    anytype
-    github-copilot-cli
-    gzip
-    inputs.nix4gitbutler.packages.${pkgs.stdenv.hostPlatform.system}.default
-  ];
+  home.packages = with pkgs;
+    [
+      google-chrome
+      imagemagick
+      grim
+      grimblast
+      guvcview
+      slurp
+      nautilus
+      nautilus-open-any-terminal
+      imv
+      mpv
+      pavucontrol
+      tree
+      tldr
+      ffmpeg
+      zip
+      jp2a
+      alejandra
+      superfile
+      discord
+      smile
+      nwg-displays
+      libadwaita
+      adwaita-icon-theme
+      adwaita-qt
+      adwaita-qt6
+      glib
+      qt6.qtwayland
+      qt5.qtwayland
+      qt6.qtbase
+      qt6.qtdeclarative
+      qt6.qtsvg
+      qt6.qttools
+      duf
+      ncdu
+      libreoffice
+      papers
+      anytype
+      github-copilot-cli
+      gzip
+      inputs.nix4gitbutler.packages.${pkgs.stdenv.hostPlatform.system}.default
+    ]
+    ++ [
+      frida-tools
+    ];
   programs = {
     gh.enable = true;
     fzf.enable = true;
