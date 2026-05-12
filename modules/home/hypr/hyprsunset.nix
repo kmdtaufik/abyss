@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [hyprsunset];
   services.hyprsunset = {
-    enable = true;
+    enable = false;
     settings = {
       max-gamma = 150;
       profile = [
