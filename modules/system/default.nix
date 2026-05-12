@@ -11,5 +11,6 @@
     ./gpg.nix
     ./stylix.nix
     ./nix-ld.nix
+    ./podman.nix
   ];
 }
