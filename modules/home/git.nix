@@ -1,10 +1,17 @@
-let
-  inherit (import ../../settings.nix) gitUsername gitEmail;
-in  ;{
+{
   programs.git = {
     enable = true;
-    userEmail =${gitEmail} ;
-    userName =${gitUsername} ;
-    
+    settings = {
+      user = {
+        email = "147173391+kmdtaufik@users.noreply.github.com";
+        name = "Md Taufik Khan";
+      };
+
+      gpg.format = "ssh";
+    };
+    signing = {
+      key = "~/.ssh/id_ed25519_signing.pub";
+      signByDefault = true;
+    };
   };
 }

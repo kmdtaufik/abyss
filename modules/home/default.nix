@@ -29,5 +29,6 @@
     ./nh.nix
     ./direnv.nix
     ./cliphist.nix
+    ./git.nix
   ];
 }
