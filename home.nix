@@ -79,8 +79,12 @@ in {
       papers
       anytype
       github-copilot-cli
+      claude-code-bin
       gzip
       inputs.nix4gitbutler.packages.${pkgs.stdenv.hostPlatform.system}.default
+      gnome-disk-utility
+      thunderbird-bin
+      age
     ]
     ++ [
       frida-tools
