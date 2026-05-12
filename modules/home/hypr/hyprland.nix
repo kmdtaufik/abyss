@@ -5,7 +5,7 @@
     portalPackage = null;
     systemd = {
       enable = true;
-      # enableXdgAutostart = true;
+      enableXdgAutostart = true;
       variables = ["--all"];
     };
     xwayland.enable = true;

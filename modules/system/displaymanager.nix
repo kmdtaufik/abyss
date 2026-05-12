@@ -29,6 +29,7 @@ in {
   #enable gnome keyring for sddm
   security.pam.services = {
     sddm.enableGnomeKeyring = true;
+    login.enableGnomeKeyring = true;
   };
   environment.systemPackages = let
     sddm-astronaut = pkgs.sddm-astronaut.override {
