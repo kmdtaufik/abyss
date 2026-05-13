@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  settings = import ../../../../../settings.nix;
+  settings = import ../../../../settings.nix;
 in
   pkgs.writeShellApplication {
     name = "screenshot";
