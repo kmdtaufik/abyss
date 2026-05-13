@@ -1,13 +1,7 @@
 {
-  pkgs,
-  inputs,
   username,
   ...
-}: let
-  inherit
-    (import ./settings.nix)
-    ;
-in {
+}: {
   # Home Manager Settings
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
@@ -15,85 +9,46 @@ in {
 
   # Import Program Configurations
   imports = [
-    inputs.hyprland.homeManagerModules.default
     ./modules/home
   ];
 
-  # Define Settings For Xresources
-  # xresources.properties = {
-  #"Xcursor.size" = 24;
-  #};
-
-  # Create XDG Dirs
-  xdg = {
-    userDirs = {
-      enable = true;
-      createDirectories = true;
-    };
-  };
-
-  #dconf.settings = {
-  #"org/virt-manager/virt-manager/connections" = {
-  # autoconnect = [ "qemu:///system" ];
-  # uris = [ "qemu:///system" ];
-  #};
-  #};
-  # Install Packages For The User
-  home.packages = with pkgs;
-    [
-      google-chrome
-      imagemagick
-      grim
-      grimblast
-      guvcview
-      slurp
-      nautilus
-      nautilus-open-any-terminal
-      imv
-      mpv
-      pavucontrol
-      tree
-      tldr
-      ffmpeg
-      zip
-      jp2a
-      alejandra
-      superfile
-      discord
-      smile
-      nwg-displays
-      libadwaita
-      adwaita-icon-theme
-      adwaita-qt
-      adwaita-qt6
-      glib
-      qt6.qtwayland
-      qt5.qtwayland
-      qt6.qtbase
-      qt6.qtdeclarative
-      qt6.qtsvg
-      qt6.qttools
-      duf
-      ncdu
-      libreoffice
-      papers
-      anytype
-      github-copilot-cli
-      claude-code-bin
-      gzip
-      inputs.nix4gitbutler.packages.${pkgs.stdenv.hostPlatform.system}.default
-      gnome-disk-utility
-      thunderbird-bin
-      age
-    ]
-    ++ [
-      frida-tools
-    ];
-  programs = {
+  modules = {
+    alacritty.enable = true;
+    btop.enable = true;
+    cliphist.enable = true;
+    devsuite.enable = true;
+    direnv.enable = true;
+    fastfetch.enable = true;
+    git.enable = true;
     gh.enable = true;
     fzf.enable = true;
     obsidian.enable = true;
+    gtk.enable = true;
+    hyprland.enable = true;
+    kitty.enable = true;
+    nh.enable = true;
+    nvim.enable = true;
+    qt.enable = true;
+    qutebrowser.enable = true;
+    rofi.enable = true;
+    spotify.enable = true;
+    ssh.enable = true;
+    starship.enable = true;
+    shellAliases.enable = true;
+    stylix.enable = true;
+    swappy.enable = true;
+    swaync.enable = true;
+    walker.enable = true;
+    waybar.enable = true;
+    xsettingsd.enable = true;
+    zen.enable = true;
+    zoxide.enable = true;
+    matugen.enable = true;
+    pywal.enable = true;
+    abyss.enable = true;
+    bash.enable = true;
+    fish.enable = true;
   };
+
   programs.home-manager.enable = true;
-  services.kdeconnect.enable = false;
 }
