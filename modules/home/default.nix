@@ -1,34 +1,13 @@
 {
   imports = [
-    ./stylix.nix
-    ./shell/bash.nix
-    ./shell/alias.nix
-    ./shell/fish.nix
-    ./starship.nix
-    ./zoxide.nix
-    ./alacritty.nix
-    ./kitty.nix
-    ./fastfetch.nix
-    ./swappy.nix
-    ./btop.nix
-    # ./wlogout/wlogout.nix
-    ./xsettingsd.nix
-    ./waybar/waybar.nix
-    ./pywal/pywal.nix
-    ./qt.nix
-    ./gtk.nix
-    ./rofi/rofi.nix
-    ./hypr
-    ./abyss
-    ./nvim.nix
-    ./matugen/matugen.nix
-    ./devsuite.nix
-    ./swaync/swaync.nix
-    ./zen.nix
-    ./walker.nix
-    ./nh.nix
-    ./direnv.nix
-    ./cliphist.nix
-    ./git.nix
+    ./options.nix
+    ./apps
+    ./dev
+    ./editors
+    ./shell
+    ./terminals
+    ./theming
+    ./tools
+    ./desktop
   ];
 }

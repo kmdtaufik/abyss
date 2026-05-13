@@ -1,0 +1,39 @@
+{lib, ...}: {
+  options.modules = {
+    bash.enable = lib.mkEnableOption "bash";
+    fish.enable = lib.mkEnableOption "fish";
+    alacritty.enable = lib.mkEnableOption "alacritty";
+    btop.enable = lib.mkEnableOption "btop";
+    cliphist.enable = lib.mkEnableOption "cliphist";
+    devsuite.enable = lib.mkEnableOption "devsuite";
+    direnv.enable = lib.mkEnableOption "direnv";
+    fastfetch.enable = lib.mkEnableOption "fastfetch";
+    gh.enable = lib.mkEnableOption "gh";
+    fzf.enable = lib.mkEnableOption "fzf";
+    obsidian.enable = lib.mkEnableOption "obsidian";
+    git.enable = lib.mkEnableOption "git";
+    gtk.enable = lib.mkEnableOption "gtk";
+    hyprland.enable = lib.mkEnableOption "hyprland";
+    kitty.enable = lib.mkEnableOption "kitty";
+    nh.enable = lib.mkEnableOption "nh";
+    nvim.enable = lib.mkEnableOption "nvim";
+    qt.enable = lib.mkEnableOption "qt";
+    qutebrowser.enable = lib.mkEnableOption "qutebrowser";
+    rofi.enable = lib.mkEnableOption "rofi";
+    spotify.enable = lib.mkEnableOption "spotify";
+    ssh.enable = lib.mkEnableOption "ssh";
+    starship.enable = lib.mkEnableOption "starship";
+    shellAliases.enable = lib.mkEnableOption "shellAliases";
+    stylix.enable = lib.mkEnableOption "stylix";
+    swappy.enable = lib.mkEnableOption "swappy";
+    swaync.enable = lib.mkEnableOption "swaync";
+    walker.enable = lib.mkEnableOption "walker";
+    waybar.enable = lib.mkEnableOption "waybar";
+    xsettingsd.enable = lib.mkEnableOption "xsettingsd";
+    zen.enable = lib.mkEnableOption "zen";
+    zoxide.enable = lib.mkEnableOption "zoxide";
+    matugen.enable = lib.mkEnableOption "matugen";
+    pywal.enable = lib.mkEnableOption "pywal";
+    abyss.enable = lib.mkEnableOption "abyss";
+  };
+}
