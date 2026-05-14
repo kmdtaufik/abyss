@@ -18,7 +18,7 @@
         "$mainMod, B, exec, zen-twilight"
         "$mainMod, E, exec, nautilus"
         "$mainMod CTRL, E, exec, smile"
-        "$mainMod, grave, exec, DropTerminal.sh"
+        ", f12, exec, DropTerminal.sh"
         # Windows
         "$mainMod, Q, killactive"
         "$mainMod, F, fullscreen"
