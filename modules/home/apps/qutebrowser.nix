@@ -7,7 +7,7 @@
   config = lib.mkIf config.modules.qutebrowser.enable {
     programs.qutebrowser = {
       enable = true;
-      package = pkgs.qutebrowser-qt5;
     };
+    stylix.targets.qutebrowser.enable = true;
   };
 }
