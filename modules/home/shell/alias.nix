@@ -1,22 +1,31 @@
-{pkgs, ...}: {
-  home = {
-    shellAliases = {
-      cd = "z";
-      ".." = "cd ..";
-      "..." = "cd ../..";
-      "..3" = "cd ../../..";
-      walker = "walker --height 300";
-      ls = "eza --icons --group-directories-first -1";
-      la = "ls -a";
-      ll = "ls -la";
-      cl = "clear";
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  config = lib.mkIf config.modules.shellAliases.enable {
+    home = {
+      shellAliases = {
+        cd = "z";
+        ".." = "cd ..";
+        "..." = "cd ../..";
+        "..3" = "cd ../../..";
+        walker = "walker --height 300";
+        ls = "eza --icons --group-directories-first -1";
+        la = "ls -a";
+        ll = "ls -la";
+        cl = "clear";
+        rm = "trash";
+      };
+      sessionVariables = {
+        EDITOR = "nvim";
+      };
+      packages = with pkgs; [
+        eza
+        trashy
+      ];
     };
-    sessionVariables = {
-      EDITOR = "nvim";
-    };
-    packages = with pkgs; [
-      eza
-    ];
+    programs.carapace.enable = true;
   };
-  programs.carapace.enable = true;
 }

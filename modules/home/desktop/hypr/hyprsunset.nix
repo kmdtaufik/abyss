@@ -1,0 +1,27 @@
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  config = lib.mkIf config.modules.hyprland.enable {
+    home.packages = with pkgs; [hyprsunset];
+    services.hyprsunset = {
+      enable = false;
+      settings = {
+        max-gamma = 150;
+        profile = [
+          {
+            time = "07:30";
+            identity = true;
+          }
+          {
+            time = "21:00";
+            temperature = 5000;
+            gamma = 0.8;
+          }
+        ];
+      };
+    };
+  };
+}
