@@ -3,6 +3,7 @@
     bash.enable = lib.mkEnableOption "bash";
     fish.enable = lib.mkEnableOption "fish";
     alacritty.enable = lib.mkEnableOption "alacritty";
+    dropTerm.enable = lib.mkEnableOption "dropTerm";
     btop.enable = lib.mkEnableOption "btop";
     cliphist.enable = lib.mkEnableOption "cliphist";
     devsuite.enable = lib.mkEnableOption "devsuite";

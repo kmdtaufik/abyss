@@ -14,6 +14,7 @@
 
   modules = {
     alacritty.enable = true;
+    dropTerm.enable = true;
     btop.enable = true;
     cliphist.enable = true;
     devsuite.enable = true;
