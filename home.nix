@@ -1,7 +1,4 @@
-{
-  username,
-  ...
-}: {
+{username, ...}: {
   # Home Manager Settings
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
@@ -30,9 +27,8 @@
     nh.enable = true;
     nvim.enable = true;
     qt.enable = true;
-    qutebrowser.enable = true;
+    qutebrowser.enable = false;
     rofi.enable = true;
-    spotify.enable = true;
     ssh.enable = true;
     starship.enable = true;
     shellAliases.enable = true;
