@@ -10,5 +10,6 @@
     nix-ld.enable = lib.mkEnableOption "nix-ld";
     podman.enable = lib.mkEnableOption "podman";
     displaymanager.enable = lib.mkEnableOption "displaymanager";
+    throne.enable = lib.mkEnableOption "throne";
   };
 }

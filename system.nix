@@ -1,6 +1,4 @@
-{
-  ...
-}: let
+{...}: let
   inherit
     (import ./settings.nix)
     flakeDir
@@ -18,6 +16,7 @@ in {
     stylix.enable = true;
     nix-ld.enable = true;
     podman.enable = true;
+    throne.enable = true;
   };
 
   environment.variables = {
