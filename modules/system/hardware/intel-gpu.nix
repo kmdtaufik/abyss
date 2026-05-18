@@ -10,7 +10,6 @@
         enableHybridCodec = true;
       };
     };
-    hardware.cpu.intel.updateMicrocode = true;
     hardware.graphics = {
       extraPackages = with pkgs; [
         intel-media-driver

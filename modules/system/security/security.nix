@@ -15,5 +15,8 @@
         })
       '';
     };
+    pam.services.hyprlock = {
+      enableGnomeKeyring = true;
+    };
   };
 }
