@@ -26,6 +26,7 @@
   services.gvfs.enable = true;
   services.tumbler.enable = true;
   services.gnome.gnome-keyring.enable = true;
+  services.gnome.gcr-ssh-agent.enable = true;
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   security.pam.services.hyprlock = {
