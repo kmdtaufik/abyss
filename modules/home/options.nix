@@ -24,7 +24,6 @@
     spotify.enable = lib.mkEnableOption "spotify";
     ssh.enable = lib.mkEnableOption "ssh";
     starship.enable = lib.mkEnableOption "starship";
-    shellAliases.enable = lib.mkEnableOption "shellAliases";
     stylix.enable = lib.mkEnableOption "stylix";
     swappy.enable = lib.mkEnableOption "swappy";
     swaync.enable = lib.mkEnableOption "swaync";

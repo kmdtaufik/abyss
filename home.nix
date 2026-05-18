@@ -31,7 +31,6 @@
     rofi.enable = true;
     ssh.enable = true;
     starship.enable = true;
-    shellAliases.enable = true;
     stylix.enable = true;
     swappy.enable = true;
     swaync.enable = true;
