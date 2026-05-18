@@ -14,7 +14,7 @@
     dropTerm.enable = true;
     btop.enable = true;
     cliphist.enable = true;
-    devsuite.enable = true;
+    devsuite.enable = false;
     direnv.enable = true;
     fastfetch.enable = true;
     git.enable = true;
