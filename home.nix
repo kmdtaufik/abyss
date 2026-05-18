@@ -12,11 +12,9 @@
   modules = {
     alacritty.enable = true;
     dropTerm.enable = true;
-    btop.enable = true;
     cliphist.enable = true;
     devsuite.enable = false;
     direnv.enable = true;
-    fastfetch.enable = true;
     git.enable = true;
     gh.enable = true;
     fzf.enable = true;
@@ -24,7 +22,6 @@
     gtk.enable = true;
     hyprland.enable = true;
     kitty.enable = true;
-    nh.enable = true;
     nvim.enable = true;
     qt.enable = true;
     qutebrowser.enable = false;
@@ -41,7 +38,6 @@
     zoxide.enable = true;
     matugen.enable = true;
     pywal.enable = true;
-    abyss.enable = true;
     bash.enable = true;
     fish.enable = true;
   };

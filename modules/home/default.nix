@@ -7,7 +7,6 @@
     ./shell
     ./terminals
     ./theming
-    ./tools
     ./desktop
   ];
 }
