@@ -4,5 +4,6 @@
     ./qutebrowser.nix
     ./packages.nix
     ./obsidian.nix
+    ./tools
   ];
 }
