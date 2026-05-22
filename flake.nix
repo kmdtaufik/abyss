@@ -34,6 +34,10 @@
       url = "github:kmdtaufik/nix4gitbutler";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix4adspower = {
+      url = "github:kmdtaufik/nix4adspower";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs @ {
     self,
