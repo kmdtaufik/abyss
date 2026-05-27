@@ -8,7 +8,8 @@
     ./fastfetch.nix
     ./nh.nix
   ];
-  home.packages = [
+  home.packages = with pkgs; [
     inputs.nix4adspower.packages.${pkgs.stdenv.hostPlatform.system}.default
+    httptoolkit
   ];
 }
