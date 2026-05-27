@@ -876,11 +876,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1779475171,
-        "narHash": "sha256-b4BC8scgYIL1W074Vs/e7yMKCRvzGfx4uvGtIPeRoJQ=",
+        "lastModified": 1779871169,
+        "narHash": "sha256-VRbTRrh8gXGjagjeajfZdI0kgzZpoKt1LijFJrMMck8=",
         "owner": "kmdtaufik",
         "repo": "nix4adspower",
-        "rev": "b30de0721112216900ced48ad0f3c3508145669d",
+        "rev": "fe2b9ba1205275ec557883f5a89aa30d446add53",
         "type": "github"
       },
       "original": {
