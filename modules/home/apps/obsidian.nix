@@ -1,5 +1,11 @@
-{ config, lib, ... }: {
+{
+  config,
+  lib,
+  ...
+}: {
   config = lib.mkIf config.modules.obsidian.enable {
-    programs.obsidian.enable = true;
+    programs.obsidian = {
+      enable = true;
+    };
   };
 }
