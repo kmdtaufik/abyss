@@ -9,7 +9,12 @@
   ];
 
   config = lib.mkIf config.modules.waybar.enable {
-    programs.waybar.enable = true;
+    programs.waybar = {
+      enable = true;
+      systemd = {
+        enable = true;
+      };
+    };
     home.file.".config/waybar/assets" = {
       source = ./assets;
       recursive = true;
