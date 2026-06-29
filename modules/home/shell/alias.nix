@@ -16,6 +16,8 @@
       ll = "ls -la";
       cl = "clear";
       rm = "trash";
+      mkdir = "mkdir -p";
+      reboot = "systemctl reboot";
     };
     sessionVariables = {
       EDITOR = "nvim";
