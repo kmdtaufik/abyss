@@ -5,7 +5,6 @@
 }: {
   imports = [
     ./conf/windowrule.nix
-    ./conf/autostart.nix
     ./conf/gestures.nix
     ./conf/env.nix
     ./conf/keybinds.nix
