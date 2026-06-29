@@ -16,6 +16,7 @@
       enable = true;
       package = null;
       portalPackage = null;
+      configType = "hyprlang";
       systemd = {
         enable = true;
         enableXdgAutostart = true;
@@ -79,7 +80,6 @@
         };
         #Layout
         dwindle = {
-          pseudotile = true;
           preserve_split = true;
         };
 
