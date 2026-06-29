@@ -30,18 +30,18 @@
     adwaita-qt
     adwaita-qt6
     glib
-    qt6.qtwayland
+    /*
+      qt6.qtwayland
     qt5.qtwayland
     qt6.qtbase
     qt6.qtdeclarative
     qt6.qtsvg
     qt6.qttools
+    */
     duf
     ncdu
     libreoffice
     papers
-    anytype
-    github-copilot-cli
     claude-code-bin
     gzip
     inputs.nix4gitbutler.packages.${pkgs.stdenv.hostPlatform.system}.default
