@@ -32,7 +32,7 @@ pkgs.writeShellApplication {
 
     magick "$input" -quality 100 "$current_wallpaper"
     sleep 1
-    restore-wallpaper
+    restore-wallpaper.sh
     notify "✅ Wallpaper" "Saved to $current_wallpaper" 30
 
     magick "$current_wallpaper" -resize 75% -blur "$blur_strength" "$blurred_wallpaper"
