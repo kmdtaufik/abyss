@@ -30,14 +30,6 @@
     adwaita-qt
     adwaita-qt6
     glib
-    /*
-      qt6.qtwayland
-    qt5.qtwayland
-    qt6.qtbase
-    qt6.qtdeclarative
-    qt6.qtsvg
-    qt6.qttools
-    */
     duf
     ncdu
     libreoffice
@@ -48,6 +40,7 @@
     gnome-disk-utility
     thunderbird-bin
     age
+    kicad
     frida-tools
   ];
 }
