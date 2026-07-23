@@ -41,6 +41,7 @@
     thunderbird-bin
     age
     kicad
+    croc
     frida-tools
   ];
 }
