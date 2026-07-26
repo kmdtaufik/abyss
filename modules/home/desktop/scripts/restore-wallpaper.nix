@@ -1,6 +1,6 @@
 {pkgs, ...}:
 pkgs.writeShellApplication {
-  name = "restore-wallpaper";
+  name = "restore-wallpaper.sh";
 
   text = ''
     #                _ _
@@ -36,7 +36,6 @@ pkgs.writeShellApplication {
     # -----------------------------------------------------
     # Set wallpaper
     # -----------------------------------------------------
-    sleep 1
     echo ":: Setting wallpaper with source image $wallpaper"
     hyprctl hyprpaper wallpaper ,"$wallpaper"
   '';

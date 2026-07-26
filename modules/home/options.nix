@@ -4,11 +4,9 @@
     fish.enable = lib.mkEnableOption "fish";
     alacritty.enable = lib.mkEnableOption "alacritty";
     dropTerm.enable = lib.mkEnableOption "dropTerm";
-    btop.enable = lib.mkEnableOption "btop";
     cliphist.enable = lib.mkEnableOption "cliphist";
     devsuite.enable = lib.mkEnableOption "devsuite";
     direnv.enable = lib.mkEnableOption "direnv";
-    fastfetch.enable = lib.mkEnableOption "fastfetch";
     gh.enable = lib.mkEnableOption "gh";
     fzf.enable = lib.mkEnableOption "fzf";
     obsidian.enable = lib.mkEnableOption "obsidian";
@@ -16,7 +14,6 @@
     gtk.enable = lib.mkEnableOption "gtk";
     hyprland.enable = lib.mkEnableOption "hyprland";
     kitty.enable = lib.mkEnableOption "kitty";
-    nh.enable = lib.mkEnableOption "nh";
     nvim.enable = lib.mkEnableOption "nvim";
     qt.enable = lib.mkEnableOption "qt";
     qutebrowser.enable = lib.mkEnableOption "qutebrowser";
@@ -24,7 +21,6 @@
     spotify.enable = lib.mkEnableOption "spotify";
     ssh.enable = lib.mkEnableOption "ssh";
     starship.enable = lib.mkEnableOption "starship";
-    shellAliases.enable = lib.mkEnableOption "shellAliases";
     stylix.enable = lib.mkEnableOption "stylix";
     swappy.enable = lib.mkEnableOption "swappy";
     swaync.enable = lib.mkEnableOption "swaync";
@@ -35,6 +31,5 @@
     zoxide.enable = lib.mkEnableOption "zoxide";
     matugen.enable = lib.mkEnableOption "matugen";
     pywal.enable = lib.mkEnableOption "pywal";
-    abyss.enable = lib.mkEnableOption "abyss";
   };
 }

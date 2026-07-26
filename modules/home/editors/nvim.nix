@@ -11,8 +11,10 @@
       viAlias = true;
       vimAlias = true;
       vimdiffAlias = true;
-      withPython3 = true;
-      withNodeJs = true;
+      sideloadInitLua = true;
+      withPython3 = false;
+      withNodeJs = false;
+      withRuby = false;
       extraPackages = with pkgs; [
         gcc
         cargo

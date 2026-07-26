@@ -1,1 +1,9 @@
-{imports = [./opengl.nix ./intel-gpu.nix];}
+{
+  imports = [
+    ./graphics.nix
+    ./intel-gpu.nix
+    ./cpu.nix
+    ./bluetooth.nix
+    ./audio.nix
+  ];
+}

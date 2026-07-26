@@ -5,7 +5,6 @@
 }: {
   imports = [
     ./conf/windowrule.nix
-    ./conf/autostart.nix
     ./conf/gestures.nix
     ./conf/env.nix
     ./conf/keybinds.nix
@@ -16,6 +15,7 @@
       enable = true;
       package = null;
       portalPackage = null;
+      configType = "hyprlang";
       systemd = {
         enable = true;
         enableXdgAutostart = true;
@@ -79,7 +79,6 @@
         };
         #Layout
         dwindle = {
-          pseudotile = true;
           preserve_split = true;
         };
 

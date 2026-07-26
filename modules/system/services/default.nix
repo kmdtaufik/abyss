@@ -1,1 +1,6 @@
-{imports = [./services.nix];}
+{
+  imports = [
+    ./services.nix
+    ./keyring.nix
+  ];
+}

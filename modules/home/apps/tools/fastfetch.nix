@@ -3,14 +3,12 @@
   lib,
   ...
 }: {
-  config = lib.mkIf config.modules.fastfetch.enable {
-    programs.fastfetch = {
-      enable = true;
-      settings = {
-        logo = {
-          padding = {
-            top = 2;
-          };
+  programs.fastfetch = {
+    enable = true;
+    settings = {
+      logo = {
+        padding = {
+          top = 2;
         };
         display = {
           separator = " ➜  ";

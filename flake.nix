@@ -5,16 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    hyprland.url = "github:hyprwm/Hyprland";
-    hyprlock = {
-      url = "github:hyprwm/hyprlock";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-    matugen.url = "github:/InioX/matugen";
+    matugen.url = "github:InioX/matugen";
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     devsuite.url = "github:kmdtaufik/devsuite";
     elephant.url = "github:abenz1267/elephant";
@@ -34,6 +25,10 @@
       url = "github:kmdtaufik/nix4gitbutler";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix4adspower = {
+      url = "github:kmdtaufik/nix4adspower";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs @ {
     self,
@@ -43,17 +38,19 @@
     ...
   }: let
     inherit (import ./settings.nix) username hostname system;
-
-    pkgs = import nixpkgs {
+    /*
+      pkgs = import nixpkgs {
       inherit system;
       config = {
         allowUnfree = true;
         android_sdk.accept_license = true;
       };
     };
+    */
   in {
     nixosConfigurations = {
       "${hostname}" = nixpkgs.lib.nixosSystem {
+        inherit system;
         specialArgs = {
           inherit system;
           inherit inputs;
@@ -69,6 +66,7 @@
             home-manager.extraSpecialArgs = {
               inherit username;
               inherit inputs;
+              inherit hostname;
             };
             home-manager = {
               useGlobalPkgs = true;

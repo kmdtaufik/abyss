@@ -6,5 +6,6 @@
     ./swaync/swaync.nix
     ./utils
     ./scripts
+    ./xdg.nix
   ];
 }

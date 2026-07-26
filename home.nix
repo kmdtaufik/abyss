@@ -1,7 +1,4 @@
-{
-  username,
-  ...
-}: {
+{username, ...}: {
   # Home Manager Settings
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
@@ -15,11 +12,9 @@
   modules = {
     alacritty.enable = true;
     dropTerm.enable = true;
-    btop.enable = true;
     cliphist.enable = true;
-    devsuite.enable = true;
+    devsuite.enable = false;
     direnv.enable = true;
-    fastfetch.enable = true;
     git.enable = true;
     gh.enable = true;
     fzf.enable = true;
@@ -27,15 +22,12 @@
     gtk.enable = true;
     hyprland.enable = true;
     kitty.enable = true;
-    nh.enable = true;
     nvim.enable = true;
     qt.enable = true;
-    qutebrowser.enable = true;
+    qutebrowser.enable = false;
     rofi.enable = true;
-    spotify.enable = true;
     ssh.enable = true;
     starship.enable = true;
-    shellAliases.enable = true;
     stylix.enable = true;
     swappy.enable = true;
     swaync.enable = true;
@@ -46,7 +38,6 @@
     zoxide.enable = true;
     matugen.enable = true;
     pywal.enable = true;
-    abyss.enable = true;
     bash.enable = true;
     fish.enable = true;
   };
