@@ -34,7 +34,7 @@
     ncdu
     libreoffice
     papers
-    claude-code
+    opencode
     gzip
     inputs.nix4gitbutler.packages.${pkgs.stdenv.hostPlatform.system}.default
     gnome-disk-utility
