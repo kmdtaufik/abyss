@@ -36,7 +36,7 @@
           no_hardware_cursors = false;
         };
         input = {
-          numlock_by_default = true;
+          numlock_by_default = false;
           follow_mouse = 1;
           touchpad = {
             natural_scroll = false;

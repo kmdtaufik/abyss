@@ -34,7 +34,7 @@
     ncdu
     libreoffice
     papers
-    claude-code-bin
+    opencode
     gzip
     inputs.nix4gitbutler.packages.${pkgs.stdenv.hostPlatform.system}.default
     gnome-disk-utility
@@ -43,5 +43,6 @@
     kicad
     croc
     frida-tools
+    qbittorrent
   ];
 }
