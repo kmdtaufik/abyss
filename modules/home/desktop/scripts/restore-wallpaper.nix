@@ -1,4 +1,8 @@
-{pkgs, ...}:
+{pkgs, config, ...}:
+let
+  awwwCmd = if config.modules.awww.enable then "awww img \"$wallpaper\" --transition-step 255" else "";
+  hyprpaperCmd = if config.modules.hyprpaper.enable then "hyprctl hyprpaper wallpaper ,\"$wallpaper\"" else "";
+in
 pkgs.writeShellApplication {
   name = "restore-wallpaper.sh";
 
@@ -37,6 +41,7 @@ pkgs.writeShellApplication {
     # Set wallpaper
     # -----------------------------------------------------
     echo ":: Setting wallpaper with source image $wallpaper"
-    hyprctl hyprpaper wallpaper ,"$wallpaper"
+    ${hyprpaperCmd}
+    ${awwwCmd}
   '';
 }

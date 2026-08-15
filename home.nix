@@ -40,6 +40,7 @@
     pywal.enable = true;
     bash.enable = true;
     fish.enable = true;
+    awww.enable = true;
   };
 
   programs.home-manager.enable = true;

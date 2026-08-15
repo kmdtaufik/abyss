@@ -31,5 +31,7 @@
     zoxide.enable = lib.mkEnableOption "zoxide";
     matugen.enable = lib.mkEnableOption "matugen";
     pywal.enable = lib.mkEnableOption "pywal";
+    awww.enable = lib.mkEnableOption "awww";
+    hyprpaper.enable = lib.mkEnableOption "hyprpaper";
   };
 }

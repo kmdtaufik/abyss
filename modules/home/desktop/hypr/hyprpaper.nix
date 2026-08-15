@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-  config = lib.mkIf config.modules.hyprland.enable {
+  config = lib.mkIf config.modules.hyprpaper.enable {
     services.hyprpaper = {
       enable = true;
       settings = {
