@@ -43,5 +43,6 @@
     kicad
     croc
     frida-tools
+    qbittorrent
   ];
 }
