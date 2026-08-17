@@ -14,7 +14,7 @@
       @define-color fontcolor @on_surface;
 
       * {
-          font-family: "Fira Sans Semibold";
+          font-family: "Fira Sans Semibold", "Font Awesome 7 Free", "Font Awesome 7 Brands", "Font Awesome 6 Free", "Font Awesome 6 Brands", FontAwesome, "Material Icons", sans-serif;
       }
 
       /* Control Center */
