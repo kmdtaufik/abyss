@@ -77,7 +77,7 @@
           }
           {
             "label" = " ";
-            "command" = "bash -c $HOME/.config/ml4w/scripts/wlogout.sh";
+            "command" = "launch-wlogout";
           }
         ];
       };

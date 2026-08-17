@@ -179,10 +179,10 @@
           tooltip-format = "Left: Open the application launcher\nRight: Show all keybindings";
         };
 
-        # Exit Menu
-        "custom/exit" = {
+        # Power Menu
+        "custom/power" = {
           format = "";
-          on-click = "${config.home.homeDirectory}/.config/ml4w/scripts/wlogout.sh";
+          on-click = "launch-wlogout";
           on-click-right = "hyprlock";
           tooltip-format = "Left: Power menu\nRight: Lock screen";
         };
