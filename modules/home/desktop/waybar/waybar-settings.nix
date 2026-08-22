@@ -233,8 +233,8 @@
         "idle_inhibitor" = {
           format = "{icon}";
           format-icons = {
-            activated = "";
-            deactivated = "";
+            activated = "";
+            deactivated = "";
           };
           tooltip = true;
           tooltip-format-activated = "Coffee Mode Active";
