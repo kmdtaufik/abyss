@@ -6,7 +6,13 @@
   config = lib.mkIf config.modules.ssh.enable {
     programs.ssh = {
       enable = true;
-      addKeysToAgent = "yes";
+      enableDefaultConfig = false; # Disable the deprecated default config
+      settings = {
+        "*" = {
+          AddKeysToAgent = "yes";
+          IdentitiesOnly = "yes"; # Home-manager's old default
+        };
+      };
     };
   };
 }
