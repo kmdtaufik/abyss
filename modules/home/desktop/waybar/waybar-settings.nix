@@ -215,6 +215,7 @@
           modules = [
             "custom/tools"
             "custom/cliphist"
+            "idle_inhibitor"
             "custom/hypridle"
           ];
         };
@@ -226,6 +227,18 @@
             "custom/chatgpt"
             "custom/empty"
           ];
+        };
+
+        # Idle Inhibitor (Coffee Mode)
+        "idle_inhibitor" = {
+          format = "{icon}";
+          format-icons = {
+            activated = "";
+            deactivated = "";
+          };
+          tooltip = true;
+          tooltip-format-activated = "Coffee Mode Active";
+          tooltip-format-deactivated = "Coffee Mode Inactive";
         };
 
         # System info
