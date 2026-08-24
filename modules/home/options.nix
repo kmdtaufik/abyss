@@ -15,6 +15,7 @@
     hyprland.enable = lib.mkEnableOption "hyprland";
     kitty.enable = lib.mkEnableOption "kitty";
     ghostty.enable = lib.mkEnableOption "ghostty";
+    foot.enable = lib.mkEnableOption "foot";
     nvim.enable = lib.mkEnableOption "nvim";
     qt.enable = lib.mkEnableOption "qt";
     qutebrowser.enable = lib.mkEnableOption "qutebrowser";

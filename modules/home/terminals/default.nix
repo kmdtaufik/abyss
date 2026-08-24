@@ -3,6 +3,7 @@
     ./alacritty.nix
     ./kitty.nix
     ./ghostty.nix
+    ./foot.nix
     ./DropTerminal.nix
   ];
 }

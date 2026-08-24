@@ -23,6 +23,7 @@
     hyprland.enable = true;
     kitty.enable = true;
     ghostty.enable = true;
+    foot.enable = true;
     nvim.enable = true;
     qt.enable = true;
     qutebrowser.enable = false;
