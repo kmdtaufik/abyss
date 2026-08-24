@@ -3,12 +3,12 @@
 in
   pkgs.writeShellApplication {
     name = "screenshot";
+    runtimeInputs = with pkgs; [ grimblast rofi libnotify coreutils ];
 
     text = ''
       #Warning: Commented out due to error in nix
         # prompt='Screenshot'
         # mesg="DIR: ~/Screenshots"
-
 
               #Screenshot file name,directory and editor
               NAME="${settings.screenshot-name}"
@@ -31,7 +31,7 @@ in
               edit='Edit'
 
               rofi_cmd() {
-                rofi -dmenu -replace -config ~/.config/rofi/config-screenshot.rasi -i -no-show-icons -l 2 -width 30 -p "Take screenshot"
+                rofi -dmenu -replace -i -no-show-icons -theme-str 'inputbar {children: [prompt];} listview {lines: 2;} window {width: 30em;}' -p "Take screenshot"
               }
 
               run_rofi() {
@@ -39,7 +39,7 @@ in
               }
 
               timer_cmd() {
-                rofi -dmenu -replace -config ~/.config/rofi/config-screenshot.rasi -i -no-show-icons -l 5 -width 30 -p "Choose timer"
+                rofi -dmenu -replace -i -no-show-icons -theme-str 'inputbar {children: [prompt];} listview {lines: 5;} window {width: 30em;}' -p "Choose timer"
               }
 
               timer_exit() {
@@ -59,7 +59,7 @@ in
               }
 
               type_screenshot_cmd() {
-                rofi -dmenu -replace -config ~/.config/rofi/config-screenshot.rasi -i -no-show-icons -l 3 -width 30 -p "Type of screenshot"
+                rofi -dmenu -replace -i -no-show-icons -theme-str 'inputbar {children: [prompt];} listview {lines: 3;} window {width: 30em;}' -p "Type of screenshot"
               }
 
               type_screenshot_exit() {
@@ -77,7 +77,7 @@ in
               }
 
               copy_save_editor_cmd() {
-                rofi -dmenu -replace -config ~/.config/rofi/config-screenshot.rasi -i -no-show-icons -l 4 -width 30 -p "How to save"
+                rofi -dmenu -replace -i -no-show-icons -theme-str 'inputbar {children: [prompt];} listview {lines: 4;} window {width: 30em;}' -p "How to save"
               }
 
               copy_save_editor_exit() {

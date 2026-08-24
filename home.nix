@@ -33,7 +33,7 @@
     stylix.enable = true;
     swappy.enable = true;
     swaync.enable = true;
-    walker.enable = true;
+    walker.enable = false;
     waybar.enable = true;
     xsettingsd.enable = true;
     zen.enable = true;

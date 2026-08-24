@@ -10,7 +10,8 @@
       ".." = "cd ..";
       "..." = "cd ../..";
       "..3" = "cd ../../..";
-      walker = "walker --height 300";
+      rofi = "rofi -show drun";
+      wlogout = "wlogout -b 2 -c 0 -r 0 -L 930 -R 930 -T 300 -B 300 --protocol layer-shell";
       ls = "eza --icons --group-directories-first -1";
       la = "ls -a";
       ll = "ls -la";

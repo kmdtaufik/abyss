@@ -43,10 +43,10 @@
         "$mainMod SHIFT, L, exec, wlogout"
         "$mainMod SHIFT, W, exec, waypaper --random"
         "$mainMod CTRL, W, exec, waypaper"
-        "$mainMod, A, exec, walker --height 300"
+        "$mainMod, A, exec, rofi -show drun"
         "$mainMod, ?, exec, hyprland-keybinds"
         "$mainMod SHIFT, R, exec, hyprctl reload"
-        "$mainMod, V, exec,walker -m clipboard --height 300"
+        "$mainMod, V, exec, clipboard"
 
         # Workspaces
         "$mainMod, 1, workspace, 1"
