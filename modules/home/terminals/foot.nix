@@ -12,7 +12,7 @@
           font = "JetBrainsMono Nerd Font:size=12";
           pad = "10x10";
         };
-        colors = {
+        colors-dark = {
           alpha = 0.7;
         };
         cursor = {
