@@ -26,7 +26,6 @@
     stylix.enable = lib.mkEnableOption "stylix";
     swappy.enable = lib.mkEnableOption "swappy";
     swaync.enable = lib.mkEnableOption "swaync";
-    walker.enable = lib.mkEnableOption "walker";
     waybar.enable = lib.mkEnableOption "waybar";
     xsettingsd.enable = lib.mkEnableOption "xsettingsd";
     zen.enable = lib.mkEnableOption "zen";

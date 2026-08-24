@@ -9,10 +9,6 @@
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     devsuite.url = "github:kmdtaufik/devsuite";
     elephant.url = "github:abenz1267/elephant";
-    walker = {
-      url = "github:abenz1267/walker";
-      inputs.elephant.follows = "elephant";
-    };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       # inputs.nixpkgs.follows = "nixpkgs";

@@ -1,1 +1,1 @@
-{imports = [./swappy.nix ./walker.nix ./cliphist.nix ./awww.nix];}
+{imports = [./swappy.nix ./cliphist.nix ./awww.nix];}
