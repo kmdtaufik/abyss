@@ -22,6 +22,7 @@
     gtk.enable = true;
     hyprland.enable = true;
     kitty.enable = true;
+    ghostty.enable = true;
     nvim.enable = true;
     qt.enable = true;
     qutebrowser.enable = false;
