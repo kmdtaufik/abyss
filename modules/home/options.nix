@@ -27,6 +27,7 @@
     swappy.enable = lib.mkEnableOption "swappy";
     swaync.enable = lib.mkEnableOption "swaync";
     waybar.enable = lib.mkEnableOption "waybar";
+    wlogout.enable = lib.mkEnableOption "wlogout";
     xsettingsd.enable = lib.mkEnableOption "xsettingsd";
     zen.enable = lib.mkEnableOption "zen";
     zoxide.enable = lib.mkEnableOption "zoxide";

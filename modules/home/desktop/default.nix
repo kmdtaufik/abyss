@@ -6,6 +6,7 @@
     ./swaync/swaync.nix
     ./utils
     ./scripts
+    ./wlogout/wlogout.nix
     ./xdg.nix
   ];
 }

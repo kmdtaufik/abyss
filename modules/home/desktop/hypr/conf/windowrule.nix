@@ -87,7 +87,9 @@
         "match:namespace swaync-notification-window,blur on"
         "ignore_alpha 0.5,match:namespace swaync-notification-window"
         "match:namespace waybar, blur on,ignore_alpha 0.5"
-        # "match:namespace waybar, ignore_alpha 0.5"
+        # Wlogout
+        "match:namespace logout_dialog, blur on, ignore_alpha 0.5"
+        "match:namespace wlogout, blur on, ignore_alpha 0.5"
       ];
     };
   };

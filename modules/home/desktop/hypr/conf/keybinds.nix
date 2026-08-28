@@ -40,7 +40,7 @@
         " , PRINT, exec, screenshot"
         "$mainMod, S, exec, screenshot"
         "$mainMod,L,exec,hyprlock"
-        "$mainMod SHIFT, L, exec, wlogout"
+        "$mainMod SHIFT, L, exec, sh -c 'cd ~/.config/wlogout && wlogout'"
         "$mainMod SHIFT, W, exec, waypaper --random"
         "$mainMod CTRL, W, exec, waypaper"
         "$mainMod, A, exec, rofi -show drun"

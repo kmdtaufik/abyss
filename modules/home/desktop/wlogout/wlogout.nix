@@ -1,75 +1,71 @@
 {
-  home.file.".config/wlogout/icons" = {
-    source = ./icons;
-    recursive = true;
-  };
-  programs.wlogout = {
-    enable = true;
-    layout = [
-      {
-        label = "lock";
-        action = "~/.config/hypr/scripts/power.sh lock";
-        text = "Lock";
-        keybind = "l";
-      }
-      {
-        label = "hibernate";
-        action = "~/.config/hypr/scripts/power.sh hibernate";
-        text = "Hibernate";
-        keybind = "h";
-      }
-      {
-        label = "logout";
-        action = "~/.config/hypr/scripts/power.sh exit";
-        text = "Exit";
-        keybind = "e";
-      }
-      {
-        label = "shutdown";
-        action = "~/.config/hypr/scripts/power.sh shutdown";
-        text = "Shutdown";
-        keybind = "s";
-      }
-      {
-        label = "suspend";
-        action = "~/.config/hypr/scripts/power.sh suspend";
-        text = "Suspend";
-        keybind = "u";
-      }
-      {
-        label = "reboot";
-        action = "~/.config/hypr/scripts/power.sh reboot";
-        text = "Reboot";
-        keybind = "r";
-      }
-    ];
-    style =
-      # css
-      ''
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
+  colors = config.lib.stylix.colors;
+in {
+  config = lib.mkIf config.modules.wlogout.enable {
+    home.file.".config/wlogout/icons" = {
+      source = ./icons;
+      recursive = true;
+    };
 
-        /* -----------------------------------------------------
-         * Import Pywal colors
-         * ----------------------------------------------------- */
-        @import '../../.cache/wal/colors-wlogout.css';
-
-        /* -----------------------------------------------------
-         * General
-         * ----------------------------------------------------- */
-
+    programs.wlogout = {
+      enable = true;
+      layout = [
+        {
+          label = "lock";
+          action = "hyprlock";
+          text = "Lock";
+          keybind = "l";
+        }
+        {
+          label = "hibernate";
+          action = "systemctl hibernate";
+          text = "Hibernate";
+          keybind = "h";
+        }
+        {
+          label = "logout";
+          action = "hyprctl dispatch exit";
+          text = "Exit";
+          keybind = "e";
+        }
+        {
+          label = "shutdown";
+          action = "systemctl poweroff";
+          text = "Shutdown";
+          keybind = "s";
+        }
+        {
+          label = "suspend";
+          action = "systemctl suspend";
+          text = "Suspend";
+          keybind = "u";
+        }
+        {
+          label = "reboot";
+          action = "systemctl reboot";
+          text = "Reboot";
+          keybind = "r";
+        }
+      ];
+      style = ''
         * {
-            font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+            font-family: "JetBrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
             background-image: none;
             transition: 20ms;
             box-shadow: none;
         }
 
         window {
-            background: url("../../.config/ml4w/cache/blurred_wallpaper.png");
-            background-size: cover;
+            background-color: alpha(#${colors.base00}, 0.5);
         }
 
         button {
-            color: #FFFFFF;
+            color: #${colors.base05};
             font-size: 20px;
 
             background-repeat: no-repeat;
@@ -77,8 +73,8 @@
             background-size: 25%;
 
             border-style: solid;
-            background-color: rgba(12, 12, 12, 0.3);
-            border: 3px solid #FFFFFF;
+            background-color: alpha(#${colors.base01}, 0.3);
+            border: 3px solid #${colors.base05};
 
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
@@ -86,16 +82,10 @@
         button:focus,
         button:active,
         button:hover {
-            color: @color11;
-            background-color: rgba(12, 12, 12, 0.5);
-            border: 3px solid @color11;
+            color: #${colors.base0D};
+            background-color: alpha(#${colors.base01}, 0.5);
+            border: 3px solid #${colors.base0D};
         }
-
-        /*
-        -----------------------------------------------------
-        Buttons
-        -----------------------------------------------------
-        */
 
         #lock {
             margin: 10px;
@@ -112,26 +102,27 @@
         #suspend {
             margin: 10px;
             border-radius: 20px;
-            background-image: image(url("icons/suspend.png"));
+            background-image: image(url("icons/sleep.png"));
         }
 
         #hibernate {
             margin: 10px;
             border-radius: 20px;
-            background-image: image(url("icons/hibernate.png"));
+            background-image: image(url("icons/sleep.png"));
         }
 
         #shutdown {
             margin: 10px;
             border-radius: 20px;
-            background-image: image(url("icons/shutdown.png"));
+            background-image: image(url("icons/power.png"));
         }
 
         #reboot {
             margin: 10px;
             border-radius: 20px;
-            background-image: image(url("icons/reboot.png"));
+            background-image: image(url("icons/restart.png"));
         }
       '';
+    };
   };
 }
