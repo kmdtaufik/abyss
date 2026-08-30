@@ -40,9 +40,7 @@
         " , PRINT, exec, screenshot"
         "$mainMod, S, exec, screenshot"
         "$mainMod,L,exec,hyprlock"
-        "$mainMod SHIFT, L, exec, sh -c 'cd ~/.config/wlogout && wlogout'"
-        "$mainMod SHIFT, W, exec, waypaper --random"
-        "$mainMod CTRL, W, exec, waypaper"
+        "$mainMod SHIFT, L, exec, wlogout"
         "$mainMod, A, exec, rofi -show drun"
         "$mainMod, ?, exec, hyprland-keybinds"
         "$mainMod SHIFT, R, exec, hyprctl reload"
@@ -58,7 +56,6 @@
         "$mainMod, 7, workspace, 7"
         "$mainMod, 8, workspace, 8"
         "$mainMod, 9, workspace, 9"
-        # "$mainMod, 0, workspace, 10"
         "$mainMod,0 ,togglespecialworkspace," #move to specific workspace
 
         "$mainMod SHIFT, 1, movetoworkspace, 1"
@@ -70,7 +67,6 @@
         "$mainMod SHIFT, 7, movetoworkspace, 7"
         "$mainMod SHIFT, 8, movetoworkspace, 8"
         "$mainMod SHIFT, 9, movetoworkspace, 9"
-        # "$mainMod SHIFT, 0, movetoworkspace, 10"
         "$mainMod SHIFT, 0, movetoworkspacesilent, special"
 
         "$mainMod, Tab, workspace, m+1"
@@ -102,7 +98,6 @@
         ", XF86AudioNext, exec, playerctl next"
         ", XF86AudioPrev, exec, playerctl previous"
         ", XF86AudioMicMute, exec, pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-        # ", XF86Calculator, exec, ~/.config/ml4w/settings/calculator.sh"
         ", XF86Lock, exec, hyprlock"
 
         ", code:238, exec, brightnessctl -d smc::kbd_backlight s +10"

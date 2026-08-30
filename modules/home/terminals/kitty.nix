@@ -7,12 +7,10 @@
   config = lib.mkIf config.modules.kitty.enable {
     programs.kitty = {
       enable = true;
-
-      /*font = {
-        name = "JetBrainsMono Nerd Font";
-        size = 12;
-      };*/
-      shellIntegration.mode = "no-cursor";
+      shellIntegration = {
+        enableBashIntegration = true;
+        enableFishIntegration = true;
+      };
       settings = {
         bold_font = "auto";
         italic_font = "auto";
@@ -34,7 +32,6 @@
         selection_background = "none";
         cursor_shape = "beam";
       };
-
     };
     stylix.targets.kitty = {
       enable = true;

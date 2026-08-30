@@ -16,7 +16,7 @@
           blink = "yes";
         };
         colors-dark = {
-          alpha-mode = "all";
+          alpha-mode = "matching";
         };
       };
     };

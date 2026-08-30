@@ -16,11 +16,10 @@
         window-padding-x = 10;
         window-padding-y = 10;
         window-decoration = false;
-        #background-opacity = 0.7;
         confirm-close-surface = false;
       };
     };
-    
+
     stylix.targets.ghostty.enable = true;
   };
 }
