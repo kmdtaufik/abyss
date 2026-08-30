@@ -13,13 +13,6 @@
             "~/.config/alacritty/themes/catpuccin-mocha.toml"
           ];
         };
-        font = {
-          size = 12.0;
-          normal = {
-            family = "FiraCode Nerd Font";
-            style = "Regular";
-          };
-        };
         window = {
           padding = {
             x = 0;
@@ -104,5 +97,7 @@
       index = 17
       color = "#f5e0dc"
     '';
+    
+    stylix.targets.alacritty.enable = true;
   };
 }

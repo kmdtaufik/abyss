@@ -23,6 +23,8 @@ in {
       font-awesome
       fira-sans
       google-sans-flex
+      material-design-icons
+      roboto
     ] #Nerd-fonts
     ++ (with pkgs.nerd-fonts; [
       fira-code

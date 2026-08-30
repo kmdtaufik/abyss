@@ -18,10 +18,18 @@
       fonts = {
         monospace = {
           package = pkgs.nerd-fonts.jetbrains-mono;
-          name = "Jetbrains Mono";
+          name = "JetBrainsMono Nerd Font";
         };
         sansSerif = {
           name = "Google Sans Flex";
+        };
+        serif = {
+          package = pkgs.roboto-slab;
+          name = "Roboto Slab";
+        };
+        emoji = {
+          package = pkgs.noto-fonts-color-emoji;
+          name = "Noto Color Emoji";
         };
       };
     };

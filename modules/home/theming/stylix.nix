@@ -11,6 +11,9 @@
         bat.enable = true;
         fzf.enable = true;
       };
+      opacity = {
+        terminal = 0.7;
+      };
     };
   };
 }
