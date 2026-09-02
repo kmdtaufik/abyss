@@ -7,7 +7,8 @@
     services.displayManager.ly = {
       enable = true;
       settings = {
-        animation = "matrix";
+        animation = "dur";
+        dur_file_path = "${./blackhole.dur}";
         clock = "%c";
         hide_borders = false;
         margin_box_h = 2;
