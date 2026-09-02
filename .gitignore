@@ -1,4 +1,6 @@
 *.md
+AGENTS.md
+STACK.md
 .claude
 .agent
 .agents
