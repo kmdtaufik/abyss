@@ -1,1 +1,1 @@
-{imports = [./hyprland.nix ./displaymanager.nix];}
+{imports = [./hyprland.nix ./displaymanager];}

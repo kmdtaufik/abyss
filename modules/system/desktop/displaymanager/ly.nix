@@ -6,12 +6,19 @@
   config = lib.mkIf config.systemModules.displaymanager.ly.enable {
     services.displayManager.ly = {
       enable = true;
-      # Configure some Ly-specific settings
       settings = {
-        animation = "doom"; # classic doom fire animation
-        hide_borders = true;
-        clock = null;
+        animation = "doom";
+        clock = "%c";
+        hide_borders = false;
+        margin_box_h = 2;
+        margin_box_v = 2;
+        box_title = " Abyss ";
       };
+    };
+    
+    security.pam.services = {
+      ly.enableGnomeKeyring = true;
+      login.enableGnomeKeyring = true;
     };
   };
 }
