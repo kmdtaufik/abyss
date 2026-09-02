@@ -7,7 +7,7 @@
     services.displayManager.ly = {
       enable = true;
       settings = {
-        animation = "doom";
+        animation = "matrix";
         clock = "%c";
         hide_borders = false;
         margin_box_h = 2;
