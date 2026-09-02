@@ -12,8 +12,8 @@ in {
   systemModules = {
     displaymanager = {
       enable = true;
-      ly.enable = true;
-      sddm.enable = false;
+      ly.enable = false;
+      sddm.enable = true;
     };
     gpu.type = "intel";
     cpu.type = "intel";
