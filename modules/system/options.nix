@@ -14,7 +14,11 @@
     stylix.enable = lib.mkEnableOption "stylix";
     nix-ld.enable = lib.mkEnableOption "nix-ld";
     podman.enable = lib.mkEnableOption "podman";
-    displaymanager.enable = lib.mkEnableOption "displaymanager";
+    displaymanager = {
+      enable = lib.mkEnableOption "displaymanager";
+      sddm.enable = lib.mkEnableOption "sddm";
+      ly.enable = lib.mkEnableOption "ly";
+    };
     throne.enable = lib.mkEnableOption "throne";
   };
 }

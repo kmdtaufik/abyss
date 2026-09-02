@@ -10,7 +10,11 @@ in {
   ];
 
   systemModules = {
-    displaymanager.enable = true;
+    displaymanager = {
+      enable = true;
+      ly.enable = true;
+      sddm.enable = false;
+    };
     gpu.type = "intel";
     cpu.type = "intel";
     gpg.enable = true;
