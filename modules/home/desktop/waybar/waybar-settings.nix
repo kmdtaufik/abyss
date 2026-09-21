@@ -34,7 +34,7 @@
           "pulseaudio"
           "bluetooth"
           "network"
-          #"battery"
+          "battery"
           # "power-profiles-daemon"
           "group/hardware"
           "group/tools"
@@ -288,8 +288,7 @@
         };
 
         # Battery
-        /*
-          "battery" = {
+        "battery" = {
           states = {
             warning = 30;
             critical = 15;
@@ -306,7 +305,6 @@
             " "
           ];
         };
-        */
 
         # Power Profiles
         "power-profiles-daemon" = {
