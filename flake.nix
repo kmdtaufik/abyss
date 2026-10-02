@@ -6,9 +6,10 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     matugen.url = "github:InioX/matugen";
+    nix-index-database.url = "github:nix-community/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     devsuite.url = "github:kmdtaufik/devsuite";
-    elephant.url = "github:abenz1267/elephant";
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       # inputs.nixpkgs.follows = "nixpkgs";

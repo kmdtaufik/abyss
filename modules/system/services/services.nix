@@ -8,4 +8,6 @@
   services.fstrim.enable = true;
   services.gvfs.enable = true;
   services.tumbler.enable = true;
+  services.thermald.enable = true;
+  zramSwap.enable = true;
 }

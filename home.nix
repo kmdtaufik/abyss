@@ -1,4 +1,4 @@
-{username, ...}: {
+{username, inputs, ...}: {
   # Home Manager Settings
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
@@ -7,6 +7,7 @@
   # Import Program Configurations
   imports = [
     ./modules/home
+    inputs.nix-index-database.homeModules.default
   ];
 
   modules = {
@@ -39,11 +40,14 @@
     zen.enable = true;
     zoxide.enable = true;
     matugen.enable = true;
-    pywal.enable = true;
+    pywal.enable = false; # matugen regenerates ~/.cache/wal compat outputs
     bash.enable = true;
     fish.enable = true;
     awww.enable = true;
   };
 
-  programs.home-manager.enable = true;
+  programs = {
+    home-manager.enable = true;
+    nix-index-database.comma.enable = true;
+  };
 }

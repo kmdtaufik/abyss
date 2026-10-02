@@ -112,7 +112,8 @@ in
               takescreenshot() {
                 sleep 1
                 grimblast --notify "$option_chosen" "$option_type_screenshot" "$NAME"
-                if [ -f "$HOME/$NAME" ] && [ -d "$screenshot_folder" ]; then
+                mkdir -p "$screenshot_folder"
+                if [ -f "$HOME/$NAME" ]; then
                   mv "$HOME/$NAME" "$screenshot_folder/"
                 fi
               }
@@ -122,7 +123,8 @@ in
                 timer
                 sleep 1
                 grimblast --notify "$option_chosen" "$option_type_screenshot" "$NAME"
-                if [ -f "$HOME/$NAME" ] && [ -d "$screenshot_folder" ]; then
+                mkdir -p "$screenshot_folder"
+                if [ -f "$HOME/$NAME" ]; then
                   mv "$HOME/$NAME" "$screenshot_folder/"
                 fi
               }

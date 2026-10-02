@@ -2,13 +2,15 @@
   config,
   lib,
   ...
-}: {
+}: let
+  inherit (import ../../../settings.nix) gitEmail;
+in {
   config = lib.mkIf config.modules.git.enable {
     programs.git = {
       enable = true;
       settings = {
         user = {
-          email = "147173391+kmdtaufik@users.noreply.github.com";
+          email = gitEmail;
           name = "Md Taufik Khan";
         };
 

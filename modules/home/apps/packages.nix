@@ -12,6 +12,7 @@
     slurp
     nautilus
     nautilus-open-any-terminal
+    blueman
     imv
     mpv
     pavucontrol

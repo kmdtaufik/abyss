@@ -16,6 +16,7 @@
         gpl = "git pull ";
         gd = "git diff ";
         gb = "git branch ";
+        nos = "nh os switch";
       };
       functions = {
         fish_greeting = {
@@ -51,9 +52,6 @@
           '';
         };
       };
-      shellInit = ''
-        set -g fish_color_param 00ffff
-      '';
     };
     programs.starship.enableFishIntegration = true;
     programs.zoxide.enableFishIntegration = true;
