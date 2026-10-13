@@ -29,7 +29,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     task-master = {
-      url = "git+ssh://git@github.com/kmdtaufik/task-master";
+      url = "github:kmdtaufik/task-master";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
   };
