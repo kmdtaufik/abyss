@@ -4,6 +4,7 @@
   nixpkgs.config.android_sdk.accept_license = true;
   # List System Programs
   environment.systemPackages = with pkgs; [
+    distrobox
     jq
     wget
     curl

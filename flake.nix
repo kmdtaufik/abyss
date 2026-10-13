@@ -6,8 +6,10 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     matugen.url = "github:InioX/matugen";
-    nix-index-database.url = "github:nix-community/nix-index-database";
-    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     devsuite.url = "github:kmdtaufik/devsuite";
     zen-browser = {
@@ -25,6 +27,10 @@
     nix4adspower = {
       url = "github:kmdtaufik/nix4adspower";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    task-master = {
+      url = "git+ssh://git@github.com/kmdtaufik/task-master";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
   };
   outputs = inputs @ {

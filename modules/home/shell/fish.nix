@@ -25,7 +25,9 @@
             # -----------------------------------------------------
             # Fastfetch
             # -----------------------------------------------------
-            fastfetch --config examples/13
+            if type -q fastfetch
+              fastfetch --config examples/13
+            end
           '';
         };
         nsh = {

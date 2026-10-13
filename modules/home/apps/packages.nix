@@ -38,12 +38,16 @@
     opencode
     gzip
     inputs.nix4gitbutler.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.task-master.packages.${pkgs.stdenv.hostPlatform.system}.default
     gnome-disk-utility
-    thunderbird-bin
     age
     kicad
     croc
     frida-tools
+    ghidra-bin
+    apktool
+    jadx
+    apksigner
     qbittorrent
   ];
 }
