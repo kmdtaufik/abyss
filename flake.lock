@@ -665,11 +665,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1791862738,
-        "narHash": "sha256-Wy4IWTgnDYmTEoGd5TonBgL/qrISoGKfnO9loBcdnTY=",
+        "lastModified": 1792036779,
+        "narHash": "sha256-DxUKbQ9hGt8LrW3B+Ee5Y1lmeWxKQZd0CbIIjyiTV6E=",
         "owner": "kmdtaufik",
         "repo": "task-master",
-        "rev": "de1c10d92d4efd8ec6d2a47e069485497353b724",
+        "rev": "42948cac7c95a42bd39a3b48a0abe92ebf33a06e",
         "type": "github"
       },
       "original": {
