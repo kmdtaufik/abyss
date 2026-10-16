@@ -32,6 +32,10 @@
       url = "github:kmdtaufik/task-master";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
+    amp = {
+      url = "github:kmdtaufik/amp";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs @ {
     self,
