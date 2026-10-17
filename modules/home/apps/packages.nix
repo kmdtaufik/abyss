@@ -33,11 +33,10 @@
     glib
     duf
     ncdu
-    libreoffice
+    collabora-desktop
     papers
     opencode
     gzip
-    inputs.nix4gitbutler.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.task-master.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.amp.packages.${pkgs.stdenv.hostPlatform.system}.default
     gnome-disk-utility
