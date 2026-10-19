@@ -39,6 +39,7 @@
     gzip
     inputs.task-master.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.amp.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.omp.packages.${pkgs.stdenv.hostPlatform.system}.default
     gnome-disk-utility
     age
     kicad

@@ -32,6 +32,10 @@
       url = "github:kmdtaufik/amp";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    omp = {
+      url = "github:kmdtaufik/omp-bin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs @ {
     self,

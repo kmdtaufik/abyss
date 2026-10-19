@@ -554,6 +554,26 @@
         "type": "github"
       }
     },
+    "omp": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792406785,
+        "narHash": "sha256-lLza2rReT/52+WYiEI0HlN/XpvTAthPD9qbk2BGbJMY=",
+        "owner": "kmdtaufik",
+        "repo": "omp-bin",
+        "rev": "8c5c5b9284d1e1f975c6df8242fa23cddd9e4649",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kmdtaufik",
+        "repo": "omp-bin",
+        "type": "github"
+      }
+    },
     "qmd": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -582,6 +602,7 @@
         "nix-index-database": "nix-index-database",
         "nix4adspower": "nix4adspower",
         "nixpkgs": "nixpkgs_4",
+        "omp": "omp",
         "stylix": "stylix",
         "task-master": "task-master",
         "zen-browser": "zen-browser"
