@@ -20,6 +20,7 @@
     gh.enable = true;
     fzf.enable = true;
     obsidian.enable = true;
+    obs.enable = true;
     gtk.enable = true;
     hyprland.enable = true;
     kitty.enable = true;

@@ -5,5 +5,6 @@
     ./cpu.nix
     ./bluetooth.nix
     ./audio.nix
+    ./virtualcamera.nix
   ];
 }

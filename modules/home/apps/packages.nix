@@ -15,6 +15,7 @@
     blueman
     imv
     mpv
+    vlc
     pavucontrol
     tree
     tldr

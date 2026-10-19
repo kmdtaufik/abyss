@@ -68,6 +68,10 @@
         "match:class (hyprland-share-picker), center on"
         "match:class (hyprland-share-picker), size 600 400"
 
+
+        # OBS Studio
+        "match:class (com.obsproject.Studio) match:title (.*Settings.*), float on"
+        "match:class (com.obsproject.Studio) match:title (.*Remux.*), float on"
         # General Floating
         "match:class (dotfiles-floating), float on"
         "match:class (dotfiles-floating), size 1000 700"

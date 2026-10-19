@@ -10,6 +10,7 @@
     gh.enable = lib.mkEnableOption "gh";
     fzf.enable = lib.mkEnableOption "fzf";
     obsidian.enable = lib.mkEnableOption "obsidian";
+    obs.enable = lib.mkEnableOption "obs";
     git.enable = lib.mkEnableOption "git";
     gtk.enable = lib.mkEnableOption "gtk";
     hyprland.enable = lib.mkEnableOption "hyprland";

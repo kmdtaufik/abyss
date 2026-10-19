@@ -772,11 +772,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1792282547,
-        "narHash": "sha256-BVuOWnoKfWrn1Ev8JyJm+Nk2MXAEg+IgXrTg+pcBLsw=",
+        "lastModified": 1792353568,
+        "narHash": "sha256-xMzr6pRNPwuTNNDFWnB7gjSpBBaifIVCkZj0yEjIZRs=",
         "owner": "kmdtaufik",
         "repo": "task-master",
-        "rev": "85309e89ae0fc179dcbcee452b6c6666e31a1b5b",
+        "rev": "6a68d6c7b83c72e74f57b3b993317d3efef182bc",
         "type": "github"
       },
       "original": {

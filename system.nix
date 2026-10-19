@@ -22,6 +22,7 @@ in {
     nix-ld.enable = true;
     podman.enable = true;
     throne.enable = true;
+    virtualcamera.enable = true;
   };
 
   environment.variables = {

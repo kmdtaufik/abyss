@@ -20,5 +20,6 @@
       ly.enable = lib.mkEnableOption "ly";
     };
     throne.enable = lib.mkEnableOption "throne";
+    virtualcamera.enable = lib.mkEnableOption "virtual camera support (v4l2loopback)";
   };
 }
