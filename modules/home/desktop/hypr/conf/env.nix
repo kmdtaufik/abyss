@@ -34,8 +34,6 @@
 
         # Input Method (Fcitx5 / OpenBangla Avro)
         "XMODIFIERS,@im=fcitx"
-        "GTK_IM_MODULE,fcitx"
-        "QT_IM_MODULE,fcitx"
         "SDL_IM_MODULE,fcitx"
         "GLFW_IM_MODULE,ibus"
       ];
