@@ -45,6 +45,8 @@
         "$mainMod, ?, exec, hyprland-keybinds"
         "$mainMod SHIFT, R, exec, hyprctl reload"
         "$mainMod, V, exec, clipboard"
+        "$mainMod, space, exec, toggle-bangla"
+        ", f11, exec, toggle-bangla"
 
         # Workspaces
         "$mainMod, 1, workspace, 1"

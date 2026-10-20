@@ -24,6 +24,9 @@
       xwayland.enable = true;
       sourceFirst = true;
       settings = {
+        exec-once = [
+          "fcitx5 -d"
+        ];
         monitor = [
           "eDP-1,preferred,auto,1"
           "HDMI-A-1, preferred, auto, 1, mirror, eDP-1"

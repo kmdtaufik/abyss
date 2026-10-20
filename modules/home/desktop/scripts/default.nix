@@ -11,5 +11,6 @@
     (import ./launch-wlogout.nix {inherit pkgs;})
     (import ./wallpaper.nix {inherit pkgs;})
     (import ./mount-manager.nix {inherit pkgs;})
+    (import ./toggle-bangla.nix {inherit pkgs;})
   ];
 }

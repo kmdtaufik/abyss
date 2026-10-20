@@ -23,6 +23,7 @@ in {
     podman.enable = true;
     throne.enable = true;
     virtualcamera.enable = true;
+    inputMethod.enable = true;
   };
 
   environment.variables = {
