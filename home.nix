@@ -8,6 +8,7 @@
   imports = [
     ./modules/home
     inputs.nix-index-database.homeModules.default
+    inputs.stylix.homeModules.stylix
   ];
 
   modules = {
@@ -34,7 +35,7 @@
     rofi.enable = true;
     ssh.enable = true;
     starship.enable = true;
-    stylix.enable = true;
+    stylix.enable = false;
     swappy.enable = true;
     swaync.enable = false;
     waybar.enable = false;
@@ -48,6 +49,8 @@
     fish.enable = true;
     awww.enable = false;
   };
+
+  stylix.enable = false;
 
   programs = {
     home-manager.enable = true;

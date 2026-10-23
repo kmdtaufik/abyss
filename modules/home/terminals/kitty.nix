@@ -25,16 +25,16 @@
         enable_audio_bell = false; # 'no' becomes 'false'
         window_padding_width = 10;
         hide_window_decorations = true; # 'yes' becomes 'true'
-        #background_opacity = 0.7;
+        background_opacity = "0.7";
         dynamic_background_opacity = true; # 'yes' becomes 'true'
         confirm_os_window_close = 0;
         selection_foreground = "none";
         selection_background = "none";
         cursor_shape = "beam";
       };
-    };
-    stylix.targets.kitty = {
-      enable = true;
+      extraConfig = ''
+        include themes/noctalia.conf
+      '';
     };
   };
 }

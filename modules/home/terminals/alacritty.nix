@@ -9,8 +9,12 @@
       enable = true;
       settings = {
         general = {
+          import = [
+            "~/.config/alacritty/themes/noctalia.toml"
+          ];
         };
         window = {
+          opacity = 0.7;
           padding = {
             x = 10;
             y = 10;
@@ -27,6 +31,5 @@
         };
       };
     };
-    stylix.targets.alacritty.enable = true;
   };
 }

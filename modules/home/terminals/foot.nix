@@ -9,6 +9,7 @@
       enable = true;
       settings = {
         main = {
+          include = "~/.config/foot/themes/noctalia";
           pad = "10x10";
         };
         cursor = {
@@ -23,7 +24,5 @@
         };
       };
     };
-
-    stylix.targets.foot.enable = true;
   };
 }

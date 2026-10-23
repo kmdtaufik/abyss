@@ -30,12 +30,38 @@
               output_path = "$XDG_CONFIG_HOME/kitty/themes/noctalia.conf";
               post_hook = "pkill -USR1 kitty || true";
             };
+            rofi = {
+              input_path = "${config.xdg.configHome}/noctalia/templates/rofi.rasi";
+              output_path = "$XDG_CONFIG_HOME/rofi/colors-noctalia.rasi";
+            };
+            wlogout = {
+              input_path = "${config.xdg.configHome}/noctalia/templates/wlogout.css";
+              output_path = "$XDG_CONFIG_HOME/wlogout/colors-noctalia.css";
+            };
+            fish = {
+              input_path = "${config.xdg.configHome}/noctalia/templates/fish.theme";
+              output_path = "$XDG_CONFIG_HOME/fish/conf.d/noctalia.fish";
+            };
+            qutebrowser = {
+              input_path = "${config.xdg.configHome}/noctalia/templates/qutebrowser.py";
+              output_path = "$XDG_CONFIG_HOME/qutebrowser/noctalia.py";
+            };
+            fcitx5 = {
+              input_path = "${config.xdg.configHome}/noctalia/templates/fcitx5-theme.conf";
+              output_path = "$XDG_DATA_HOME/fcitx5/themes/noctalia/theme.conf";
+              post_hook = "fcitx5-remote -r || true";
+            };
           };
         };
       };
 
       # Wallpaper — the dynamic wallpaper flow (`wallpaper` script) owns this path
       wallpaper.default.path = "${config.home.homeDirectory}/.config/abyss/.cache/current_wallpaper.png";
+    };
+
+    xdg.configFile."noctalia/templates" = {
+      source = ../templates;
+      recursive = true;
     };
   };
 }

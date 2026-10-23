@@ -18,7 +18,7 @@ in {
     gpu.type = "intel";
     cpu.type = "intel";
     gpg.enable = true;
-    stylix.enable = true;
+    stylix.enable = false;
     nix-ld.enable = true;
     podman.enable = true;
     throne.enable = true;
