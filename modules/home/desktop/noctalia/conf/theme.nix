@@ -8,7 +8,7 @@
       # Use wallpaper-derived Material Design 3 colors
       theme = {
         source = "wallpaper";
-        wallpaper_scheme = "m3-tonal-spot";
+        wallpaper_scheme = "m3-monochrome";
         mode = "dark";
         templates = {
           enable_builtin_templates = true;
