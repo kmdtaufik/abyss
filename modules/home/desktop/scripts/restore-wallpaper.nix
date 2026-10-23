@@ -2,6 +2,10 @@
 let
   awwwCmd = if config.modules.awww.enable then "awww img \"$wallpaper\" --transition-step 255" else "";
   hyprpaperCmd = if config.modules.hyprpaper.enable then "hyprctl hyprpaper wallpaper ,\"$wallpaper\"" else "";
+  noctaliaCmd =
+    if config.modules.noctalia.enable
+    then "noctalia msg wallpaper-set \"$wallpaper\" || echo \":: noctalia is not running, wallpaper not set\" >&2"
+    else "";
 in
 pkgs.writeShellApplication {
   name = "restore-wallpaper.sh";
@@ -43,5 +47,6 @@ pkgs.writeShellApplication {
     echo ":: Setting wallpaper with source image $wallpaper"
     ${hyprpaperCmd}
     ${awwwCmd}
+    ${noctaliaCmd}
   '';
 }

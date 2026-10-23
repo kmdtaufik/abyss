@@ -7,7 +7,6 @@
     google-chrome
     imagemagick
     grim
-    grimblast
     guvcview
     slurp
     nautilus

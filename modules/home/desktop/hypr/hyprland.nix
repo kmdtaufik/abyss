@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: {
   imports = [
@@ -11,6 +12,10 @@
   ];
 
   config = lib.mkIf config.modules.hyprland.enable {
+    home.packages = with pkgs; [
+      grimblast
+    ];
+
     wayland.windowManager.hyprland = {
       enable = true;
       package = null;

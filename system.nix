@@ -24,6 +24,9 @@ in {
     throne.enable = true;
     virtualcamera.enable = true;
     inputMethod.enable = true;
+    hyprland.enable = false;
+    niri.enable = true;
+    noctalia.enable = true;
   };
 
   environment.variables = {

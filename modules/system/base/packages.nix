@@ -9,6 +9,7 @@
     wget
     curl
     git
+    cachix
     htop
     btop
     libvirt

@@ -22,5 +22,8 @@
     throne.enable = lib.mkEnableOption "throne";
     virtualcamera.enable = lib.mkEnableOption "virtual camera support (v4l2loopback)";
     inputMethod.enable = lib.mkEnableOption "input method (fcitx5 with OpenBangla Keyboard Avro)";
+    hyprland.enable = lib.mkEnableOption "hyprland";
+    niri.enable = lib.mkEnableOption "niri";
+    noctalia.enable = lib.mkEnableOption "noctalia";
   };
 }

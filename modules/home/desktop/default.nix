@@ -1,6 +1,8 @@
 {
   imports = [
     ./hypr
+    ./niri
+    ./noctalia/noctalia.nix
     ./waybar/waybar.nix
     ./rofi/rofi.nix
     ./swaync/swaync.nix

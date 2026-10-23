@@ -158,7 +158,7 @@
     '';
   };
 in {
-  config = lib.mkIf config.modules.dropTerm.enable {
+  config = lib.mkIf (config.modules.dropTerm.enable && config.modules.hyprland.enable) {
     home.packages = [dropterminal];
   };
 }

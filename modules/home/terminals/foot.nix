@@ -15,6 +15,9 @@
           style = "beam";
           blink = "yes";
         };
+        colors = {
+          alpha = 0.7;
+        };
         colors-dark = {
           alpha-mode = "matching";
         };

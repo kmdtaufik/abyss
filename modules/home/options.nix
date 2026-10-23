@@ -36,5 +36,7 @@
     pywal.enable = lib.mkEnableOption "pywal";
     awww.enable = lib.mkEnableOption "awww";
     hyprpaper.enable = lib.mkEnableOption "hyprpaper";
+    niri.enable = lib.mkEnableOption "niri";
+    noctalia.enable = lib.mkEnableOption "noctalia";
   };
 }

@@ -22,7 +22,9 @@
     obsidian.enable = true;
     obs.enable = true;
     gtk.enable = true;
-    hyprland.enable = true;
+    hyprland.enable = false;
+    niri.enable = true;
+    noctalia.enable = true;
     kitty.enable = true;
     ghostty.enable = true;
     foot.enable = true;
@@ -34,9 +36,9 @@
     starship.enable = true;
     stylix.enable = true;
     swappy.enable = true;
-    swaync.enable = true;
-    waybar.enable = true;
-    wlogout.enable = true;
+    swaync.enable = false;
+    waybar.enable = false;
+    wlogout.enable = false;
     xsettingsd.enable = true;
     zen.enable = true;
     zoxide.enable = true;
@@ -44,7 +46,7 @@
     pywal.enable = false; # matugen regenerates ~/.cache/wal compat outputs
     bash.enable = true;
     fish.enable = true;
-    awww.enable = true;
+    awww.enable = false;
   };
 
   programs = {

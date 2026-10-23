@@ -1,4 +1,9 @@
-{pkgs, ...}: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   security = {
     rtkit.enable = true;
     polkit = {
@@ -15,7 +20,7 @@
         })
       '';
     };
-    pam.services.hyprlock = {
+    pam.services.hyprlock = lib.mkIf config.systemModules.hyprland.enable {
       enableGnomeKeyring = true;
     };
   };

@@ -10,6 +10,7 @@
         btop.enable = true;
         bat.enable = true;
         fzf.enable = true;
+        noctalia.enable = false;
       };
       opacity = {
         terminal = 0.7;

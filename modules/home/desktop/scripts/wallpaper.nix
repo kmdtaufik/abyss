@@ -1,4 +1,14 @@
-{pkgs, ...}:
+{
+  pkgs,
+  config,
+  ...
+}:
+let
+  # Waybar's reload helper only exists when the waybar module is installed.
+  barCmd = if config.modules.waybar.enable then "launch-bar" else "";
+  # Noctalia renders its own notifications; swaync only when it is enabled.
+  notifyCmd = if config.modules.swaync.enable then "swaync-client -rs" else "";
+in
 pkgs.writeShellApplication {
   name = "wallpaper";
 
@@ -45,9 +55,9 @@ pkgs.writeShellApplication {
     notify "🎨 Matugen" "Theme generated from wallpaper" 100
 
     sleep 0.1
-    launch-bar
+    ${barCmd}
 
     sleep 0.1
-    swaync-client -rs
+    ${notifyCmd}
   '';
 }

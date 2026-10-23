@@ -17,6 +17,7 @@
         window-padding-y = 10;
         window-decoration = false;
         confirm-close-surface = false;
+        background-opacity = 0.7;
       };
     };
 

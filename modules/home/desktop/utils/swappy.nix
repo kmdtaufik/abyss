@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-  config = lib.mkIf config.modules.swappy.enable {
+  config = lib.mkIf (config.modules.swappy.enable && (config.modules.hyprland.enable || !config.modules.noctalia.enable)) {
     # Install swappy via home.packages
     home.packages = with pkgs; [swappy];
 
