@@ -1,8 +1,12 @@
 {
   config,
   lib,
+  inputs,
   ...
 }: {
+  imports = [
+    inputs.noctalia.nixosModules.default
+  ];
   config = lib.mkIf config.systemModules.noctalia.enable {
     # Noctalia NixOS module (from flake) installs the package system-wide.
     # Home-manager module owns the user service and settings.

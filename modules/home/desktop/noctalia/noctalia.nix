@@ -2,8 +2,12 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }: {
+  imports = [
+    inputs.noctalia.homeModules.default
+  ];
   config = lib.mkIf config.modules.noctalia.enable {
     programs.noctalia = {
       enable = true;
@@ -64,8 +68,7 @@
         };
 
         # Wallpaper — the dynamic wallpaper flow (`wallpaper` script) owns this path
-        wallpaper.default.path =
-          "${config.home.homeDirectory}/.config/abyss/.cache/current_wallpaper.png";
+        wallpaper.default.path = "${config.home.homeDirectory}/.config/abyss/.cache/current_wallpaper.png";
       };
     };
 

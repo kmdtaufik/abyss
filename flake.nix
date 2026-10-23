@@ -74,19 +74,6 @@
         modules = [
           ./system.nix
           inputs.niri.nixosModules.niri
-          inputs.noctalia.nixosModules.default
-          {
-            nix.settings = {
-              extra-substituters = [
-                "https://noctalia.cachix.org"
-                "https://niri-epireyn.cachix.org"
-              ];
-              extra-trusted-public-keys = [
-                "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
-                "niri-epireyn.cachix.org-1:tlVyFN7CtsDT+ZcLPS+ekFWeT1X6X4OqvWqbBMyIzFA="
-              ];
-            };
-          }
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
           {
@@ -102,7 +89,6 @@
               users.${username} = {
                 imports = [
                   (import ./home.nix)
-                  inputs.noctalia.homeModules.default
                 ];
               };
             };
