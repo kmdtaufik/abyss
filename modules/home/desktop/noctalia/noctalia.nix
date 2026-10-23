@@ -1,75 +1,20 @@
 {
   config,
   lib,
-  pkgs,
   inputs,
   ...
 }: {
   imports = [
     inputs.noctalia.homeModules.default
   ];
+
   config = lib.mkIf config.modules.noctalia.enable {
+    # Note: stale state in ~/.local/state/noctalia/settings.toml merges on top of
+    # ~/.config/noctalia/config.toml and can override theme settings; clear it manually if needed.
     programs.noctalia = {
       enable = true;
       systemd.enable = true;
       checkConfig = true;
-
-      settings = {
-        # Use wallpaper-derived Material Design 3 colors
-        theme = {
-          source = "wallpaper";
-          wallpaper_scheme = "m3-tonal-spot";
-          mode = "dark";
-          templates = {
-            enable_builtin_templates = true;
-            enable_community_templates = false;
-            builtin_ids = [
-              "alacritty"
-              "btop"
-              "foot"
-              "ghostty"
-              "gtk3"
-              "gtk4"
-              "niri"
-              "qt"
-            ];
-            community_ids = [];
-            user = {
-              kitty = {
-                input_path = "${config.programs.noctalia.package}/share/noctalia/assets/templates/kitty/kitty.conf";
-                output_path = "$XDG_CONFIG_HOME/kitty/themes/noctalia.conf";
-                post_hook = "pkill -USR1 kitty || true";
-              };
-            };
-          };
-        };
-
-        # Shell sizing — generous for 1366x768 display
-        bar.default = {
-          thickness = 42; # was 34, cramped
-          padding = 16; # was 14
-          widget_spacing = 8; # was 6
-          font_weight = 500;
-        };
-
-        dock = {
-          icon_size = 52; # was 48, a bit small
-          item_spacing = 8; # was 6
-          main_axis_padding = 18; # was 16
-        };
-
-        # Accessibility
-        accessibility.ui_scale = 1.1; # slight scale up for 768px
-
-        # Shell panel preferences
-        shell.panel = {
-          transparency_mode = "glass";
-          launcher_placement = "attached";
-        };
-
-        # Wallpaper — the dynamic wallpaper flow (`wallpaper` script) owns this path
-        wallpaper.default.path = "${config.home.homeDirectory}/.config/abyss/.cache/current_wallpaper.png";
-      };
     };
 
     # Ensure placeholder theme files exist so applications can start cleanly

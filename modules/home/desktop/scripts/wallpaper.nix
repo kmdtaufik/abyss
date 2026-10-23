@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  lib ? pkgs.lib,
   ...
 }:
 let
@@ -8,15 +9,21 @@ let
   barCmd = if config.modules.waybar.enable then "launch-bar" else "";
   # Noctalia renders its own notifications; swaync only when it is enabled.
   notifyCmd = if config.modules.swaync.enable then "swaync-client -rs" else "";
+  matugenCmd =
+    if config.modules.matugen.enable
+    then ''
+      matugen image "$current_wallpaper" -m "dark"
+      notify "🎨 Matugen" "Theme generated from wallpaper" 100
+    ''
+    else "";
 in
 pkgs.writeShellApplication {
   name = "wallpaper";
 
   runtimeInputs = [
     pkgs.imagemagick
-    pkgs.matugen
     pkgs.libnotify
-  ];
+  ] ++ lib.optional config.modules.matugen.enable pkgs.matugen;
 
   text = ''
     cache_dir="$HOME/.config/abyss/.cache"
@@ -51,8 +58,7 @@ pkgs.writeShellApplication {
     magick "$current_wallpaper" -gravity center -extent 1:1 "$square_wallpaper"
     notify "✅ Square Version" "Saved to $square_wallpaper" 80
 
-    matugen image "$current_wallpaper" -m "dark"
-    notify "🎨 Matugen" "Theme generated from wallpaper" 100
+    ${matugenCmd}
 
     sleep 0.1
     ${barCmd}

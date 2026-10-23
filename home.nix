@@ -42,7 +42,7 @@
     xsettingsd.enable = true;
     zen.enable = true;
     zoxide.enable = true;
-    matugen.enable = true;
+    matugen.enable = false;
     pywal.enable = false; # matugen regenerates ~/.cache/wal compat outputs
     bash.enable = true;
     fish.enable = true;

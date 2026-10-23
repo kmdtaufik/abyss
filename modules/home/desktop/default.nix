@@ -2,7 +2,7 @@
   imports = [
     ./hypr
     ./niri
-    ./noctalia/noctalia.nix
+    ./noctalia
     ./waybar/waybar.nix
     ./rofi/rofi.nix
     ./swaync/swaync.nix
