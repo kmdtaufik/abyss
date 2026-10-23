@@ -5,6 +5,7 @@
   ...
 }:
 let
+  inherit (import ../../../../settings.nix) flakeDir;
   # Waybar's reload helper only exists when the waybar module is installed.
   barCmd = if config.modules.waybar.enable then "launch-bar" else "";
   # Noctalia renders its own notifications; swaync only when it is enabled.
@@ -49,6 +50,13 @@ pkgs.writeShellApplication {
 
     magick "$input" -quality 100 "$current_wallpaper"
     sleep 1
+
+    # Keep the repo's current_wallpaper.png in sync so Stylix can read it at
+    # eval time (flakes cannot reference absolute home-directory paths). Run
+    # `git add current_wallpaper.png` before the next `nix flake check` if you
+    # want Stylix to pick up the new palette immediately.
+    cp -f "$current_wallpaper" "${flakeDir}/current_wallpaper.png"
+
     restore-wallpaper.sh
     notify "✅ Wallpaper" "Saved to $current_wallpaper" 30
 

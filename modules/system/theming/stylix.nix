@@ -9,6 +9,10 @@
       enable = true;
       autoEnable = false;
       polarity = "dark";
+      # Stylix needs the image inside the flake so it can be copied to the Nix
+      # store at eval time. The `wallpaper` script keeps this file in sync with
+      # the live wallpaper at ~/.config/abyss/.cache/current_wallpaper.png.
+      # Noctalia reads the live wallpaper directly; Stylix reads this snapshot.
       image = ../../../current_wallpaper.png;
       cursor = {
         package = pkgs.bibata-cursors;
