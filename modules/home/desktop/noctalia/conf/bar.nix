@@ -17,8 +17,8 @@
         radius = 0;
         start = [
           "launcher"
+          "wallpaper"
           "workspaces"
-          "window-title"
         ];
         center = [
           "clock"
