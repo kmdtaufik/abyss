@@ -10,7 +10,6 @@
       enableBashIntegration = true;
       enableFishIntegration = true;
       settings = {
-        theme = "noctalia";
         window-theme = "ghostty";
         cursor-style = "bar";
         cursor-style-blink = true;
@@ -21,5 +20,7 @@
         background-opacity = 0.7;
       };
     };
+
+    stylix.targets.ghostty.enable = true;
   };
 }

@@ -9,6 +9,7 @@
       enable = true;
       autoEnable = false;
       polarity = "dark";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
       # Stylix needs the image inside the flake so it can be copied to the Nix
       # store at eval time. The `wallpaper` script keeps this file in sync with
       # the live wallpaper at ~/.config/abyss/.cache/current_wallpaper.png.

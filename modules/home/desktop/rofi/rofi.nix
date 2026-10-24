@@ -4,14 +4,18 @@
   pkgs,
   ...
 }: let
+  colors = config.lib.stylix.colors;
   inherit (config.lib.formats.rasi) mkLiteral;
 in {
   config = lib.mkIf config.modules.rofi.enable {
     programs.rofi = {
       enable = true;
       theme = {
-        "@import" = "~/.config/rofi/colors-noctalia.rasi";
         "*" = {
+          background = mkLiteral "#${colors.base00}E6";
+          foreground = mkLiteral "#${colors.base05}";
+          primary = mkLiteral "#${colors.base0D}";
+          background-alt = mkLiteral "#${colors.base01}E6";
           border-color = mkLiteral "@primary";
           text-color = mkLiteral "@foreground";
           background-color = mkLiteral "transparent";
@@ -73,5 +77,6 @@ in {
         drun-display-format = "{name}";
       };
     };
+    stylix.targets.rofi.enable = false;
   };
 }

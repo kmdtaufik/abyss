@@ -5,22 +5,9 @@
   ...
 }: {
   config = lib.mkIf config.modules.gtk.enable {
-    home.pointerCursor = {
-      enable = true;
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
-      size = 24;
-      gtk.enable = true;
-      x11.enable = true;
-    };
 
     gtk = {
       enable = true;
-      cursorTheme = {
-        package = pkgs.bibata-cursors;
-        name = "Bibata-Modern-Ice";
-        size = 24;
-      };
       iconTheme = {
         name = "Papirus-Dark";
         package = pkgs.papirus-icon-theme;
@@ -43,10 +30,16 @@
         gtk-xft-rgba = "rgb";
       };
     };
+    stylix.targets.gtk = {
+      enable = true;
+    };
 
     dconf.settings = {
       "org/gnome/desktop/wm/preferences" = {
         button-layout = ":";
+      };
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
       };
     };
   };

@@ -3,7 +3,9 @@
   lib,
   pkgs,
   ...
-}: {
+}: let
+  colors = config.lib.stylix.colors;
+in {
   config = lib.mkIf config.modules.wlogout.enable {
     home.file.".config/wlogout/icons" = {
       source = ./icons;
@@ -51,8 +53,6 @@
         }
       ];
       style = ''
-        @import url("colors-noctalia.css");
-
         * {
             font-family: "JetBrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
             background-image: none;
@@ -60,13 +60,31 @@
             box-shadow: none;
         }
 
+        window {
+            background-color: alpha(#${colors.base00}, 0.5);
+        }
+
         button {
+            color: #${colors.base05};
             font-size: 20px;
+
             background-repeat: no-repeat;
             background-position: center;
             background-size: 25%;
+
             border-style: solid;
+            background-color: alpha(#${colors.base01}, 0.3);
+            border: 3px solid #${colors.base05};
+
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        button:focus,
+        button:active,
+        button:hover {
+            color: #${colors.base0D};
+            background-color: alpha(#${colors.base01}, 0.5);
+            border: 3px solid #${colors.base0D};
         }
         #lock {
             margin: 10px;

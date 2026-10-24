@@ -57,5 +57,8 @@
     };
     programs.starship.enableFishIntegration = true;
     programs.zoxide.enableFishIntegration = true;
+    stylix.targets.fish = {
+      enable = true;
+    };
   };
 }

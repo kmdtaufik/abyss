@@ -31,34 +31,20 @@
     };
   };
 in {
-  fonts = {
-    packages = with pkgs;
-      [
-        bangla-fonts
-        noto-fonts
-        noto-fonts-color-emoji
-        corefonts
-        font-awesome
-        fira-sans
-        google-sans-flex
-        material-design-icons
-        roboto
-        roboto-slab
-      ] #Nerd-fonts
-      ++ (with pkgs.nerd-fonts; [
-        fira-code
-        fira-mono
-        jetbrains-mono
-      ]);
-
-    fontconfig = {
-      enable = true;
-      defaultFonts = {
-        monospace = [ "JetBrainsMono Nerd Font" ];
-        sansSerif = [ "Google Sans Flex" ];
-        serif = [ "Roboto Slab" ];
-        emoji = [ "Noto Color Emoji" ];
-      };
-    };
-  };
+  fonts.packages = with pkgs;
+    [
+      bangla-fonts
+      noto-fonts
+      corefonts
+      font-awesome
+      fira-sans
+      google-sans-flex
+      material-design-icons
+      roboto
+    ] #Nerd-fonts
+    ++ (with pkgs.nerd-fonts; [
+      fira-code
+      fira-mono
+      jetbrains-mono
+    ]);
 }

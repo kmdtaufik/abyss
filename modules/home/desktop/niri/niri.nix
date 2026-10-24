@@ -2,7 +2,9 @@
   config,
   lib,
   ...
-}: {
+}: let
+  c = config.lib.stylix.colors.withHashtag;
+in {
   config = lib.mkIf config.modules.niri.enable {
     programs.niri.settings = {
       includes = [
@@ -47,6 +49,8 @@
         focus-ring = {
           enable = true;
           width = 2;
+          active.color = c.base0D;
+          inactive.color = c.base02;
         };
 
         border = {

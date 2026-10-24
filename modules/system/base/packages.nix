@@ -44,13 +44,8 @@
     ntfs3g
     localsend
     mission-center
-    bibata-cursors
   ];
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    XCURSOR_THEME = "Bibata-Modern-Ice";
-    XCURSOR_SIZE = "24";
-  };
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   programs = {
     fuse.userAllowOther = true;
     mtr.enable = true;
