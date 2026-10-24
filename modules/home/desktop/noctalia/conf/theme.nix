@@ -44,7 +44,7 @@
             };
             starship = {
               input_path = "${config.xdg.configHome}/noctalia/templates/starship.toml";
-              output_path = "$XDG_CONFIG_HOME/starship.toml";
+              output_path = "$XDG_CONFIG_HOME/starship/noctalia.toml";
             };
             qutebrowser = {
               input_path = "${config.xdg.configHome}/noctalia/templates/qutebrowser.py";

@@ -55,11 +55,7 @@
         };
       };
     };
-    programs.fish.interactiveShellInit = lib.mkAfter ''
-      if command -v starship >/dev/null 2>&1
-        starship init fish | source
-      end
-    '';
+    programs.starship.enableFishIntegration = true;
     programs.zoxide.enableFishIntegration = true;
   };
 }

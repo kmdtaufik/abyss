@@ -8,22 +8,23 @@ primary = "{{colors.primary.default.hex}}"
 secondary = "{{colors.secondary.default.hex}}"
 tertiary = "{{colors.tertiary.default.hex}}"
 error = "{{colors.error.default.hex}}"
+outline = "{{colors.outline.default.hex}}"
 
 "$schema" = "https://starship.rs/config-schema.json"
 
 [git_status]
 ahead = "${count}"
 behind = "${count}"
-deleted = "x(red)"
+deleted = "x(error)"
 diverged = "${ahead_count}${behind_count}"
 style = "foreground"
-conflicted = "[≠](red)"
-untracked = "[?](yellow)"
-modified = "[~](orange)"
+conflicted = "[≠](error)"
+untracked = "[?](outline)"
+modified = "[~](tertiary)"
 
 [git_branch]
 symbol = " "
-style = "bold purple"
+style = "bold primary"
 
 [nix_shell]
 format = "via [$symbol(($name))]($style) "
@@ -31,7 +32,7 @@ symbol = " "
 
 [cmd_duration]
 disabled = false
-style = "bold orange"
+style = "bold secondary"
 format = "took [$duration]($style)"
 show_milliseconds = true
 show_notifications = true
@@ -45,5 +46,5 @@ full_symbol = ""
 
 [[battery.display]]
 disabled = false
-style = "bold red"
+style = "bold error"
 threshold = 15
