@@ -11,7 +11,8 @@
     slurp
     nautilus
     nautilus-open-any-terminal
-    blueman
+    # blueman
+    gawk
     imv
     mpv
     vlc

@@ -1,4 +1,9 @@
 {
+  config,
+  lib,
+  ...
+}: {
+  config = lib.mkIf (config.modules.swaync.enable && !config.modules.noctalia.enable) {
   services.swaync.style =
     /*
     css
@@ -53,4 +58,5 @@
           background: transparent;
       }
     '';
+  };
 }

@@ -1,4 +1,9 @@
 {
+  config,
+  lib,
+  ...
+}: {
+  config = lib.mkIf config.modules.waybar.enable {
   programs.waybar.style =
     /*
     css
@@ -497,4 +502,5 @@
               -gtk-icon-effect: highlight;
           }
     '';
+  };
 }

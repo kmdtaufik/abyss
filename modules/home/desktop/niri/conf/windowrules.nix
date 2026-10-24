@@ -16,11 +16,13 @@
             bottom-left = r;
           };
           clip-to-geometry = true;
+          draw-border-with-background = false;
         }
         {
+          matches = [{ app-id = "^(kitty|Alacritty|com\\.mitchellh\\.ghostty|foot)$"; }];
           background-effect = {
             blur = true;
-            xray = true;
+            xray = false;
           };
         }
         {

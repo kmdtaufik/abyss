@@ -23,7 +23,6 @@
             };
             "Hotkey/TriggerKeys" = {
               "0" = "Control+space";
-              "1" = "Super+space";
             };
             "Behavior" = {
               "ShareInputState" = "All";

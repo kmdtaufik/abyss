@@ -5,13 +5,19 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    matugen.url = "github:InioX/matugen";
+    matugen = {
+      url = "github:InioX/matugen";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    devsuite.url = "github:kmdtaufik/devsuite";
+    devsuite = {
+      url = "github:kmdtaufik/devsuite";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       # inputs.nixpkgs.follows = "nixpkgs";
@@ -26,7 +32,6 @@
     };
     task-master = {
       url = "github:kmdtaufik/task-master";
-      # inputs.nixpkgs.follows = "nixpkgs";
     };
     amp = {
       url = "github:kmdtaufik/amp";

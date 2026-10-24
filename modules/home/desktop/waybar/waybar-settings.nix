@@ -4,6 +4,7 @@
   pkgs,
   ...
 }: {
+  config = lib.mkIf config.modules.waybar.enable {
   programs.waybar = {
     settings = [
       {
@@ -365,5 +366,6 @@
         };
       }
     ];
+  };
   };
 }

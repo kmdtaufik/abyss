@@ -5,18 +5,24 @@
 }: {
   config = lib.mkIf config.modules.noctalia.enable {
     programs.noctalia.settings.bar = {
+      order = lib.mkForce ["default"];
       default = {
-        enabled = false;
-      };
-      order = ["main"];
-      main = {
-        thickness = 42;
-        padding = 16;
+        position = "top";
+        thickness = 36;
+        padding = 14;
         widget_spacing = 8;
         font_weight = 500;
         margin_ends = 0;
         margin_edge = 0;
         radius = 0;
+        start = [
+          "launcher"
+          "workspaces"
+          "window-title"
+        ];
+        center = [
+          "clock"
+        ];
         end = [
           "tray"
           "notifications"

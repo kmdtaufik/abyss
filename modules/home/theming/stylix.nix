@@ -6,10 +6,12 @@
 }: {
   config = lib.mkIf config.modules.stylix.enable {
     stylix = {
-      autoEnable = true;
+      autoEnable = false;
       targets = {
         fcitx5.enable = false;
         rofi.enable = false;
+        waybar.enable = config.modules.waybar.enable;
+        swaync.enable = config.modules.swaync.enable;
       };
       opacity = {
         terminal = 0.7;
@@ -116,7 +118,6 @@
 
       [Hotkey/TriggerKeys]
       0=Control+space
-      1=Super+space
 
       [Behavior]
       ShareInputState=All

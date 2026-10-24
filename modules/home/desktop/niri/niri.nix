@@ -46,16 +46,13 @@ in {
 
         default-column-width = { proportion = 0.85; };
 
-        focus-ring = {
-          enable = true;
-          width = 2;
-          active.color = c.base0D;
-          inactive.color = c.base02;
-        };
+        focus-ring.enable = false;
 
         border = {
           enable = true;
           width = 2;
+          active.color = c.base0D;
+          inactive.color = c.base02;
         };
       };
 
