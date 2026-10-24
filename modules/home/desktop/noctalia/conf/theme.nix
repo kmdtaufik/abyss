@@ -42,6 +42,10 @@
               input_path = "${config.xdg.configHome}/noctalia/templates/fish.theme";
               output_path = "$XDG_CONFIG_HOME/fish/conf.d/noctalia.fish";
             };
+            starship = {
+              input_path = "${config.xdg.configHome}/noctalia/templates/starship.toml";
+              output_path = "$XDG_CONFIG_HOME/starship.toml";
+            };
             qutebrowser = {
               input_path = "${config.xdg.configHome}/noctalia/templates/qutebrowser.py";
               output_path = "$XDG_CONFIG_HOME/qutebrowser/noctalia.py";

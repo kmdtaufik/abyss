@@ -10,7 +10,11 @@
       enable = true;
       extraConfig = ''
         polkit.addRule(function(action, subject) {
-          if (action.id.indexOf("org.freedesktop.udisks2.") == 0 && subject.active && subject.local) {
+          if (subject.active && subject.local && (
+            action.id == "org.freedesktop.udisks2.filesystem-mount" ||
+            action.id == "org.freedesktop.udisks2.filesystem-mount-system" ||
+            action.id == "org.freedesktop.udisks2.filesystem-mount-other-system"
+          )) {
             return polkit.Result.YES;
           }
         });

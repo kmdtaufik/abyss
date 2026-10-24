@@ -32,10 +32,13 @@
             nix shell "''${pkgs[@]}" --command "''${cmd[@]}"
           fi
         }
+
+        if command -v starship >/dev/null 2>&1; then
+          eval "$(starship init bash)"
+        fi
       '';
     };
     programs = {
-      starship.enableBashIntegration = true;
       zoxide.enableBashIntegration = true;
       carapace.enableBashIntegration = true;
     };

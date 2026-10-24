@@ -30,6 +30,7 @@
                "$HOME/.config/wlogout" \
                "$HOME/.config/fish/conf.d" \
                "$HOME/.config/qutebrowser" \
+               "$HOME/.config" \
                "$HOME/.local/share/fcitx5/themes/noctalia"
 
       [ -f "$HOME/.config/niri/noctalia.kdl" ] || touch "$HOME/.config/niri/noctalia.kdl"
@@ -42,6 +43,7 @@
       [ -f "$HOME/.config/wlogout/colors-noctalia.css" ] || touch "$HOME/.config/wlogout/colors-noctalia.css"
       [ -f "$HOME/.config/fish/conf.d/noctalia.fish" ] || touch "$HOME/.config/fish/conf.d/noctalia.fish"
       [ -f "$HOME/.config/qutebrowser/noctalia.py" ] || touch "$HOME/.config/qutebrowser/noctalia.py"
+      [ -f "$HOME/.config/starship.toml" ] || touch "$HOME/.config/starship.toml"
       [ -f "$HOME/.local/share/fcitx5/themes/noctalia/theme.conf" ] || touch "$HOME/.local/share/fcitx5/themes/noctalia/theme.conf"
     '';
   };
