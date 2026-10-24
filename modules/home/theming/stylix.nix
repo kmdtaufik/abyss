@@ -9,8 +9,6 @@
       autoEnable = true;
       targets = {
         fcitx5.enable = false;
-        noctalia.enable = false;
-        noctalia-shell.enable = false;
         rofi.enable = false;
       };
       opacity = {

@@ -9,42 +9,48 @@
   ];
 
   config = lib.mkIf config.modules.noctalia.enable {
-    # Note: stale state in ~/.local/state/noctalia/settings.toml merges on top of
-    # ~/.config/noctalia/config.toml and can override theme settings; clear it manually if needed.
     programs.noctalia = {
       enable = true;
       systemd.enable = true;
       checkConfig = true;
     };
 
-    # Ensure placeholder theme files exist so applications can start cleanly
-    # before the first Noctalia template generation pass runs.
-    home.activation.noctaliaThemePlaceholders = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      mkdir -p "$HOME/.config/niri" \
-               "$HOME/.config/foot/themes" \
-               "$HOME/.config/alacritty/themes" \
-               "$HOME/.config/ghostty/themes" \
-               "$HOME/.config/kitty/themes" \
-               "$HOME/.config/btop/themes" \
-               "$HOME/.config/rofi" \
-               "$HOME/.config/wlogout" \
-               "$HOME/.config/fish/conf.d" \
-               "$HOME/.config/qutebrowser" \
-               "$HOME/.config/starship" \
-               "$HOME/.local/share/fcitx5/themes/noctalia"
+    # Noctalia's state file merges on top of the Nix-managed config. After
+    # switching from Noctalia-generated templates to Stylix, trim the stale
+    # [theme] and [bar.default] sections so the Nix config (Stylix palette,
+    # single bar.main) takes effect. Also remove leftover Noctalia template
+    # outputs that are no longer regenerated.
+    home.activation.noctaliaCleanup = lib.hm.dag.entryAfter ["writeBoundary"] ''
+      state_file="$HOME/.local/state/noctalia/settings.toml"
+      if [ -f "$state_file" ]; then
+        tmp=$(mktemp)
+        awk '/^\[bar\.default\]/ { skip=1; next }
+             /^\[[^ ]+\]/ { skip=0 }
+             skip==0 { print }' "$state_file" > "$tmp"
+        awk '/^\[theme\]/ { skip=1; next }
+             /^\[[^ ]+\]/ { skip=0 }
+             skip==0 { print }' "$tmp" > "$state_file"
+        rm -f "$tmp"
+      fi
 
-      [ -f "$HOME/.config/niri/noctalia.kdl" ] || touch "$HOME/.config/niri/noctalia.kdl"
-      [ -f "$HOME/.config/foot/themes/noctalia" ] || touch "$HOME/.config/foot/themes/noctalia"
-      [ -f "$HOME/.config/alacritty/themes/noctalia.toml" ] || touch "$HOME/.config/alacritty/themes/noctalia.toml"
-      [ -f "$HOME/.config/ghostty/themes/noctalia" ] || touch "$HOME/.config/ghostty/themes/noctalia"
-      [ -f "$HOME/.config/kitty/themes/noctalia.conf" ] || touch "$HOME/.config/kitty/themes/noctalia.conf"
-      [ -f "$HOME/.config/btop/themes/noctalia.theme" ] || touch "$HOME/.config/btop/themes/noctalia.theme"
-      [ -f "$HOME/.config/rofi/colors-noctalia.rasi" ] || touch "$HOME/.config/rofi/colors-noctalia.rasi"
-      [ -f "$HOME/.config/wlogout/colors-noctalia.css" ] || touch "$HOME/.config/wlogout/colors-noctalia.css"
-      [ -f "$HOME/.config/fish/conf.d/noctalia.fish" ] || touch "$HOME/.config/fish/conf.d/noctalia.fish"
-      [ -f "$HOME/.config/qutebrowser/noctalia.py" ] || touch "$HOME/.config/qutebrowser/noctalia.py"
-      [ -f "$HOME/.config/starship/noctalia.toml" ] || touch "$HOME/.config/starship/noctalia.toml"
-      [ -f "$HOME/.local/share/fcitx5/themes/noctalia/theme.conf" ] || touch "$HOME/.local/share/fcitx5/themes/noctalia/theme.conf"
+      rm -f "$HOME/.config/niri/noctalia.kdl" \
+            "$HOME/.config/foot/themes/noctalia" \
+            "$HOME/.config/alacritty/themes/noctalia.toml" \
+            "$HOME/.config/ghostty/themes/noctalia" \
+            "$HOME/.config/kitty/themes/noctalia.conf" \
+            "$HOME/.config/btop/themes/noctalia.theme" \
+            "$HOME/.config/rofi/colors-noctalia.rasi" \
+            "$HOME/.config/wlogout/colors-noctalia.css" \
+            "$HOME/.config/fish/conf.d/noctalia.fish" \
+            "$HOME/.config/qutebrowser/noctalia.py" \
+            "$HOME/.config/starship/noctalia.toml" \
+            "$HOME/.local/share/fcitx5/themes/noctalia/theme.conf"
+
+      rmdir "$HOME/.config/foot/themes" "$HOME/.config/alacritty/themes" \
+            "$HOME/.config/ghostty/themes" "$HOME/.config/kitty/themes" \
+            "$HOME/.config/btop/themes" "$HOME/.config/starship" \
+            "$HOME/.local/share/fcitx5/themes/noctalia" \
+            "$HOME/.local/share/fcitx5/themes" 2>/dev/null || true
     '';
   };
 }
