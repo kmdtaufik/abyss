@@ -45,6 +45,10 @@
       url = "github:kmdtaufik/omp-bin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    orca = {
+      url = "github:kmdtaufik/orca-bin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     noctalia = {
       url = "github:noctalia-dev/noctalia/cachix";
     };

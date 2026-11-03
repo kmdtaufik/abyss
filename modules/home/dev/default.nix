@@ -4,5 +4,6 @@
     ./ssh.nix
     ./devsuite.nix
     ./gh.nix
+    ./orca.nix
   ];
 }
