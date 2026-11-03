@@ -51,5 +51,6 @@
     jadx
     apksigner
     qbittorrent
+    librewolf
   ];
 }

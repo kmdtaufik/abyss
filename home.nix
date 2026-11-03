@@ -1,4 +1,8 @@
-{username, inputs, ...}: {
+{
+  username,
+  inputs,
+  ...
+}: {
   # Home Manager Settings
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
@@ -9,7 +13,6 @@
     ./modules/home
     inputs.nix-index-database.homeModules.default
   ];
-
   modules = {
     alacritty.enable = true;
     dropTerm.enable = true;

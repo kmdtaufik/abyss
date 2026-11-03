@@ -9,6 +9,10 @@
       url = "github:InioX/matugen";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # nur = {
+    #   url = "github:nix-community/NUR";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -82,6 +86,7 @@
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
           {
+            # nixpkgs.overlays = [nur.overlays.default];
             home-manager.extraSpecialArgs = {
               inherit username;
               inherit inputs;

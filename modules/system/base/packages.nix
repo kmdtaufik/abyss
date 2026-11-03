@@ -38,7 +38,7 @@
     playerctl
     bat
     lazygit
-    networkmanagerapplet
+    # networkmanagerapplet
     android-tools
     ouch
     ntfs3g

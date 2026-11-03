@@ -653,11 +653,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792406785,
-        "narHash": "sha256-lLza2rReT/52+WYiEI0HlN/XpvTAthPD9qbk2BGbJMY=",
+        "lastModified": 1792666624,
+        "narHash": "sha256-s1zCmfGCD3wb74k+pM9LW6MvpKrRs64YUA1+j3zFlFs=",
         "owner": "kmdtaufik",
         "repo": "omp-bin",
-        "rev": "8c5c5b9284d1e1f975c6df8242fa23cddd9e4649",
+        "rev": "fc39683c9ea224ee7a6a397da7710ecc93790335",
         "type": "github"
       },
       "original": {
