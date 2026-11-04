@@ -99,11 +99,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1793802923,
-        "narHash": "sha256-u56nIBcNqXTGU0vE1vi/eSS1FhSbtxCbLwI2oGmmf4k=",
+        "lastModified": 1793806310,
+        "narHash": "sha256-6oAIQvbJZZdzNxD9hURkdhKBEWzI0B1LqjYMyEy0qCY=",
         "owner": "kmdtaufik",
         "repo": "craft-anything-nix",
-        "rev": "007dfe19154dec542e6db1d2da57e5a6d5e122df",
+        "rev": "a94592fe129e4ee3f8278cad1c2431fdb46540d2",
         "type": "github"
       },
       "original": {
