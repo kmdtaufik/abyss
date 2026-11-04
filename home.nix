@@ -18,7 +18,7 @@
     dropTerm.enable = true;
     cliphist.enable = true;
     devsuite.enable = false;
-    orca.enable = true;
+    orca.enable = false;
     craft-anything.enable = true;
     direnv.enable = true;
     git.enable = true;
