@@ -39,5 +39,6 @@
     niri.enable = lib.mkEnableOption "niri";
     noctalia.enable = lib.mkEnableOption "noctalia";
     orca.enable = lib.mkEnableOption "orca";
+    craft-anything.enable = lib.mkEnableOption "craft-anything";
   };
 }

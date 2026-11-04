@@ -55,6 +55,10 @@
     niri = {
       url = "github:epireyn/niri-flake";
     };
+    craft-anything = {
+      url = "github:kmdtaufik/craft-anything-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs @ {
     self,

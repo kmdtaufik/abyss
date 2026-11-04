@@ -91,6 +91,27 @@
         "type": "github"
       }
     },
+    "craft-anything": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1793802923,
+        "narHash": "sha256-u56nIBcNqXTGU0vE1vi/eSS1FhSbtxCbLwI2oGmmf4k=",
+        "owner": "kmdtaufik",
+        "repo": "craft-anything-nix",
+        "rev": "007dfe19154dec542e6db1d2da57e5a6d5e122df",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kmdtaufik",
+        "repo": "craft-anything-nix",
+        "type": "github"
+      }
+    },
     "devsuite": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -727,6 +748,7 @@
     "root": {
       "inputs": {
         "amp": "amp",
+        "craft-anything": "craft-anything",
         "devsuite": "devsuite",
         "home-manager": "home-manager_2",
         "matugen": "matugen",
@@ -756,6 +778,27 @@
         "owner": "rust-lang",
         "ref": "nightly",
         "repo": "rust-analyzer",
+        "type": "github"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "craft-anything",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793782363,
+        "narHash": "sha256-5Vod7vKm10hOilQvEhTwXbhBE+V0ZqXH0jBQJhkX3KQ=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "7fcafdf6f0761462d68012aba6a627be3f008d68",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
         "type": "github"
       }
     },
